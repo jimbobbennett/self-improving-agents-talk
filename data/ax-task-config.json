@@ -1,0 +1,79 @@
+{
+  "project": "thanksgiving-food-lore-demo",
+  "space": "jbennett Space",
+  "tasks": [
+    {
+      "name": "Thanksgiving Agent Judge Evaluations",
+      "id": "T25saW5lVGFzazo1NTE0MjpnazVY",
+      "task_type": "TEMPLATE_EVALUATION",
+      "continuous": false,
+      "data_granularity": "trace",
+      "evaluators": [
+        {
+          "evaluator_id": "RXZhbHVhdG9yOjE5Nzc1Ojc0SzU=",
+          "column_mappings": {
+            "input": "attributes.demo.request_input",
+            "output": "attributes.demo.response_output",
+            "context": "attributes.demo.context"
+          }
+        },
+        {
+          "evaluator_id": "RXZhbHVhdG9yOjE5Nzc2Okx1akI=",
+          "column_mappings": {
+            "input": "attributes.demo.request_input",
+            "output": "attributes.demo.response_output",
+            "context": "attributes.demo.context"
+          }
+        },
+        {
+          "evaluator_id": "RXZhbHVhdG9yOjE5Nzc3OkI4Q0g=",
+          "column_mappings": {
+            "input": "attributes.demo.request_input",
+            "output": "attributes.demo.response_output",
+            "context": "attributes.demo.context"
+          }
+        },
+        {
+          "evaluator_id": "RXZhbHVhdG9yOjE5Nzc4Onp5MTc=",
+          "column_mappings": {
+            "input": "attributes.demo.request_input",
+            "output": "attributes.demo.response_output",
+            "context": "attributes.demo.context"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Thanksgiving Search Tool Contract",
+      "id": "T25saW5lVGFzazo1NTE0MzpZRUNF",
+      "task_type": "CODE_EVALUATION",
+      "continuous": false,
+      "data_granularity": "span",
+      "evaluators": [
+        {
+          "evaluator_id": "RXZhbHVhdG9yOjE5Nzc5Ok80azE=",
+          "query_filter": "span_kind = 'TOOL'",
+          "column_mappings": {
+            "output": "attributes.input.value"
+          }
+        }
+      ]
+    }
+  ],
+  "task_mode": "backfill completed on the 100-query batch; continuous sampling is off to control cost",
+  "latest_runs": {
+    "judge_task": {
+      "id": "VGVtcGxhdGVFdmFsdWF0aW9uVGFza1J1bjoyNzIxMjcxNDpzMDVr",
+      "status": "COMPLETED",
+      "successful_evaluations": 400,
+      "errors": 0
+    },
+    "tool_contract_task": {
+      "id": "Q29kZUV2YWx1YXRpb25UYXNrUnVuOjQ0OTM5Nzc6MXM3Sg==",
+      "status": "COMPLETED",
+      "successful_evaluations": 516,
+      "errors": 0,
+      "skipped": 359
+    }
+  }
+}

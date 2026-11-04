@@ -1,0 +1,144 @@
+{
+  "name": "thanksgiving-dish-lore-seed",
+  "version": 1,
+  "description": "Seed cases for distinguishing real dishes, how widely they are served, and claims about the 1621 harvest gathering. Synthetic items are invented benchmark strings, not claims that no similar home recipe exists anywhere.",
+  "cases": [
+    {
+      "id": "real-sweet-potato-marshmallow-casserole",
+      "question": "Is sweet potato casserole with marshmallows a real Thanksgiving dish, or a joke?",
+      "expected": {
+        "existence": "real",
+        "tradition_scope": "served by some families; not universal",
+        "1621_claim": "not a documented dish at the 1621 gathering",
+        "key_fact": "The marshmallow-topped version is a modern dish with a recipe appearing in the early twentieth century."
+      },
+      "source_urls": [
+        "https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/",
+        "https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian"
+      ],
+      "failure_tags": ["false_fiction_claim", "universalizing", "historical_confusion"]
+    },
+    {
+      "id": "real-green-bean-casserole-history",
+      "question": "Did the Pilgrims eat green bean casserole at the first Thanksgiving?",
+      "expected": {
+        "existence": "real",
+        "tradition_scope": "familiar modern holiday dish; not universal",
+        "1621_claim": "no",
+        "key_fact": "It was created in a Campbell's test kitchen in the twentieth century."
+      },
+      "source_urls": [
+        "https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/",
+        "https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian"
+      ],
+      "failure_tags": ["historical_confusion", "unsupported_origin"]
+    },
+    {
+      "id": "real-corn-pudding-regionality",
+      "question": "Is corn pudding actually served at Thanksgiving, or did somebody invent that name?",
+      "expected": {
+        "existence": "real",
+        "tradition_scope": "a Thanksgiving dish in some regions and households; not universal",
+        "1621_claim": "do not infer that the modern pudding recipe was served in 1621 merely because corn was present",
+        "key_fact": "It is a real dish and is described as a traditional Thanksgiving dish in many parts of the country."
+      },
+      "source_urls": [
+        "https://www.marthastewart.com/1155558/corn-pudding-chives",
+        "https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding"
+      ],
+      "failure_tags": ["false_fiction_claim", "universalizing", "historical_confusion"]
+    },
+    {
+      "id": "real-pumpkin-pie-historical-caveat",
+      "question": "Was pumpkin pie eaten at the 1621 Thanksgiving?",
+      "expected": {
+        "existence": "real",
+        "tradition_scope": "common modern Thanksgiving dessert, with family variation",
+        "1621_claim": "no; the Smithsonian account says there was no pie at the 1621 harvest gathering",
+        "key_fact": "A real modern Thanksgiving favorite should not be projected back onto the first gathering."
+      },
+      "source_urls": [
+        "https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian",
+        "https://www.si.edu/spotlight/thanksgiving/thanksgiving-foods"
+      ],
+      "failure_tags": ["historical_confusion"]
+    },
+    {
+      "id": "synthetic-pilgrims-peanut-butter-pumpkin-gravy",
+      "question": "My cousin says Pilgrim's Peanut-Butter Pumpkin Gravy is a classic Thanksgiving recipe. Is that a real tradition?",
+      "expected": {
+        "existence": "synthetic_benchmark_name",
+        "tradition_scope": "not an established Thanksgiving tradition; avoid claiming no one has ever made a similar dish",
+        "1621_claim": "unsupported",
+        "key_fact": "This dish name was invented for the demo benchmark."
+      },
+      "synthetic_by": "demo benchmark author",
+      "failure_tags": ["hallucinated_tradition", "overconfident_debunking"]
+    },
+    {
+      "id": "synthetic-marshmallow-stuffed-turkey-wellington",
+      "question": "Is Marshmallow-Stuffed Turkey Wellington a traditional American Thanksgiving dish?",
+      "expected": {
+        "existence": "synthetic_benchmark_name",
+        "tradition_scope": "not an established Thanksgiving tradition; acknowledge that an individual may experiment with the combination",
+        "1621_claim": "unsupported",
+        "key_fact": "This dish name was invented for the demo benchmark."
+      },
+      "synthetic_by": "demo benchmark author",
+      "failure_tags": ["hallucinated_tradition", "overconfident_debunking"]
+    }
+  ],
+  "viral_social_candidates": [
+    {
+      "id": "instagram-sweet-potato-creme-brulee",
+      "candidate_name": "Sweet potato crème brûlée",
+      "platform": "Instagram",
+      "creator": "@eatsbyrachel",
+      "reported_as": "A creator's viral recipe video, covered in November 2024.",
+      "what_makes_it_unusual": "A roasted sweet potato is split and mashed, topped with pastry cream and sugar, then torched or broiled for a crisp brûlée shell.",
+      "classification": "real social-media recipe; not evidence of a Thanksgiving tradition",
+      "source_urls": [
+        "https://www.thekitchn.com/viral-sweet-potato-creme-brulee-recipe-review-23692946",
+        "https://www.instagram.com/reel/C_I2LuugxlS/"
+      ]
+    },
+    {
+      "id": "tiktok-lit-mashed-potatoes",
+      "candidate_name": "Lit mashed potatoes",
+      "platform": "TikTok",
+      "creator": "@contentwithcee",
+      "reported_as": "A Thanksgiving 2025 TikTok discussed as viral, with thousands of comments and response videos in a contemporary report.",
+      "what_makes_it_unusual": "The creator replaces the water for instant mashed potatoes with Patrón tequila.",
+      "classification": "real viral social-media stunt/recipe; not an established Thanksgiving tradition",
+      "planner_note": "Do not recommend as a shared side without clearly flagging that it contains alcohol; it is better used as a fact-check example than a menu suggestion.",
+      "source_urls": [
+        "https://homeandtexture.com/holiday-mashed-potatoes-patron/"
+      ]
+    },
+    {
+      "id": "viral-flamin-hot-cheeto-turkey",
+      "candidate_name": "Flamin' Hot Cheeto turkey",
+      "platform": "Social video; reported as spreading through Twitter/Facebook, with a separate Reynolds Kitchens recipe previously circulating online",
+      "reported_as": "TIME described a newly viral video in November 2019 and noted an earlier Reynolds Kitchens version had gone viral in 2017.",
+      "what_makes_it_unusual": "One viral video showed a turkey coated in crushed Flamin' Hot Cheetos and stuffed with potatoes and a large block of cheese.",
+      "classification": "real social-media recipe/video; not an established Thanksgiving tradition",
+      "source_urls": [
+        "https://time.com/5716916/flamin-hot-cheeto-turkey/",
+        "https://www.buzzfeed.com/aliciabarron/theres-a-hot-cheetos-turkey-recipe-to-spice-up-your"
+      ]
+    },
+    {
+      "id": "instagram-mashed-potato-bottle-hack",
+      "candidate_name": "Bottle-squeezed instant mashed potatoes",
+      "platform": "Instagram",
+      "creator": "@anthonywehnert",
+      "reported_as": "A viral Instagram food hack covered in October 2024.",
+      "what_makes_it_unusual": "Instant potato mix is put in a water bottle and squeezed out as mashed potatoes.",
+      "classification": "real social-media food hack; not a distinct dish or Thanksgiving tradition",
+      "source_urls": [
+        "https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/",
+        "https://www.instagram.com/p/DAo5u0JSXRY/"
+      ]
+    }
+  ]
+}

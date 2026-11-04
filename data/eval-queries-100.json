@@ -1,0 +1,1057 @@
+{
+  "name": "thanksgiving-lore-pass-fail-queries-100-v1",
+  "description": "100 natural-language query variants: 52 improved-agent controls and 48 baseline tool-contract failure cases. Built from the approved eight-query evaluation set.",
+  "cases": [
+    {
+      "id": "pass-history-green-bean-batch-01",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Please keep the answer sourced and distinguish documented history from modern custom."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-01",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "query": "What is the sweet potato crème brûlée recipe from @eatsbyrachel, and can you link the original post? Is it a common Thanksgiving dish? Please keep the answer sourced and distinguish documented history from modern custom."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-01",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding a real Thanksgiving side everywhere, or is it more regional? Please separate what is documented from what is common. Please keep the answer sourced and distinguish documented history from modern custom."
+    },
+    {
+      "id": "pass-search-selection-control-batch-01",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Please keep the answer sourced and distinguish documented history from modern custom."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-01",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Please keep the answer sourced and distinguish documented history from modern custom."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-01",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is sweet potato casserole with marshmallows a real modern dish, and what does its history say about the first Thanksgiving? Please keep the answer sourced and distinguish documented history from modern custom."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-01",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding actually served at Thanksgiving, or is it only a regional family dish? Please keep the answer sourced and distinguish documented history from modern custom."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-01",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Also, when did green bean casserole originate? Please keep the answer sourced and distinguish documented history from modern custom."
+    },
+    {
+      "id": "pass-history-green-bean-batch-02",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? I am new to the holiday, so explain whether this is a broad tradition or just a regional one."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-02",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "query": "What is the sweet potato crème brûlée recipe from @eatsbyrachel, and can you link the original post? Is it a common Thanksgiving dish? I am new to the holiday, so explain whether this is a broad tradition or just a regional one."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-02",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding a real Thanksgiving side everywhere, or is it more regional? Please separate what is documented from what is common. I am new to the holiday, so explain whether this is a broad tradition or just a regional one."
+    },
+    {
+      "id": "pass-search-selection-control-batch-02",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? I am new to the holiday, so explain whether this is a broad tradition or just a regional one."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-02",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? I am new to the holiday, so explain whether this is a broad tradition or just a regional one."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-02",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is sweet potato casserole with marshmallows a real modern dish, and what does its history say about the first Thanksgiving? I am new to the holiday, so explain whether this is a broad tradition or just a regional one."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-02",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding actually served at Thanksgiving, or is it only a regional family dish? I am new to the holiday, so explain whether this is a broad tradition or just a regional one."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-02",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Also, when did green bean casserole originate? I am new to the holiday, so explain whether this is a broad tradition or just a regional one."
+    },
+    {
+      "id": "pass-history-green-bean-batch-03",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Please separate what is known from what social media makes visible."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-03",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "query": "What is the sweet potato crème brûlée recipe from @eatsbyrachel, and can you link the original post? Is it a common Thanksgiving dish? Please separate what is known from what social media makes visible."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-03",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding a real Thanksgiving side everywhere, or is it more regional? Please separate what is documented from what is common. Please separate what is known from what social media makes visible."
+    },
+    {
+      "id": "pass-search-selection-control-batch-03",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Please separate what is known from what social media makes visible."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-03",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Please separate what is known from what social media makes visible."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-03",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is sweet potato casserole with marshmallows a real modern dish, and what does its history say about the first Thanksgiving? Please separate what is known from what social media makes visible."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-03",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding actually served at Thanksgiving, or is it only a regional family dish? Please separate what is known from what social media makes visible."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-03",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Also, when did green bean casserole originate? Please separate what is known from what social media makes visible."
+    },
+    {
+      "id": "pass-history-green-bean-batch-04",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Could you answer carefully and include any relevant source links?"
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-04",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "query": "What is the sweet potato crème brûlée recipe from @eatsbyrachel, and can you link the original post? Is it a common Thanksgiving dish? Could you answer carefully and include any relevant source links?"
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-04",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding a real Thanksgiving side everywhere, or is it more regional? Please separate what is documented from what is common. Could you answer carefully and include any relevant source links?"
+    },
+    {
+      "id": "pass-search-selection-control-batch-04",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Could you answer carefully and include any relevant source links?"
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-04",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Could you answer carefully and include any relevant source links?"
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-04",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is sweet potato casserole with marshmallows a real modern dish, and what does its history say about the first Thanksgiving? Could you answer carefully and include any relevant source links?"
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-04",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding actually served at Thanksgiving, or is it only a regional family dish? Could you answer carefully and include any relevant source links?"
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-04",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Also, when did green bean casserole originate? Could you answer carefully and include any relevant source links?"
+    },
+    {
+      "id": "pass-history-green-bean-batch-05",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Please make clear what is documented and what is only inferred."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-05",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "query": "What is the sweet potato crème brûlée recipe from @eatsbyrachel, and can you link the original post? Is it a common Thanksgiving dish? Please make clear what is documented and what is only inferred."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-05",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding a real Thanksgiving side everywhere, or is it more regional? Please separate what is documented from what is common. Please make clear what is documented and what is only inferred."
+    },
+    {
+      "id": "pass-search-selection-control-batch-05",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Please make clear what is documented and what is only inferred."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-05",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Please make clear what is documented and what is only inferred."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-05",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is sweet potato casserole with marshmallows a real modern dish, and what does its history say about the first Thanksgiving? Please make clear what is documented and what is only inferred."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-05",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding actually served at Thanksgiving, or is it only a regional family dish? Please make clear what is documented and what is only inferred."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-05",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Also, when did green bean casserole originate? Please make clear what is documented and what is only inferred."
+    },
+    {
+      "id": "pass-history-green-bean-batch-06",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? I want a concise answer, but please distinguish common practice from a family tradition."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-06",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "query": "What is the sweet potato crème brûlée recipe from @eatsbyrachel, and can you link the original post? Is it a common Thanksgiving dish? I want a concise answer, but please distinguish common practice from a family tradition."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-06",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding a real Thanksgiving side everywhere, or is it more regional? Please separate what is documented from what is common. I want a concise answer, but please distinguish common practice from a family tradition."
+    },
+    {
+      "id": "pass-search-selection-control-batch-06",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? I want a concise answer, but please distinguish common practice from a family tradition."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-06",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? I want a concise answer, but please distinguish common practice from a family tradition."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-06",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is sweet potato casserole with marshmallows a real modern dish, and what does its history say about the first Thanksgiving? I want a concise answer, but please distinguish common practice from a family tradition."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-06",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding actually served at Thanksgiving, or is it only a regional family dish? I want a concise answer, but please distinguish common practice from a family tradition."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-06",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Also, when did green bean casserole originate? I want a concise answer, but please distinguish common practice from a family tradition."
+    },
+    {
+      "id": "pass-history-green-bean-batch-07",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Could this be a modern dish being projected onto the first Thanksgiving?"
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-07",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "query": "What is the sweet potato crème brûlée recipe from @eatsbyrachel, and can you link the original post? Is it a common Thanksgiving dish? Could this be a modern dish being projected onto the first Thanksgiving?"
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-07",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding a real Thanksgiving side everywhere, or is it more regional? Please separate what is documented from what is common. Could this be a modern dish being projected onto the first Thanksgiving?"
+    },
+    {
+      "id": "pass-search-selection-control-batch-07",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Could this be a modern dish being projected onto the first Thanksgiving?"
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-07",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Could this be a modern dish being projected onto the first Thanksgiving?"
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-07",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is sweet potato casserole with marshmallows a real modern dish, and what does its history say about the first Thanksgiving? Could this be a modern dish being projected onto the first Thanksgiving?"
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-07",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding actually served at Thanksgiving, or is it only a regional family dish? Could this be a modern dish being projected onto the first Thanksgiving?"
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-07",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Also, when did green bean casserole originate? Could this be a modern dish being projected onto the first Thanksgiving?"
+    },
+    {
+      "id": "pass-history-green-bean-batch-08",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Please avoid treating viral posts as evidence of what most families serve."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-08",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "query": "What is the sweet potato crème brûlée recipe from @eatsbyrachel, and can you link the original post? Is it a common Thanksgiving dish? Please avoid treating viral posts as evidence of what most families serve."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-08",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding a real Thanksgiving side everywhere, or is it more regional? Please separate what is documented from what is common. Please avoid treating viral posts as evidence of what most families serve."
+    },
+    {
+      "id": "pass-search-selection-control-batch-08",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Please avoid treating viral posts as evidence of what most families serve."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-08",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Please avoid treating viral posts as evidence of what most families serve."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-08",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is sweet potato casserole with marshmallows a real modern dish, and what does its history say about the first Thanksgiving? Please avoid treating viral posts as evidence of what most families serve."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-08",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding actually served at Thanksgiving, or is it only a regional family dish? Please avoid treating viral posts as evidence of what most families serve."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-08",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Also, when did green bean casserole originate? Please avoid treating viral posts as evidence of what most families serve."
+    },
+    {
+      "id": "pass-history-green-bean-batch-09",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Can you check the dish history and explain how confident the claim is?"
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-09",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "query": "What is the sweet potato crème brûlée recipe from @eatsbyrachel, and can you link the original post? Is it a common Thanksgiving dish? Can you check the dish history and explain how confident the claim is?"
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-09",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding a real Thanksgiving side everywhere, or is it more regional? Please separate what is documented from what is common. Can you check the dish history and explain how confident the claim is?"
+    },
+    {
+      "id": "pass-search-selection-control-batch-09",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Can you check the dish history and explain how confident the claim is?"
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-09",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Can you check the dish history and explain how confident the claim is?"
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-09",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is sweet potato casserole with marshmallows a real modern dish, and what does its history say about the first Thanksgiving? Can you check the dish history and explain how confident the claim is?"
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-09",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding actually served at Thanksgiving, or is it only a regional family dish? Can you check the dish history and explain how confident the claim is?"
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-09",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Also, when did green bean casserole originate? Can you check the dish history and explain how confident the claim is?"
+    },
+    {
+      "id": "pass-history-green-bean-batch-10",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Please explain this for someone attending their first American Thanksgiving."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-10",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "query": "What is the sweet potato crème brûlée recipe from @eatsbyrachel, and can you link the original post? Is it a common Thanksgiving dish? Please explain this for someone attending their first American Thanksgiving."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-10",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding a real Thanksgiving side everywhere, or is it more regional? Please separate what is documented from what is common. Please explain this for someone attending their first American Thanksgiving."
+    },
+    {
+      "id": "pass-search-selection-control-batch-10",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Please explain this for someone attending their first American Thanksgiving."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-10",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Please explain this for someone attending their first American Thanksgiving."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-10",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is sweet potato casserole with marshmallows a real modern dish, and what does its history say about the first Thanksgiving? Please explain this for someone attending their first American Thanksgiving."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-10",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding actually served at Thanksgiving, or is it only a regional family dish? Please explain this for someone attending their first American Thanksgiving."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-10",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Also, when did green bean casserole originate? Please explain this for someone attending their first American Thanksgiving."
+    },
+    {
+      "id": "pass-history-green-bean-batch-11",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? I care about whether the claim is verified, not just whether it sounds plausible."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-11",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "query": "What is the sweet potato crème brûlée recipe from @eatsbyrachel, and can you link the original post? Is it a common Thanksgiving dish? I care about whether the claim is verified, not just whether it sounds plausible."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-11",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding a real Thanksgiving side everywhere, or is it more regional? Please separate what is documented from what is common. I care about whether the claim is verified, not just whether it sounds plausible."
+    },
+    {
+      "id": "pass-search-selection-control-batch-11",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? I care about whether the claim is verified, not just whether it sounds plausible."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-11",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? I care about whether the claim is verified, not just whether it sounds plausible."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-11",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is sweet potato casserole with marshmallows a real modern dish, and what does its history say about the first Thanksgiving? I care about whether the claim is verified, not just whether it sounds plausible."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-11",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding actually served at Thanksgiving, or is it only a regional family dish? I care about whether the claim is verified, not just whether it sounds plausible."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-11",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Also, when did green bean casserole originate? I care about whether the claim is verified, not just whether it sounds plausible."
+    },
+    {
+      "id": "pass-history-green-bean-batch-12",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Please mention if the evidence only shows a regional or online example."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-12",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "query": "What is the sweet potato crème brûlée recipe from @eatsbyrachel, and can you link the original post? Is it a common Thanksgiving dish? Please mention if the evidence only shows a regional or online example."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-12",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding a real Thanksgiving side everywhere, or is it more regional? Please separate what is documented from what is common. Please mention if the evidence only shows a regional or online example."
+    },
+    {
+      "id": "pass-search-selection-control-batch-12",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Please mention if the evidence only shows a regional or online example."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-12",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Please mention if the evidence only shows a regional or online example."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-12",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is sweet potato casserole with marshmallows a real modern dish, and what does its history say about the first Thanksgiving? Please mention if the evidence only shows a regional or online example."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-12",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding actually served at Thanksgiving, or is it only a regional family dish? Please mention if the evidence only shows a regional or online example."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-12",
+      "variant": "baseline",
+      "expected_run": "fail",
+      "expected_evaluators": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Also, when did green bean casserole originate? Please mention if the evidence only shows a regional or online example."
+    },
+    {
+      "id": "pass-history-green-bean-batch-13",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "When was green bean casserole created, and was it served at the 1621 harvest gathering? Could you give me the careful version with sources?"
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-13",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "query": "What is the sweet potato crème brûlée recipe from @eatsbyrachel, and can you link the original post? Is it a common Thanksgiving dish? Could you give me the careful version with sources?"
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-13",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "query": "Is corn pudding a real Thanksgiving side everywhere, or is it more regional? Please separate what is documented from what is common. Could you give me the careful version with sources?"
+    },
+    {
+      "id": "pass-search-selection-control-batch-13",
+      "variant": "improved",
+      "expected_run": "pass",
+      "expected_evaluators": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "query": "I see both the tequila instant mashed potato trend and bottle-squeezed instant mash videos everywhere. Does that mean these are broadly popular Thanksgiving staples in American families? Could you give me the careful version with sources?"
+    }
+  ]
+}

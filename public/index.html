@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff4dc">
+  <title>Gobble & Tell — Thanksgiving Food Lore</title>
+  <style>
+    :root{--ink:#392419;--muted:#806854;--paper:#fffaf0;--cream:#fff1d6;--orange:#dc5a25;--deep:#9a321d;--green:#405e3e;--line:#ead9bd;--pink:#f6dce0;--yellow:#f7c95d;--shadow:0 18px 45px #6d34151b}
+    *{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.55 ui-rounded,"Avenir Next",Avenir,system-ui,sans-serif}button,textarea{font:inherit}button{cursor:pointer}.shell{max-width:1180px;margin:auto;padding:24px 26px 72px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.04em;font-size:20px}.brand-mark{width:36px;height:36px;border-radius:13px;background:var(--orange);color:white;display:grid;place-items:center;font-size:20px;transform:rotate(-5deg)}.trace-pill{display:flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid var(--line);border-radius:99px;background:#fff;font-size:12px;color:var(--muted);font-weight:750;text-decoration:none}.trace-pill:hover{border-color:#bf8054;color:var(--deep)}.trace-pill.offline{pointer-events:none}.dot{width:8px;height:8px;background:#c6b9a5;border-radius:50%}.dot.on{background:#438a53;box-shadow:0 0 0 3px #438a5322}
+    .hero{margin-top:26px;border-radius:30px;min-height:354px;padding:44px 48px;position:relative;overflow:hidden;background:radial-gradient(circle at 85% 22%,#ffd77a 0 10%,transparent 10.2%),linear-gradient(120deg,#f8dba5,#ffeecb 58%,#f5bb78);display:flex;align-items:center;box-shadow:var(--shadow)}.hero-copy{max-width:560px;position:relative;z-index:2}.eyebrow{color:var(--deep);font-size:12px;letter-spacing:.14em;font-weight:900;text-transform:uppercase}.hero h1{font-family:Georgia,serif;letter-spacing:-.055em;font-size:clamp(42px,6vw,72px);line-height:.98;margin:16px 0 15px;max-width:530px}.hero p{font-size:17px;color:#664b38;max-width:470px;margin:0}.hero-art{position:absolute;width:405px;height:405px;right:3%;bottom:-80px;object-fit:contain;filter:drop-shadow(0 14px 10px #8b4b2830)}.hero-sticker{display:inline-flex;background:#fff8e8;border:1px solid #e4c99b;border-radius:10px 12px 9px 13px;padding:6px 11px;font-size:12px;font-weight:800;color:#745125;transform:rotate(-3deg);margin-top:20px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:48px 0 17px}.section-head h2{font:700 31px/1.1 Georgia,serif;margin:0;letter-spacing:-.035em}.section-head p{margin:7px 0 0;color:var(--muted);font-size:14px}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:#fffdf8;color:var(--muted);padding:7px 12px;border-radius:99px;font-size:12px;font-weight:800}.filter.active{background:var(--ink);color:white;border-color:var(--ink)}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.dish-card{background:white;border:1px solid var(--line);border-radius:19px;padding:18px;min-height:232px;display:flex;flex-direction:column;box-shadow:0 6px 18px #6d34150a}.dish-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.dish-emoji{font-size:26px}.badge{font-size:10px;letter-spacing:.04em;text-transform:uppercase;font-weight:900;border-radius:99px;padding:5px 9px;background:#e7f0df;color:#355c34}.badge.social{background:#fce6cf;color:#9e4a1d}.badge.synthetic{background:#f5dfe3;color:#883e4a}.dish-card h3{font:700 20px/1.15 Georgia,serif;margin:13px 0 7px}.dish-card p{font-size:13px;line-height:1.5;color:var(--muted);margin:0 0 13px}.card-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:8px}.card-links a{font-size:12px;font-weight:850;color:var(--deep);text-decoration:none}.card-links a:hover{text-decoration:underline}.no-results{grid-column:1/-1;padding:28px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:16px}
+    .planner{margin-top:54px;border:1px solid var(--line);border-radius:26px;background:#fff;border-top:5px solid var(--green);box-shadow:var(--shadow);overflow:hidden}.planner-head{padding:24px 27px 18px;display:flex;justify-content:space-between;align-items:start;gap:18px}.planner-title h2{font:700 30px/1 Georgia,serif;margin:0}.planner-title p{font-size:13px;color:var(--muted);margin:8px 0 0}.variant-switch{display:flex;align-items:center;gap:4px;padding:4px;background:#f6f0e5;border-radius:99px;flex-shrink:0}.variant-switch button{border:0;border-radius:99px;background:transparent;padding:8px 12px;font-size:11px;font-weight:850;color:var(--muted)}.variant-switch button.active{background:white;color:var(--ink);box-shadow:0 2px 5px #00000010}.chat-log{padding:0 27px 18px;display:grid;gap:13px;max-height:420px;overflow-y:auto}.empty-state{border:1px dashed var(--line);background:#fffcf6;border-radius:17px;padding:20px;display:flex;align-items:center;gap:14px;color:var(--muted);font-size:14px}.empty-state span:first-child{font-size:30px}.bubble{padding:14px 17px;border-radius:17px;max-width:88%;white-space:pre-wrap;font-size:14px}.bubble.user{justify-self:end;background:var(--green);color:white;border-bottom-right-radius:5px}.bubble.agent{justify-self:start;background:#fff5df;border:1px solid #f1dfbb;border-bottom-left-radius:5px}.bubble.agent p{margin:0 0 9px}.bubble.agent p:last-child{margin-bottom:0}.bubble.agent a{color:var(--deep);font-weight:750}.eval-line{font-size:11px;font-weight:900;margin-top:9px;padding-top:8px;border-top:1px solid #e8d6b2;color:#a7432c}.eval-line.pass{color:#3d6b3f}.run-meta{font-size:10px;color:#8a7967;margin-top:8px}.composer{padding:17px 27px 23px;background:#fffdf9;border-top:1px solid #f1e6d6}.prompt-chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}.prompt-chip{border:1px solid var(--line);background:white;border-radius:99px;padding:6px 10px;color:#6b5543;font-size:11px;font-weight:750}.input-row{display:flex;gap:10px;align-items:stretch}.input-row textarea{flex:1;resize:vertical;min-height:52px;max-height:140px;border:1px solid var(--line);border-radius:14px;padding:13px 15px;outline:none;color:var(--ink);background:white}.input-row textarea:focus{border-color:#bd7446;box-shadow:0 0 0 3px #dc5a251b}.send{border:0;border-radius:14px;background:var(--orange);color:white;font-size:13px;font-weight:900;padding:0 20px;box-shadow:0 5px 0 #a94120}.send:disabled{opacity:.6;cursor:wait}.footnote{text-align:center;color:#9a8771;font-size:11px;margin:17px 0 0}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#3a2921;color:white;padding:10px 15px;border-radius:12px;font-size:12px;box-shadow:var(--shadow);display:none}
+    @media(max-width:820px){.hero{padding:35px 30px;min-height:325px}.hero-art{width:290px;height:290px;right:-20px;bottom:-42px;opacity:.68}.hero-copy{max-width:500px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:580px){.shell{padding:16px 14px 45px}.hero{padding:28px 23px;min-height:370px;align-items:flex-start}.hero h1{font-size:49px}.hero p{font-size:15px}.hero-art{width:230px;height:230px;right:-18px;bottom:-38px;opacity:.75}.section-head{display:block;margin-top:36px}.filters{margin-top:14px}.cards{grid-template-columns:1fr}.dish-card{min-height:190px}.planner-head{display:block;padding:20px}.variant-switch{margin-top:16px;width:max-content}.chat-log{padding:0 17px 16px}.composer{padding:15px 17px 19px}.input-row{flex-direction:column}.send{height:48px}.bubble{max-width:97%}.trace-pill{font-size:10px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">🦃</span> Gobble &amp; Tell</div>
+      <a class="trace-pill offline" id="traceIndicator" href="#" target="_blank" rel="noopener noreferrer"><span class="dot" id="traceDot"></span><span id="traceStatus">Checking AX connection…</span></a>
+    </header>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">A Thanksgiving field guide for the newly baffled</div>
+        <h1>Is it tradition<br>or just… a lot?</h1>
+        <p>Meet the dishes, decode the viral food stunts, and plan a feast without accidentally inviting 1621 to the menu.</p>
+        <span class="hero-sticker">Made with 100% questionable gravy opinions</span>
+      </div>
+      <img class="hero-art" src="/assets/turkey-stickers.png" alt="Silly Thanksgiving turkey and food characters">
+    </section>
+
+    <section class="planner" aria-labelledby="plannerHeading">
+      <div class="planner-head">
+        <div class="planner-title"><h2 id="plannerHeading">Ask the dinner planner</h2><p>Ask if a dish is real, what the internet is doing to potatoes, or plan a menu for your guests.</p></div>
+        <div class="variant-switch" role="group" aria-label="Choose agent version"><button class="active" data-variant="baseline">Baseline 🥴</button><button data-variant="improved">Improved ✨</button></div>
+      </div>
+      <div class="chat-log" id="chatLog"><div class="empty-state"><span>🥧</span><span>Pick a question below or ask your own. Baseline follows stale search-tool documentation and may need a validation retry; the improved version uses the current contract.</span></div></div>
+      <div class="composer">
+        <div class="prompt-chips">
+          <button class="prompt-chip" data-prompt="Was green bean casserole served at the 1621 feast? Is it common today?">Green bean casserole: 1621?</button>
+          <button class="prompt-chip" data-prompt="Is sweet potato casserole with marshmallows a real Thanksgiving dish or an internet joke?">Marshmallows on sweet potatoes?</button>
+          <button class="prompt-chip" data-prompt="I saw a sweet potato crème brûlée video from @eatsbyrachel. What is it, and can you verify the original post?">Sweet potato crème brûlée</button>
+          <button class="prompt-chip" data-prompt="Are tequila instant mashed potatoes a real viral Thanksgiving recipe, and should I serve them to guests?">Tequila mashed potatoes?</button>
+          <button class="prompt-chip" data-prompt="Is Pilgrim's Peanut-Butter Pumpkin Gravy a real Thanksgiving tradition, or is that name made up?">Peanut-butter pumpkin gravy?</button>
+          <button class="prompt-chip" data-prompt="Plan a Thanksgiving menu for 8, including one dairy-free guest. Give me a simple prep order.">Plan dinner for 8</button>
+        </div>
+        <form class="input-row" id="plannerForm"><textarea id="question" placeholder="Ask the turkey hotline…" aria-label="Question for the Thanksgiving planner" required></textarea><button class="send" id="sendButton" type="submit">Ask the bird →</button></form>
+      </div>
+    </section>
+    <p class="footnote">Sample questions are drawn from real holiday food lore and the demo’s synthetic benchmark cases.</p>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script>
+    let variant = 'baseline';
+    function esc(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+    document.querySelectorAll('[data-variant]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-variant]').forEach(b=>b.classList.remove('active'));button.classList.add('active');variant=button.dataset.variant;}));
+    document.querySelectorAll('[data-prompt]').forEach(button=>button.addEventListener('click',()=>{document.querySelector('#question').value=button.dataset.prompt;document.querySelector('#question').focus();}));
+    fetch('/api/status').then(r=>r.json()).then(status=>{const indicator=document.querySelector('#traceIndicator');document.querySelector('#traceDot').classList.toggle('on',status.tracing);document.querySelector('#traceStatus').textContent=status.tracing?`AX project · ${status.project}`:'AX tracing off';if(status.tracing&&status.projectUrl){indicator.href=status.projectUrl;indicator.classList.remove('offline');indicator.setAttribute('aria-label',`Open ${status.project} in Arize AX`);}}).catch(()=>{document.querySelector('#traceStatus').textContent='Agent server unavailable';});
+    function renderAnswer(text){
+      const safe=esc(text);
+      return safe.split(/\n\n+/).map(paragraph=>`<p>${paragraph.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,'<a href="$2" target="_blank" rel="noopener noreferrer">$1 ↗</a>').replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>')}</p>`).join('');
+    }
+    const form=document.querySelector('#plannerForm'),question=document.querySelector('#question'),send=document.querySelector('#sendButton'),log=document.querySelector('#chatLog');
+    form.addEventListener('submit',async event=>{
+      event.preventDefault();const input=question.value.trim();if(!input)return;
+      const empty=log.querySelector('.empty-state');if(empty)empty.remove();
+      log.insertAdjacentHTML('beforeend',`<div class="bubble user">${esc(input)}</div>`);question.value='';send.disabled=true;send.textContent='Checking the gravy…';log.insertAdjacentHTML('beforeend','<div class="bubble agent" id="thinking">Consulting the suspiciously large recipe binder… 🥄</div>');log.scrollTop=log.scrollHeight;
+      try{
+        const response=await fetch('/api/plan',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({input,variant})});const result=await response.json();document.querySelector('#thinking')?.remove();if(!response.ok)throw new Error(result.error||'The planner could not answer.');
+        const state=result.evaluation.passed?'pass':'fail';
+        log.insertAdjacentHTML('beforeend',`<div class="bubble agent">${renderAnswer(result.answer)}<div class="eval-line ${state}">Tool-contract eval: ${esc(result.evaluation.label)} · ${esc(result.evaluation.reason)}</div><div class="run-meta">${esc(result.variant)} run · ${esc(result.runId)} · ${result.metrics.searchToolCalls} search call(s), ${result.metrics.invalidSourceTypeCalls} invalid value(s) · trace sent to AX when connected</div></div>`);
+      }catch(error){document.querySelector('#thinking')?.remove();log.insertAdjacentHTML('beforeend',`<div class="bubble agent">${esc(error.message||'Something went wrong. Check that the local server is running.')}</div>`);}
+      finally{send.disabled=false;send.textContent='Ask the bird →';log.scrollTop=log.scrollHeight;}
+    });
+  </script>
+</body>
+</html>
