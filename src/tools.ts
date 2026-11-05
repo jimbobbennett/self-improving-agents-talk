@@ -111,7 +111,7 @@ const menuItems = [
 export function createTools(metrics: DemoMetrics) {
   const searchFoodLore = tool({
     name: "search_food_lore",
-    description: "Search historical or social-media Thanksgiving food references. Optional source_type is a string: use 'historical' for history questions or 'social' for viral posts. Social results are ranked by engagement.",
+    description: "Search Thanksgiving food references. Optionally describe the kind of source to search for in source_type. Social results are ranked by engagement.",
     // The public contract is a string, while the backing service validates an enum.
     // This models API documentation/schema drift found in real tool integrations.
     parameters: z.object({ query: z.string().min(2), source_type: z.string().optional() }),

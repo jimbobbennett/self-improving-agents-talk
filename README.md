@@ -1,6 +1,6 @@
-# Thanksgiving Food Lore Planner
+# Gobble & Tell: Thanksgiving Food Lore Chatbot
 
-A demo for a self-improving Thanksgiving agent. The agent helps a first-time host distinguish real dishes from social-media stunts, separate modern traditions from claims about 1621, and sketch a menu for guests.
+A demo for a self-improving Thanksgiving food-lore chatbot. It helps a British newcomer understand American dishes and social-media food trends, and separates documented modern traditions from claims about the 1621 gathering.
 
 ## Run the demo
 
@@ -18,7 +18,7 @@ Do not commit credentials. The demo warns and runs without AX tracing when the A
 ```sh
 npm install
 npm run build
-npm run demo -- "Is green bean casserole a Pilgrim dish? Plan a menu for 8 with one dairy-free guest."
+npm run demo -- "Is corn pudding a real Thanksgiving side everywhere, or is it more regional?"
 ```
 
 Launch the local web UI with:
@@ -27,7 +27,7 @@ Launch the local web UI with:
 npm start
 ```
 
-Then open `http://127.0.0.1:3000`. The page offers sample questions about real, viral, and synthetic dishes, plus the baseline/improved planner switch. Planner requests run through the same AX-traced agent as the CLI. When AX tracing is configured, the status pill links directly to the project.
+Then open `http://127.0.0.1:3000`. The page is a chat with playful turkey artwork, three real-world starter questions, and a link to the AX project. It runs the original agent only. Answers render headings, lists, emphasis, and source links. Evaluation results stay in AX rather than appearing as failure badges in the chat.
 
 Run the eight-case local pass/fail query set sequentially with:
 
@@ -43,7 +43,9 @@ Set `DEMO_VARIANT=improved` to run the improved prompt:
 DEMO_VARIANT=improved npm run demo -- "Is sweet potato crème brûlée a Thanksgiving tradition?"
 ```
 
-The baseline has two measured failure modes. Its stale tool documentation says to send `source_type="historical"`, while the backing service accepts `history` and `social`; the invalid value reaches runtime validation and can cause a corrective tool call. It also treats multiple high-engagement search hits as evidence of household popularity, although the result set is curated and non-representative. The improved variant uses the current enum and treats the social results as a selected sample. Tools read deterministic local fixtures; their lookup cost and latency are simulated. Model token usage, tool errors, and retries are captured in the shared AX trace. Four LLM judge evaluators and a code evaluator are defined in AX; the prompt sources are in [eval-prompts.json](data/eval-prompts.json).
+The demo covers two distinct failure types. First, the model chooses a free-form `source_type` value that the search service may reject, causing a corrective retry and another model call. The tool description intentionally leaves the string open-ended; the service accepts only `history` or `social`. Second, the model can overstate what curated sources establish—for example, inferring popularity from selected search results. AX has four LLM judge evaluators and a code evaluator for these behaviors. The tool-contract and search-selection checks continuously score new traces; factual-grounding, dish-classification, and source-integrity judges are available for targeted backfills. The prompt sources are in [eval-prompts.json](data/eval-prompts.json).
+
+The original app snapshot is kept under [`orginal/`](orginal/) as the first layer of the talk repository.
 
 ## Demo material
 
@@ -52,4 +54,4 @@ The baseline has two measured failure modes. Its stale tool documentation says t
 
 ## Current boundary
 
-The AX evaluator definitions and local query set are configured. An AX task still needs a chosen run mode (historical backfill, continuous, or both) before the evaluators will score project traces. Trace-derived datasets, experiment hill-climbing, and the autonomous Codex SDK loop remain later build steps in the talk plan.
+The AX evaluators are attached to the Thanksgiving project. Tool-contract and search-selection evaluations run continuously; the other judge evaluators are attached to a one-time backfill task to limit ongoing cost. Trace-derived datasets, experiment hill-climbing, and the autonomous Codex SDK loop remain later build steps in the talk plan.

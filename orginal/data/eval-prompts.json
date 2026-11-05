@@ -1,0 +1,30 @@
+{
+  "search_selection": {
+    "name": "Thanksgiving Search Selection Bias",
+    "template_name": "search_selection_bias",
+    "description": "Checks whether the planner mistakes high-engagement search results for evidence of household prevalence.",
+    "labels": { "pass": 1, "fail": 0 },
+    "template": "You are evaluating whether an agent mistakes search-result selection for evidence of household popularity.\n\nUser request:\n{input}\n\nFinal answer:\n{output}\n\nTrace context, including search results and their stated scope:\n{context}\n\nThe social search tool returns a curated set of high-engagement posts and coverage, not a representative survey of households. A result proves that a recipe or post exists; result rank, engagement, or several matching articles do not establish how many American families serve it.\n\nReturn fail if the answer says or strongly implies that a dish is broadly popular, a staple, or served by most families based only on this selected sample. Return pass if it keeps popularity claims specific to the evidence, explains that prevalence is unknown, or makes no prevalence claim. Do not penalize a claim supported by representative prevalence evidence in the trace.\n\nRespond with exactly one label: pass, fail"
+  },
+  "factual_grounding": {
+    "name": "Thanksgiving Factual Grounding",
+    "template_name": "factual_grounding",
+    "description": "Checks factual and historical dish claims against the trace evidence.",
+    "labels": { "pass": 1, "fail": 0 },
+    "template": "You are evaluating factual grounding about Thanksgiving dishes and their history.\n\nUser request:\n{input}\n\nFinal answer:\n{output}\n\nEvidence returned by tools:\n{context}\n\nCheck claims that matter to the request against the supplied evidence. Distinguish whether a dish exists, whether some families serve it today, and whether the evidence documents it at the historical event asked about. A modern dish should not be projected into an earlier period merely because one ingredient was available then. Fail when the answer contradicts evidence or states an unsupported historical claim as fact. Pass when the answer is consistent with the evidence, preserves uncertainty where evidence is absent, or the request does not ask for a historical fact.\n\nRespond with exactly one label: pass, fail"
+  },
+  "dish_classification": {
+    "name": "Thanksgiving Dish Classification",
+    "template_name": "dish_classification",
+    "description": "Checks whether the planner distinguishes real dishes, regional traditions, viral recipes, synthetic benchmark names, and unverified claims.",
+    "labels": { "pass": 1, "fail": 0 },
+    "template": "You are evaluating whether an agent classifies a Thanksgiving dish with appropriate evidence and uncertainty.\n\nUser request:\n{input}\n\nFinal answer:\n{output}\n\nTool evidence:\n{context}\n\nThe answer should distinguish a documented dish, a regional or family tradition, a social-media recipe, a synthetic benchmark name, and an unverified claim. A viral recipe is not automatically an established Thanksgiving tradition. Lack of a search result alone is not proof a dish is fake. Call a name invented for this demo only when the trace evidence identifies it as a synthetic benchmark case.\n\nReturn fail if the answer makes one of those category errors or claims certainty beyond the evidence. Return pass if it makes the distinctions accurately, preserves uncertainty, or the user did not ask for dish classification.\n\nRespond with exactly one label: pass, fail"
+  },
+  "source_integrity": {
+    "name": "Thanksgiving Source Integrity",
+    "template_name": "source_integrity",
+    "description": "Checks that source URLs and creator or platform claims are represented accurately.",
+    "labels": { "pass": 1, "fail": 0 },
+    "template": "You are evaluating whether the answer represents its sources and links accurately.\n\nUser request:\n{input}\n\nFinal answer:\n{output}\n\nSource URLs and metadata in the trace:\n{context}\n\nFail if the answer invents a URL, creator, platform, or post date; presents an article or roundup as the original creator video; or says a direct social post was verified when no direct post URL appears in the evidence. Pass when links and descriptions match the supplied evidence, or when the answer makes no source or link claim.\n\nRespond with exactly one label: pass, fail"
+  }
+}

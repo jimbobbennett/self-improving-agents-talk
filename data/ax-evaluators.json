@@ -1,5 +1,6 @@
 {
-  "space": "thanksgiving-food-lore-demo",
+  "space": "jbennett Space",
+  "project": "thanksgiving-food-lore-demo",
   "judge_model": "gpt-5.6-luna",
   "evaluators": {
     "search_selection": { "name": "Thanksgiving Search Selection Bias", "id": "RXZhbHVhdG9yOjE5Nzc1Ojc0SzU=" },
@@ -13,5 +14,5 @@
       "checks": "Each TOOL span input must not contain source_type=historical. A rejected historical call scores fail; corrected history/social calls score pass."
     }
   },
-  "task_status": "Attached to the Thanksgiving project and backfill evaluated against the 100-query batch. Continuous sampling is off to control judge cost."
+  "task_status": "All four judges and the tool-contract evaluator are attached. Tool-contract and search-selection checks continuously score new traces; the other three judges remain available for backfill to limit ongoing judge cost."
 }

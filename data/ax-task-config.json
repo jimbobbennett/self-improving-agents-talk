@@ -3,7 +3,7 @@
   "space": "jbennett Space",
   "tasks": [
     {
-      "name": "Thanksgiving Agent Judge Evaluations",
+      "name": "Thanksgiving Agent Judge Backfill",
       "id": "T25saW5lVGFzazo1NTE0MjpnazVY",
       "task_type": "TEMPLATE_EVALUATION",
       "continuous": false,
@@ -47,7 +47,7 @@
       "name": "Thanksgiving Search Tool Contract",
       "id": "T25saW5lVGFzazo1NTE0MzpZRUNF",
       "task_type": "CODE_EVALUATION",
-      "continuous": false,
+      "continuous": true,
       "data_granularity": "span",
       "evaluators": [
         {
@@ -58,9 +58,26 @@
           }
         }
       ]
+    },
+    {
+      "name": "Thanksgiving Search Selection Bias Monitor",
+      "id": "T25saW5lVGFzazo1NTc0NjpiWSt4",
+      "task_type": "TEMPLATE_EVALUATION",
+      "continuous": true,
+      "data_granularity": "trace",
+      "evaluators": [
+        {
+          "evaluator_id": "RXZhbHVhdG9yOjE5Nzc1Ojc0SzU=",
+          "column_mappings": {
+            "input": "attributes.demo.request_input",
+            "output": "attributes.demo.response_output",
+            "context": "attributes.demo.context"
+          }
+        }
+      ]
     }
   ],
-  "task_mode": "backfill completed on the 100-query batch; continuous sampling is off to control cost",
+  "task_mode": "Four trace judges are attached for backfill; search-selection bias and tool-contract checks continuously score new traces at 100% sampling.",
   "latest_runs": {
     "judge_task": {
       "id": "VGVtcGxhdGVFdmFsdWF0aW9uVGFza1J1bjoyNzIxMjcxNDpzMDVr",

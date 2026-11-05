@@ -1,0 +1,1657 @@
+{
+  "querySet": "thanksgiving-lore-pass-fail-queries-100-v1",
+  "completed": 100,
+  "results": [
+    {
+      "id": "pass-history-green-bean-batch-01",
+      "runId": "1b7244f5-1d4d-4357-aff7-a069a4a672fc",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "### When was it created?\nGreen bean casserole was created in a Campbell’s test kitchen in **1955**, commonly credited to **Dorcas Reilly**. It became a modern Thanksgiving staple through widespread publication and promotion.\n\n### Is it common?\nYes—especially as a **modern American Thanksgiving tradition**—though it remains a family or regional preference, not an age-old requirement.\n\n### Was it served at the 1621 gathering?\n**No documented evidence supports that.** The 1621 harvest gathering predates the casserole by more than three centuries. Accounts mention foods such as venison, seafood, corn, and local vegetables, but not green bean casserole.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) · [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)"
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-01",
+      "runId": "903a1ed4-d866-42ff-a6c4-1a997bb35994",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## @eatsbyrachel’s recipe\n\nThe documented version uses:\n\n1. Roast a sweet potato.\n2. Split it open and mash the flesh in its skin.\n3. Top with pastry cream.\n4. Sprinkle with sugar.\n5. Torch or broil until the sugar forms a crisp brûlée shell.\n\n**Original post:** [@eatsbyrachel’s Instagram Reel](https://www.instagram.com/reel/C_I2LuugxlS/)  \nRecipe coverage: [The Kitchn](https://www.thekitchn.com/viral-sweet-potato-creme-brulee-recipe-review-23692946)\n\n## Is it common at Thanksgiving?\n\n- **Does it exist?** Yes—a documented modern social-media recipe.\n- **Is it common?** No evidence here establishes it as a common national Thanksgiving dish. It appears to be a recent, creator-specific preparation rather than a standard holiday staple.\n- **Was it documented at the 1621 harvest gathering?** No. There is no evidence that sweet potato crème brûlée, or this preparation, was served in 1621. Modern sweet potatoes and crème brûlée should not be projected backward into that meal.\n\nFor context, sweet-potato casserole—especially the marshmallow-topped version—is a documented **modern** American tradition, with evidence dating to the early twentieth century, not 1621: [Smithsonian](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/)."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-01",
+      "runId": "7085902a-4e03-4f53-91ca-74b4c3f36815",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## Does corn pudding exist?\nYes. It is a well-established dish, including as a Thanksgiving side. Sources include:\n\n- [Martha Stewart: Corn Pudding with Chives](https://www.marthastewart.com/1155558/corn-pudding-chives)\n- [USDA/National Archives: Corn Pudding](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)\n\n## Is it common everywhere?\nNo. The evidence supports it being **regional and household-specific**, rather than a universal American Thanksgiving dish. It is especially associated with parts of the South and with particular family traditions. The available references document the dish but do not measure how many households serve it nationally.\n\n## Was it documented at the 1621 harvest gathering?\nNot as modern corn pudding. Although maize was present in the region, that does **not** establish that a baked custard-style corn pudding was served at the 1621 gathering. Modern recipes and later custom should be kept separate from evidence about that event.\n\nSo, for a British newcomer: corn pudding is a genuine American Thanksgiving option, but not an everywhere-traditional one."
+    },
+    {
+      "id": "pass-search-selection-control-batch-01",
+      "runId": "68ab17d0-ba58-42fb-8af8-f8e6b7f0c3a9",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 3
+      },
+      "answer": "No. Viral visibility does **not** establish broad family popularity.\n\n- **Tequila instant mash exists:** It was a reported 2025 TikTok stunt/recipe replacing the water with Patrón tequila—not an established Thanksgiving tradition. [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/)\n- **Bottle-squeezed instant mash exists:** This was a 2024 Instagram food hack, not a distinct dish or customary Thanksgiving preparation. [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/) · [Instagram](https://www.instagram.com/p/DAo5u0JSXRY/)\n- **Popularity:** The search results are a curated, high-engagement social sample, not a representative survey of American households. They support “viral online trends,” not “broadly popular staples.”\n- **Documented history:** I found no evidence connecting either trend to the 1621 harvest gathering. Modern instant potatoes—and especially tequila or bottle-squeezing—should not be projected backward into that event.\n\nSo: real modern internet phenomena, but neither is documented as a widespread American family custom or historical Thanksgiving food."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-01",
+      "runId": "1ea9f2e1-2e77-438b-bdd7-4bb5c6eac302",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "## Green bean casserole\n\n- **Created when?** It was developed in **1955** in the Campbell Soup Company test kitchen by **Dorcas Reilley**, using canned green beans, cream of mushroom soup, and fried onions.\n- **Is it common?** Yes— it became a widely popular **modern American Thanksgiving tradition**, though it is not universal and may be especially associated with particular families or regions.\n- **Was it served at the 1621 harvest gathering?** **No documented evidence supports that.** The dish did not yet exist; it is a twentieth-century creation. Accounts of the 1621 gathering mention foods such as venison, seafood, corn, and squash, but not green bean casserole.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-01",
+      "runId": "d396eb2c-529c-44d6-8a4a-044655706a22",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**sweet potato casserole with marshmallows is a real modern American dish**. Marshmallow-topped versions are documented from the **early twentieth century**, so it is a later recipe, not an ancient Thanksgiving tradition.\n\n- **Does it exist?** Yes, as a recognizable casserole, often mashed sweet potatoes topped with marshmallows and baked.\n- **Is it common?** It is a familiar Thanksgiving side in the United States, but not universal; recipes and toppings vary by household and region.\n- **Was it served at the 1621 harvest gathering?** There is **no documentation** for it. Accounts of that gathering mention foods such as venison, seafood, corn, and local produce—not marshmallow-topped sweet potatoes. The casserole’s modern history cannot be projected backward onto the first Thanksgiving.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/) and the [Smithsonian National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-01",
+      "runId": "dfd0b73f-4144-4ec6-9172-38c1061fb68d",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**corn pudding is genuinely served at Thanksgiving**, but it is more **regional and family-specific** than universal. It appears especially often in Southern and some Midwestern Thanksgiving traditions.\n\n- **Does the dish exist?** Yes. Corn pudding is a baked, custard-like side made with corn, eggs, and usually milk or cream.\n- **Is it common?** It is a recognized Thanksgiving side, but not as broadly standard as turkey, stuffing, or cranberry sauce. Its presence often reflects regional cooking or family tradition.\n- **Was it documented at the 1621 harvest gathering?** No. Although corn was important to Indigenous peoples and present in the broader historical context, there is no evidence that modern corn pudding was served at the 1621 gathering. The familiar Thanksgiving menu developed much later.\n\nSources: [Martha Stewart corn pudding](https://www.marthastewart.com/1155558/corn-pudding-chives) and the USDA’s [America’s Harvest corn pudding reference](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-01",
+      "runId": "baea177b-98d7-4632-83b0-f3973d34c4e7",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 2
+      },
+      "answer": "### Tequila and bottle-squeezed mashed potatoes\n\n- **Do they exist?** Yes. A 2025 TikTok showed instant mash made with Patrón tequila: [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/). A 2024 Instagram hack put instant mash in a bottle and squeezed it out: [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/) and [Instagram](https://www.instagram.com/p/DAo5u0JSXRY/).\n- **Are they common?** No evidence suggests they are broadly popular family Thanksgiving staples. They are viral stunts/hacks, and the research specifically cautions that high-engagement posts are not representative of households.\n- **Were they served in 1621?** No. They are modern instant-food/social-media creations.\n\n### Green bean casserole\n\n- **Does it exist?** Yes, as a twentieth-century Campbell’s test-kitchen recipe.\n- **When did it originate?** It is generally dated to **1955**, associated with Campbell’s developer Dorcas Reilly.\n- **Is it common?** It became a well-established American Thanksgiving and holiday custom, though not universal; family and regional menus vary.\n- **Was it at the 1621 gathering?** No. It was invented more than three centuries later. Smithsonian references discuss the limited evidence for the 1621 menu: [Smithsonian](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian).\n\nIn short: viral visibility is not the same as national household prevalence—especially when tequila enters the potato bowl."
+    },
+    {
+      "id": "pass-history-green-bean-batch-02",
+      "runId": "4bda7a28-8078-4c04-8776-feab5ebe6847",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "### When was it created?\nGreen bean casserole was created in **1955** in the Campbell Soup Company’s test kitchen, reportedly by Dorcas Reilly.\n\n### Was it served in 1621?\n**No.** It is a twentieth-century dish, so it was not served at the 1621 harvest gathering. Surviving accounts of that gathering mention foods such as venison, waterfowl, seafood, corn, and seasonal produce—not this casserole.\n\n### Broad tradition or regional?\nIt is a **widely recognized American Thanksgiving tradition**, especially in home-cooked holiday meals, but it is not universal. Some families serve it every year; others consider it regional, substitute another vegetable, or skip casseroles entirely. Its popularity should not be confused with being an old colonial tradition.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/), [Smithsonian National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-02",
+      "runId": "e6ae1b0f-5449-43c1-8428-f6e7855d33f7",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## The recipe\n\n@eatsbyrachel’s viral **sweet potato crème brûlée** involves:\n\n- Roasting a sweet potato and splitting it open  \n- Mashing the flesh in its skin  \n- Topping it with pastry cream  \n- Sprinkling on sugar  \n- Torching or broiling until the sugar forms a crisp brûlée shell  \n\nThe original Instagram Reel is here: [@eatsbyrachel’s post](https://www.instagram.com/reel/C_I2LuugxlS/). A recipe review with additional details is available from [The Kitchn](https://www.thekitchn.com/viral-sweet-potato-creme-brulee-recipe-review-23692946). Exact quantities may have changed or may not be fully specified in the video.\n\n## Is it a Thanksgiving dish?\n\n**Does it exist?** Yes—it is a documented modern social-media recipe.\n\n**Is it common?** No evidence indicates that sweet potato crème brûlée is a broadly common Thanksgiving dish. It appears to be a recent viral creation, rather than a standard holiday preparation.\n\n**Is it documented at the 1621 harvest gathering?** No. There is no evidence that this dish—or crème brûlée generally—was served at the 1621 gathering.\n\nFor context, sweet potatoes do appear in modern American Thanksgiving cooking, especially in dishes such as sweet potato casserole. Marshmallow-topped versions became established in the twentieth century, but even that is not a universal custom. Sweet potato crème brûlée is best understood as an individual creator’s contemporary recipe, not a broad or specifically regional Thanksgiving tradition."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-02",
+      "runId": "ffe64431-ed6c-4c4f-aef8-276047c45eb8",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "## Does corn pudding exist?\nYes. It’s a genuine American side dish, typically made with corn, eggs, and a custard-like batter. Sources: [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives) and [USDA](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding).\n\n## Is it common everywhere?\nNo. It is more regional and family-specific than universal. It appears especially in parts of the South and in households with Southern or rural food traditions. Many American Thanksgiving tables never serve it.\n\n## Was it documented at the 1621 harvest gathering?\nNot as modern corn pudding. Corn was present historically, but that does **not** establish that a custard-style corn pudding was served. The dish is best understood as a later American tradition.\n\nSo: **real dish, legitimate Thanksgiving option, but not a nationwide standard**—rather like regional accents, except spoonable."
+    },
+    {
+      "id": "pass-search-selection-control-batch-02",
+      "runId": "3d3abd9a-9a4c-489e-b9d4-b66f4290ea05",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "### Do these dishes exist?\nYes—but as recent social-media creations:\n\n- **Tequila (“lit”) instant mashed potatoes:** a viral TikTok variation replacing water with Patrón tequila. [Coverage](https://homeandtexture.com/holiday-mashed-potatoes-patron/)\n- **Bottle-squeezed instant mash:** an Instagram preparation hack, not a separate dish. [Delish coverage](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/) · [Original post](https://www.instagram.com/p/DAo5u0JSXRY/)\n\n### Are they common?\nNo reliable evidence shows either is broadly popular in American families. The search results come from curated, high-engagement social posts—not a representative household survey. Viral visibility can make a novelty look like a national tradition.\n\nMashed potatoes themselves are a common Thanksgiving side, and instant potatoes may appear in some homes, but these particular methods are best understood as **recent internet trends**, not broad or regional traditions. They might certainly be a family’s fun tradition, though.\n\n### Were they documented at the 1621 harvest gathering?\nNo. These modern instant-potato products and preparation methods were not part of the documented 1621 event. In short: real trends, not longstanding regional customs—and definitely not Pilgrim cocktail cuisine."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-02",
+      "runId": "18b17b40-34f4-44ca-a37b-27e89dee0170",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "### When was it created?\nGreen bean casserole was created in a Campbell’s test kitchen in the **1950s**, becoming popular through the company’s soup-based recipe promotion.\n\n### Was it served at the 1621 harvest gathering?\n**No.** It is a 20th-century dish. The 1621 meal likely included local foods such as venison, seafood, corn, and seasonal vegetables, but not this casserole.\n\n### How widespread is it?\nIt is a **broad modern American Thanksgiving tradition**, especially associated with mid-century and convenience-food cooking—not merely a single region. Still, whether it appears on a family’s table is family-specific, and some regions or households favor other vegetable dishes.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-02",
+      "runId": "65f15c67-41a1-418a-94f4-895e2b0d77d0",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**sweet potato casserole with marshmallows is a real modern American dish**. Marshmallow-topped versions are documented from the **early 20th century**.\n\n- **Does it exist?** Definitely, usually as mashed sweet potatoes baked with butter, sugar or spices, and marshmallows on top.\n- **Is it broadly common?** It is a familiar Thanksgiving side, especially in parts of the **South and throughout the American South-influenced holiday-food tradition**, but it is not served by every household. Some families prefer streusel, pecans, or plain roasted sweet potatoes.\n- **Was it at the 1621 harvest gathering?** No evidence supports that. The 1621 meal likely included Indigenous foods such as venison, corn, seafood, and regional produce—not this later casserole.\n\nSo it is a **modern, widely recognized tradition**, not an original “first Thanksgiving” food. The marshmallows are optional—though American holiday tables occasionally treat them as a constitutional requirement.\n\nSources: [Smithsonian](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/), [Smithsonian on 1621 foods](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/), [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)"
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-02",
+      "runId": "2977078e-0a32-4ff3-a697-8e8accdb42cc",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**corn pudding is a genuine Thanksgiving dish**, but it is not a universal American tradition.\n\n- **Does it exist?** Yes. It’s a baked, usually creamy or custardy corn side dish.\n- **How common is it?** It is especially associated with Southern and some Midwestern cooking, and often appears as a family or regional specialty rather than a nationwide staple. Many households serve it; many others have never had it.\n- **Was it at the 1621 harvest gathering?** There’s no evidence that modern corn pudding was served there. Corn was present, but that does not establish this later dish as part of the menu.\n\nSo, for a newcomer: think of corn pudding as a perfectly legitimate **regional/family Thanksgiving side**, alongside more broadly recognized dishes such as turkey, stuffing, cranberry sauce, and pumpkin pie.\n\nSources: [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives), [USDA/National Agricultural Library](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-02",
+      "runId": "68f55105-5023-49fb-bc19-b964cb1db920",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 2
+      },
+      "answer": "### Instant mashed-potato trends\n- **Do they exist?** Yes. Tequila “lit mashed potatoes” and bottle-squeezed instant mash are documented viral recipes/hacks.\n- **Are they common staples?** No evidence suggests they are broadly popular family traditions. They’re recent social-media phenomena, and the search source explicitly warns that viral posts don’t represent households generally.\n- **Were they served in 1621?** No—neither modern instant potatoes nor these techniques existed.\n\nSources: [tequila mash](https://homeandtexture.com/holiday-mashed-potatoes-patron/), [bottle hack](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/).\n\n### Green bean casserole\n- **Does it exist?** Yes; it is a twentieth-century Campbell’s test-kitchen creation.\n- **How widespread is it?** It became a recognizable American Thanksgiving classic, but it is not universal. Families may serve it—or prefer other vegetables—and regional and family habits vary.\n- **Was it at the 1621 gathering?** No. It postdates 1621 by centuries.\n\nSources: [Smithsonian history](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/), [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian).\n\nSo: green bean casserole is a broad modern tradition; the viral potato videos are trends, not evidence of standard American practice."
+    },
+    {
+      "id": "pass-history-green-bean-batch-03",
+      "runId": "62b5b460-dd70-4916-8811-a712d037fa5f",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "### What is known\n\n- **Green bean casserole is a real dish created in the Campbell’s test kitchen in the 20th century**, generally dated to **1955**, and associated with recipe developer Dorcas Reilly.\n- **It was not served at the 1621 harvest gathering.** The dish—and its modern canned-soup/fried-onion form—postdates that event by centuries.\n- Historical references: [Smithsonian](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and the [Smithsonian National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian).\n\n### What social media makes visible\n\nThe search returned **no curated high-engagement social results** specifically supporting a claim that green bean casserole was present in 1621. More broadly, social media can make modern dishes and “first Thanksgiving” jokes highly visible, but that visibility is **not evidence of historical authenticity or national popularity**.\n\nSo: **created around 1955; a modern American Thanksgiving staple for many families; definitely not a 1621 dish.**"
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-03",
+      "runId": "723c5d85-f02a-469f-b239-396eda4a15c3",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## The recipe\n\nThe original Instagram Reel is here: [@eatsbyrachel’s Sweet Potato Crème Brûlée](https://www.instagram.com/reel/C_I2LuugxlS/).\n\nBased on coverage by [The Kitchn](https://www.thekitchn.com/viral-sweet-potato-creme-brulee-recipe-review-23692946), the method is:\n\n1. Roast a sweet potato until soft.\n2. Split it open and mash the flesh in its skin.\n3. Top with pastry cream.\n4. Sprinkle with sugar.\n5. Torch or broil until the sugar forms a crisp brûlée shell.\n\nThe linked sources provide the method, not necessarily precise tested quantities, so this is a reconstruction rather than a fully verified transcription of the creator’s recipe.\n\n## Is it a common Thanksgiving dish?\n\n**The dish exists:** Yes—this is a modern sweet-potato-and-custard dessert presentation.\n\n**Is it common?** No evidence here establishes it as a common Thanksgiving dish. It appears to be a viral creator recipe, and social-media visibility reflects engagement, not representative household practice.\n\n**Was it documented at the 1621 harvest gathering?** No. There is no evidence that sweet potato crème brûlée—or crème brûlée generally—was served there. Modern sweet-potato dishes should not be projected backward into the 1621 menu.\n\nFor context, sweet-potato casserole, including marshmallow-topped versions, is a documented modern American tradition ([Smithsonian](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/)), but that does not make crème brûlée a standard Thanksgiving dish."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-03",
+      "runId": "2938e1b4-acfc-4fa0-8876-241bba518d93",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "### Does it exist?\nYes. **Corn pudding** is a real baked Thanksgiving side, typically made with corn, eggs, dairy, and sometimes a cornmeal or custard-like base.\n\n### Is it common everywhere?\nNo. It is better described as **regional and household-specific**, with stronger associations in parts of the American South and with particular family traditions. It is not a universal Thanksgiving side like turkey or mashed potatoes. The available history sources document the dish but do **not** measure national prevalence.\n\nSources: [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives), [USDA/National Agricultural Library](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding).\n\n### Was it documented at the 1621 harvest gathering?\nNot as a modern corn pudding recipe. Corn was present historically, but that does **not** establish that this custard-style dish was served at the 1621 gathering.\n\n### What does social media show?\nThe social-media search returned no results in this sample. That tells us only that this curated high-engagement sample did not surface corn pudding—not that people do not make it. Social media makes enthusiastic or unusual traditions visible, but it is not a representative survey."
+    },
+    {
+      "id": "pass-search-selection-control-batch-03",
+      "runId": "d2817236-42e9-4304-9510-e9143501b948",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "### What is known\n\n- **Tequila instant mashed potatoes exist** as a recent viral recipe/stunt: tequila replaces the water in instant mash. It is not documented as an established Thanksgiving tradition.  \n  Source: [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/)\n\n- **Bottle-squeezed instant mash exists** as a viral preparation hack, not a distinct traditional dish.  \n  Sources: [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/), [Instagram](https://www.instagram.com/p/DAo5u0JSXRY/)\n\n### How common are they?\n\nThere is no evidence here that either is broadly practiced in American families. They may be enjoyed by some households, but the available evidence shows **viral visibility, not household prevalence**.\n\n### Why social media can mislead\n\nThese results are a curated, high-engagement sample: novelty generates comments, reposts, and coverage. Seeing many videos means the ideas are highly visible—not that they are national Thanksgiving staples. Ordinary families quietly serving conventional mashed potatoes are much less likely to appear in your feed.\n\nSo: **real trends, probably niche traditions; not established American Thanksgiving standards.** The tequila version may also produce a memorable mash—though perhaps not one to serve unsuspecting relatives."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-03",
+      "runId": "206afba3-f087-4c1d-8fde-49eac7229fd5",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "## What is known\n\n- **Green bean casserole was created in 1955** by Campbell Soup Company test-kitchen employee Dorcas Reilly.\n- It was developed as a convenient recipe using canned green beans, condensed mushroom soup, and fried onions.\n- **It was not served at the 1621 harvest gathering.** The dish did not yet exist, and surviving accounts do not list it.\n- The 1621 feast likely included foods such as venison, fowl, seafood, corn, squash, and other locally available ingredients—but the evidence is limited.\n\n## What social media makes visible\n\nSocial media often presents green bean casserole as if it were an ancient, universal Thanksgiving tradition. That reflects its strong place in many **modern American family and regional traditions**, not its age or presence in 1621. A viral post can show popularity or nostalgia, but it does not establish historical origin.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-03",
+      "runId": "94edaef6-b36c-41d8-b40e-b3ee5bd83c9d",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "### What is known\n\n- **Yes, it is a real modern American dish.** Sweet potato casserole topped with marshmallows is documented in the **early twentieth century**.\n- It is a familiar Thanksgiving side today, but the research does **not** establish it as universal; popularity varies by household and region.\n- Sweet potatoes themselves could have existed in colonial America, but that does not mean this casserole—or marshmallows—was present in 1621.\n\n### What history says about the first Thanksgiving\n\n- There is **no evidence that sweet potato casserole with marshmallows was served at the 1621 harvest gathering**.\n- Documentation about that event is limited. Foods more securely associated with the gathering include deer, wildfowl, seafood, corn, and seasonal vegetables—but not the modern casserole.\n- The dish’s later history should not be projected backward onto 1621.\n\n### What social media makes visible\n\nSocial media often presents the casserole as either an indispensable “traditional” Thanksgiving food or as something allegedly served at the first Thanksgiving. Those posts reflect **modern family traditions and viral storytelling**, not proof of 1621 menus. Marshmallows on sweet potatoes are a genuine tradition—just a much later one.\n\nSources: [Smithsonian on marshmallow sweet potatoes](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/); [Smithsonian on the 1621 meal](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/); [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-03",
+      "runId": "676421e4-e60a-45c6-9813-fa47e8f22cf2",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 2
+      },
+      "answer": "Yes—**corn pudding is genuinely served at Thanksgiving**, but it is not a universal standard. It is best understood as a **regional and family-specific American side dish**, especially associated with Southern and some Midwestern traditions.\n\n- **Does it exist?** Definitely. Modern versions commonly combine corn, eggs, dairy, and sometimes cornmeal or a mix.\n- **Is it common?** Common enough to appear in Thanksgiving menus and recipe collections, but household prevalence varies greatly. Many American families never serve it.\n- **Was it documented at the 1621 harvest gathering?** No reliable evidence identifies modern corn pudding on that menu. Corn was present, but that does not establish this later preparation.\n\n**What social media makes visible:** Social platforms can make corn pudding seem either ubiquitous—because Thanksgiving recipe posts circulate widely—or unusually niche, depending on your feed. The search found no specific high-engagement social-media reference to assess, and social content is not a representative survey of American households.\n\nSources: [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives) and [USDA Founding Foods](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-03",
+      "runId": "a07eb762-9740-401f-b1a8-e7b1a9fcf8ac",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 4,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 3
+      },
+      "answer": "### What social media shows\n- **Tequila instant mashed potatoes:** A real viral TikTok trend, including a 2025 video replacing the water with Patrón tequila. It is a novelty recipe/stunt, not evidence of a widespread family tradition.  \n  Source: [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/)\n- **Bottle-squeezed instant mash:** A real 2024 Instagram hack, but again a presentation gimmick rather than a distinct Thanksgiving dish or established custom.  \n  Sources: [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/), [Instagram](https://www.instagram.com/p/DAo5u0JSXRY/)\n\n### What is known about popularity\nThese may be highly visible because algorithms amplify unusual, humorous, and easily replicated videos. The available social-media evidence is **not representative household survey data**. Instant mashed potatoes may certainly appear on some Thanksgiving tables, but these specific trends should not be treated as broadly popular American staples.\n\n### Green bean casserole\nGreen bean casserole is a real twentieth-century dish created in a Campbell’s test kitchen, generally dated to **1955**, associated with recipe developer Dorcas Reilly. It is a common American holiday side, though popularity varies by family and region—not universal.\n\nIt was **not documented at the 1621 harvest gathering**; it postdates that event by centuries.  \nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/), [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)\n\nAnd yes, marshmallows on sweet potatoes are a real tradition—though social media may make every family’s version look like a national referendum."
+    },
+    {
+      "id": "pass-history-green-bean-batch-04",
+      "runId": "0947cec2-903c-486f-954a-7012d8d80b72",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "### When was it created?\nGreen bean casserole was created in a Campbell’s test kitchen in the **mid-20th century**, generally dated to **1955**, by Campbell’s employee Dorcas Reilly.\n\n### Is it a real dish, and how common is it?\nYes—it is a genuine American Thanksgiving dish. Its popularity is especially associated with Campbell’s cream-of-mushroom soup marketing and home cooking. However, that does not mean every American family serves it; traditions vary by family and region.\n\n### Was it served at the 1621 harvest gathering?\n**No.** Green bean casserole is a modern dish, and there is no evidence it was served at the 1621 gathering. The documented foods were more likely game, seafood, corn, squash, and other locally available foods—not modern casseroles.\n\nSources:\n\n- [Smithsonian: What Was Served at the First Thanksgiving?](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/)\n- [Smithsonian National Museum of American History: 5 Questions with a Colonial Culinarian](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)"
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-04",
+      "runId": "0b90e425-9747-4fa6-be4b-0f87d2c5d92c",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## The recipe\n\n@eatsbyrachel’s viral **sweet potato crème brûlée** is made by:\n\n1. Roasting a sweet potato until soft.\n2. Splitting and mashing it in its skin.\n3. Topping it with pastry cream.\n4. Sprinkling sugar over the top.\n5. Torching or broiling it until the sugar forms a crisp brûlée shell.\n\nThe original Instagram Reel is here: [@eatsbyrachel’s post](https://www.instagram.com/reel/C_I2LuugxlS/). A recipe test and discussion is available from [The Kitchn](https://www.thekitchn.com/viral-sweet-potato-creme-brulee-recipe-review-23692946). The exact quantities and method should be taken from the original post or its accompanying recipe, since the available source summary doesn’t provide full measurements.\n\n## Is it a common Thanksgiving dish?\n\n- **Does it exist?** Yes—this is a documented modern social-media recipe.\n- **Is it common?** No evidence suggests it is a standard or widely established Thanksgiving dish. It appears to be a recent viral variation, rather than a customary side or dessert.\n- **Was it documented at the 1621 harvest gathering?** No. There is no basis for connecting this recipe—or crème brûlée generally—to that gathering. A modern sweet-potato ingredient does not establish a 1621 recipe.\n\nSweet-potato casserole, especially with marshmallows, is a much more recognizable modern American holiday dish, though it too is not universal or from 1621. [Smithsonian history of marshmallow sweet-potato casserole](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/)."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-04",
+      "runId": "4cf1e21b-4725-4c1b-8735-ebb7aee47c70",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "Yes—**corn pudding is a real Thanksgiving side**, but it is **not standard everywhere**. It is better described as a **regional and family-specific dish**, especially associated with parts of the American South and with individual holiday traditions.\n\n- **Documented dish:** Corn pudding is a recognized baked side made from corn, eggs, dairy, and often a thickener or sweetener. Sources include [Martha Stewart’s corn pudding](https://www.marthastewart.com/1155558/corn-pudding-chives) and the USDA’s [American Harvest corn pudding](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding).\n- **How common:** The available references establish that it is served at Thanksgiving in some households and regions, but they do **not** support calling it a nationwide or universal staple. Prevalence data are limited.\n- **1621 documentation:** There is **no evidence that modern corn pudding was served at the 1621 harvest gathering**. Corn was present in the broader colonial food context, but that does not establish this particular recipe.\n\nSo, if an American family serves it, that is entirely authentic—but another family may never have encountered it at Thanksgiving."
+    },
+    {
+      "id": "pass-search-selection-control-batch-04",
+      "runId": "51253427-1ad9-43e1-9b5f-79cadfb00cf7",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "No—viral visibility does **not** establish broad household popularity.\n\n- **Do they exist?** Yes. “Lit mashed potatoes” replaces the water in instant potatoes with Patrón tequila; bottle-squeezed mash is a social-media serving hack.\n- **Are they common staples?** The available evidence shows viral recipes and hacks, not representative household data. They should be treated as novelty trends, not broadly established Thanksgiving traditions. Social-media results are highly curated and engagement-based.\n- **Were they documented at the 1621 harvest gathering?** No. Neither modern instant potatoes nor these techniques belong to that historical context.\n\nSources: [Home & Texture on tequila mashed potatoes](https://homeandtexture.com/holiday-mashed-potatoes-patron/), [Delish on the bottle hack](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/), and the [original Instagram post](https://www.instagram.com/p/DAo5u0JSXRY/)."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-04",
+      "runId": "c26e21ae-ac87-4961-8120-1ae41cbd4d09",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "- **Did it exist?** Yes. Green bean casserole was created in **1955** by Campbell Soup Company test-kitchen employee **Dorcas Reilly**.\n- **Was it common?** It became a widespread American Thanksgiving side, though popularity varies by household and region.\n- **Was it served at the 1621 harvest gathering?** No. It was invented more than 300 years later. Evidence about 1621 points to foods such as venison, seafood, corn, and seasonal fruits—not modern casserole dishes.\n\nSources:\n- [Smithsonian Magazine: What Food Was Served at the First Thanksgiving?](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/)\n- [Smithsonian’s National Museum of American History: 5 Questions for a Colonial Culinarian](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)"
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-04",
+      "runId": "ae45fa62-7d94-41f3-a05e-07b40924d5a0",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**sweet potato casserole with marshmallows is a real modern American dish**. Marshmallow-topped versions are documented from the **early 20th century**, and the dish became associated with Thanksgiving menus over time.\n\nThree distinctions matter:\n\n- **Does it exist?** Yes, as a modern casserole—typically mashed sweet potatoes topped with marshmallows and baked.\n- **Is it common?** It is a familiar Thanksgiving side, but not universal; recipes vary by household and region. Some families use pecans, streusel, or no marshmallows.\n- **Was it served at the 1621 harvest gathering?** There is **no evidence** for that. The 1621 meal likely included foods such as venison, wildfowl, seafood, corn, and seasonal produce, but the surviving accounts do not document sweet potato casserole or marshmallows. Marshmallows themselves and this casserole tradition came much later.\n\nSources:\n\n- [Smithsonian: The 100-Year History of Marshmallow Sweet Potatoes](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/)\n- [Smithsonian: What Food Was Served at the First Thanksgiving?](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/)\n- [Smithsonian National Museum of American History: Colonial Foodways](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)\n\nSo it is historically American—but definitely not a 1621 survivor. The marshmallows arrived fashionably late."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-04",
+      "runId": "ba81b931-c0eb-4d3b-8a93-da29b1ada170",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**corn pudding is genuinely served at Thanksgiving**, but it is better described as a **regional or family-specific side dish** than a universal American tradition.\n\n- **Does it exist?** Yes. It’s a baked, custard-like corn side dish.\n- **Is it common?** It appears on some Thanksgiving tables, especially in Southern and regional cooking, but many American families never serve it.\n- **Was it at the 1621 harvest gathering?** There’s no evidence that modern corn pudding was served there. Corn was present, but today’s pudding-style preparation should not be projected onto that meal.\n\nSources:\n- [Martha Stewart: Corn Pudding with Chives](https://www.marthastewart.com/1155558/corn-pudding-chives)\n- [USDA/FNS: Corn Pudding](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)\n\nSo, it’s neither an invented modern dish nor a nationwide Thanksgiving requirement—more a legitimate tradition that depends on the household or region."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-04",
+      "runId": "2b025f8b-6577-4498-a185-0f0b34728cdf",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 4,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 3
+      },
+      "answer": "### Instant mashed-potato trends\n\n**Do they exist?** Yes. Tequila-based instant mash and bottle-squeezed mash are real recipes or food hacks documented online.\n\n**Are they broadly popular Thanksgiving staples?** No evidence here supports that. They appear to be viral social-media content, not representative of American households:\n\n- Tequila mash: [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/)\n- Bottle-squeezed mash: [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/) and the [Instagram post](https://www.instagram.com/p/DAo5u0JSXRY/)\n\nInstant mashed potatoes themselves may appear on some family tables, but these particular preparations are better understood as novelty trends. Viral does not mean customary—otherwise marshmallows on sweet potatoes would be legally required by now.\n\n### Green bean casserole\n\n**Does it exist?** Yes, and it is a well-established American casserole.\n\n**When did it originate?** It was created in a Campbell’s test kitchen in the **mid-20th century, commonly dated to 1955**, and became associated with Thanksgiving through canned green beans, condensed cream soup, and fried onions.\n\n**Was it served at the 1621 harvest gathering?** No. It is a modern dish, not a documented 1621 food. The Smithsonian discusses the limited evidence for that gathering:\n\n- [Smithsonian: Food at the first Thanksgiving](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/)\n- [Smithsonian National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)"
+    },
+    {
+      "id": "pass-history-green-bean-batch-05",
+      "runId": "780889a3-3def-45d4-a0a8-4e1f7f1d7969",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "## When was it created?\nGreen bean casserole was created in **1955** by **Dorcas Reilly** in the Campbell’s test kitchen. It became popular through Campbell’s recipe promotion.\n\n## Was it served in 1621?\n**No.** It is not documented at the 1621 harvest gathering; it was invented more than three centuries later.\n\n## Documented vs. inferred\n- **Documented:** The dish is a twentieth-century creation, associated with Campbell’s and Dorcas Reilly.\n- **Documented:** Accounts of the 1621 gathering describe foods such as venison, seafood, corn, and other locally available foods—not green bean casserole.\n- **Inferred:** Green beans or related vegetables might have existed in the region, but that does **not** establish that this modern casserole was served.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [Smithsonian National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-05",
+      "runId": "7bc0280d-2249-426e-a1ae-0368a4d3c19c",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## Recipe and original post\n\nThe documented recipe from **@eatsbyrachel** is:\n\n- Roast a sweet potato.\n- Split and mash the flesh in its skin.\n- Top with pastry cream.\n- Sprinkle with sugar.\n- Torch or broil until the sugar forms a crisp brûlée shell.\n\n**Original Instagram Reel:** [@eatsbyrachel’s sweet potato crème brûlée](https://www.instagram.com/reel/C_I2LuugxlS/)  \nA recipe review is also available from [The Kitchn](https://www.thekitchn.com/viral-sweet-potato-creme-brulee-recipe-review-23692946).\n\nThe available documentation summarizes the method but does **not** provide exact quantities or a full pastry-cream formula, so I wouldn’t claim those details as verified.\n\n## Is it common at Thanksgiving?\n\n- **Does the dish exist?** Yes—it is a documented modern social-media recipe.\n- **Is it common?** No evidence here establishes it as a common American Thanksgiving dish. It appears to be a creator-specific, viral variation rather than a standard holiday preparation.\n- **Was it documented at the 1621 harvest gathering?** No. There is no evidence connecting this dish to that gathering. Modern sweet potatoes, pastry cream, and brûléed sugar cannot be used to infer a 1621 recipe.\n\nSweet potato casserole—sometimes topped with marshmallows—is much more historically established in modern American holiday cooking, but that does not make crème brûlée a traditional Thanksgiving dish."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-05",
+      "runId": "bc99ae1c-548f-4af9-9a66-9d92398feccc",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## Does corn pudding exist?\nYes. **Corn pudding is a real, documented dish** made with corn and a custard-like batter. Sources include [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives) and the USDA’s [America’s Harvest](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding).\n\n## Is it common everywhere?\nNo. The evidence supports describing it as **regional and household-specific**, rather than a universal American Thanksgiving side. It is especially associated with parts of the South and with particular family traditions. The available sources document the dish but **do not measure national household prevalence**.\n\n## Was it documented at the 1621 gathering?\nNot as modern corn pudding. Although corn was present historically, that does **not establish that a custard-style corn pudding was served** at the 1621 harvest gathering. The modern dish should not be projected backward from the ingredient alone.\n\nSo: **real dish, traditional in some regions and families, not universal—and not documented as part of the 1621 menu.**"
+    },
+    {
+      "id": "pass-search-selection-control-batch-05",
+      "runId": "b53e61b9-bc34-4843-b978-f95db6f637d8",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 3
+      },
+      "answer": "No. Viral visibility does **not** establish broad family popularity.\n\n- **Tequila instant mashed potatoes:** This is a documented viral social-media recipe/stunt, reported in connection with Thanksgiving 2025. It replaces the water with Patrón tequila. It is **not documented as an established Thanksgiving tradition**.  \n  Source: [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/)\n\n- **Bottle-squeezed instant mash:** This is a documented Instagram food hack from 2024, in which prepared instant mash is squeezed from a bottle. It is **not a distinct traditional dish or evidence of common family practice**.  \n  Sources: [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/), [Instagram](https://www.instagram.com/p/DAo5u0JSXRY/)\n\n- **What can be inferred:** The videos attracted substantial online attention and response content. That supports “viral or highly shareable,” not “broadly eaten across American families.” The search produced no reliable historical evidence establishing either as a common Thanksgiving staple.\n\nIn short: both exist as online trends; neither is documented here as widespread, traditional, or connected to the 1621 harvest gathering."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-05",
+      "runId": "f78dbde5-32f6-4f88-9e0f-a8474c50d9dc",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "- **Does it exist?** Yes. Green bean casserole was created in **1955** in the Campbell Soup Company test kitchen by **Dorin (Doris) Reilly**.\n- **How common is it?** It became a widespread American Thanksgiving side, though its popularity is a modern tradition—not evidence that every family serves it.\n- **Was it served at the 1621 harvest gathering?** **No documented evidence supports that.** The casserole’s twentieth-century creation makes it chronologically impossible. Accounts of the 1621 gathering mention foods such as venison, seafood, corn, and seasonal produce, but not green bean casserole.\n\nThe creation date is documented; claims about its broad popularity are historical/cultural inference from its later adoption. Sources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-05",
+      "runId": "471bb1b9-78c4-4bf6-9fbc-d589206b375b",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**sweet potato casserole with marshmallows is a real modern American dish**, with marshmallow-topped versions documented in the **early twentieth century**. It became a recognizable holiday side, though it is not universal; prevalence varies by family and region.\n\nFor the **1621 harvest gathering**:\n\n- **Documented:** Accounts describe foods such as venison, seafood, corn, and seasonal produce.\n- **Not documented:** Sweet potato casserole, marshmallows, or this casserole-style preparation.\n- **Reasonable inference:** Sweet potatoes may have been known in the broader Americas, but that does **not** establish that they were served at the 1621 gathering.\n- **Conclusion:** The modern dish is historically real, but linking it to the first Thanksgiving is unsupported.\n\nSources: [Smithsonian on marshmallow sweet potatoes](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/) and [Smithsonian on the 1621 menu](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/)."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-05",
+      "runId": "c3a536f9-4710-4e39-a9c8-daf025f2a491",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**corn pudding is genuinely served at Thanksgiving**, but it is not universal.\n\n- **Does it exist?** Yes. It is a recognized Thanksgiving side dish.\n- **Is it common?** It is especially associated with some Southern and regional traditions, and with particular families. It is better described as **regional/family-specific than nationally standard**. The research source does not estimate how many households serve it.\n- **Was it documented at the 1621 harvest gathering?** **No evidence here documents modern corn pudding at that event.** Corn was present historically, but inferring that a baked custard-like corn pudding was served would be speculation.\n\nSources: [Martha Stewart corn pudding](https://www.marthastewart.com/1155558/corn-pudding-chives) and [USDA/National Archives “Corn Pudding”](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-05",
+      "runId": "67f99652-2828-4bdb-8cb7-a80eb288b3c3",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 2
+      },
+      "answer": "No. Viral visibility does **not** establish broad household popularity.\n\n- **Tequila instant mash:** The trend is documented as a 2025 TikTok stunt/recipe, replacing water with Patrón tequila—not as an established Thanksgiving tradition. Source: [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/).\n- **Bottle-squeezed mash:** A documented 2024 Instagram food hack, not a distinct dish or evidence of widespread family practice. Sources: [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/) and [Instagram](https://www.instagram.com/p/DAo5u0JSXRY/).\n- **What’s inferred:** Their frequent appearance reflects algorithmic amplification and engagement, not a representative survey of American Thanksgiving tables. Some families certainly use instant potatoes; these specific trends are not broadly documented staples.\n\n**Green bean casserole:** It is a real modern American dish created in a Campbell’s test kitchen, generally dated to **1955**, and later became common in many households and regions. The research confirms its twentieth-century origin, but does not establish that every family serves it.\n\n**1621 documentation:** Green bean casserole was **not** documented at the 1621 harvest gathering. Sources: [Smithsonian](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [Smithsonian National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "pass-history-green-bean-batch-06",
+      "runId": "2ec1085f-79cd-4aa7-89d3-11bacc339683",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "- **Created:** Green bean casserole was created in a Campbell’s test kitchen in **1955**.\n- **Common practice:** It’s a common American Thanksgiving side, though not universal.\n- **Family tradition:** Some families may have their own variations; that doesn’t establish broader popularity.\n- **1621 gathering:** **No.** It postdates 1621 by centuries, and there’s no evidence it was served at that harvest gathering.\n\nSources: [Smithsonian](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/), [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)"
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-06",
+      "runId": "6ce1a096-7909-4507-90ce-910475781c11",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "**Recipe:** Split and mash a roasted sweet potato, top it with pastry cream and granulated sugar, then torch or broil until the sugar forms a crisp brûlée shell. The available coverage doesn’t provide precise quantities, so this is a summary rather than a complete transcription.\n\n**Original post:** [@eatsbyrachel on Instagram](https://www.instagram.com/reel/C_I2LuugxlS/)  \nRecipe coverage: [The Kitchn](https://www.thekitchn.com/viral-sweet-potato-creme-brulee-recipe-review-23692946)\n\n**How common is it?**  \n- **Does it exist?** Yes—this is a real creator recipe.  \n- **Common Thanksgiving dish?** No evidence suggests it is a standard or widespread Thanksgiving dish; it appears to be a recent viral variation.  \n- **Family tradition?** It could certainly become one, but no specific family or regional tradition was documented. It is also not documented at the 1621 harvest gathering."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-06",
+      "runId": "2ee3c8ac-6292-4af9-82c8-ada2aa8a64fd",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "- **Does it exist?** Yes. Corn pudding is a genuine Thanksgiving side.\n- **Is it common everywhere?** No. It is more regional and household-specific than universal—especially associated with some Southern traditions. Many families serve it; many others do not.\n- **Is it documented at the 1621 harvest gathering?** Not as modern corn pudding. Although corn was present, that does **not** establish this recipe on the 1621 menu.\n\nA family serving it every Thanksgiving reflects a **family tradition**, not proof that it is nationally standard.\n\nSources: [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives), [USDA/America’s Harvest](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)"
+    },
+    {
+      "id": "pass-search-selection-control-batch-06",
+      "runId": "86938367-395b-41e7-b082-4ed92f571a96",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "**Short answer: no.**\n\n- **Do they exist?** Yes—both are real viral recipes/hacks.\n- **Are they common?** No evidence shows they’re broadly common American Thanksgiving practices. Social feeds amplify high-engagement content and aren’t representative household surveys.\n- **Could they be family traditions?** Certainly, if an individual family adopts them—but that would be family-specific, not a national custom.\n\nSources: [tequila potatoes](https://homeandtexture.com/holiday-mashed-potatoes-patron/); [bottle-squeezed mash](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/)."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-06",
+      "runId": "c092cc68-2450-4725-a108-9ebe860ee5e2",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "- **Exists:** Yes—green bean casserole was created in a Campbell’s test kitchen in **1955**.\n- **Common practice:** It became a widely popular American Thanksgiving side, though not universal.\n- **Family tradition:** Some families serve it every year; others do not.\n- **1621 gathering:** **No.** It was created centuries later, so it was not served at the harvest gathering.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/), [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)"
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-06",
+      "runId": "05f6152c-13ca-4286-b276-5c6c8655cae4",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**sweet potato casserole topped with marshmallows is a real modern American dish**, with versions documented in the early 20th century.\n\n- **Common practice:** It’s a familiar Thanksgiving side in many American households, but not universal.\n- **Family/regional tradition:** Some families make it every year; others never serve it. Either is normal.\n- **First Thanksgiving (1621):** There’s no evidence it was served at the Plymouth harvest gathering. The dish—and marshmallow topping—came much later.\n\nSources: [Smithsonian](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/), [Smithsonian/National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-06",
+      "runId": "ee537b89-ae50-4ce0-ba5c-c5c60ee88f73",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**corn pudding is genuinely served at Thanksgiving**, especially in some Southern and regional American households.\n\n- **Common practice:** A recognized Thanksgiving side, but not universal.\n- **Family/regional tradition:** Often more characteristic of particular regions or individual family menus.\n- **1621 gathering:** No—modern corn pudding is not documented as part of that meal, despite corn being present.\n\nSources: [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives), [USDA/FNS](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-06",
+      "runId": "36643600-c683-4c3c-84a7-fc764fb2698c",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 2
+      },
+      "answer": "- **Tequila instant mash:** It exists and went viral, but it’s a recent social-media stunt—not a broadly established Thanksgiving staple.\n- **Bottle-squeezed instant mash:** Also real and viral, but a preparation hack, not evidence of common household practice.\n- **Family traditions:** Individual families may genuinely serve either; viral visibility doesn’t measure prevalence. Social results explicitly aren’t representative of households.\n\n**Green bean casserole:** It exists, is a common modern Thanksgiving side in many American homes, and originated in a Campbell’s test kitchen in **1955**—not at the 1621 harvest gathering.\n\nSources: [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/), [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/), [Smithsonian](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/)."
+    },
+    {
+      "id": "pass-history-green-bean-batch-07",
+      "runId": "228ab811-ee88-4792-abfe-33467f9463e4",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "Yes—**green bean casserole is a real dish**, but it is distinctly modern.\n\n- **Created:** In 1955, by Campbell Soup Company staff member Dorcas Reilly in the company’s test kitchen.\n- **Common or regional?** It became a widely recognized American Thanksgiving side, though it remains a family or regional preference—not a universal tradition.\n- **Served in 1621?** No. There is no evidence it was served at the 1621 harvest gathering. The documented accounts mention foods such as venison, wildfowl, corn, and seafood, not casserole recipes.\n\nSo yes, presenting green bean casserole as part of the “first Thanksgiving” is projecting a later American tradition backward onto 1621.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [Smithsonian National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-07",
+      "runId": "7506b4c2-cbfc-47c0-a975-d76256af3717",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## The recipe\n\nThe viral version from **@eatsbyrachel** uses:\n\n1. Roast a sweet potato until tender.\n2. Split and mash it in its skin.\n3. Top with pastry cream.\n4. Sprinkle with sugar.\n5. Torch or broil until the sugar forms a crisp brûlée shell.\n\nThe original Instagram Reel is here: [@eatsbyrachel’s sweet potato crème brûlée](https://www.instagram.com/reel/C_I2LuugxlS/). A recipe review is also available from [The Kitchn](https://www.thekitchn.com/viral-sweet-potato-creme-brulee-recipe-review-23692946). The exact quantities and method should be taken from the creator’s post; the available coverage confirms the technique but not a fully standardized written recipe.\n\n## Is it common at Thanksgiving?\n\n**The dish exists:** yes, as a contemporary social-media recipe.\n\n**Is it common?** There is no good evidence that sweet potato crème brûlée is a widespread Thanksgiving standard. It appears to be a viral or individual-creator dish, unlike sweet-potato casserole, which has a documented early-twentieth-century history. Viral coverage is not a representative survey of American households.\n\n**Was it at the 1621 harvest gathering?** Almost certainly not in this form. The dish depends on modern pastry-cream and brûlée techniques, and there is no evidence documenting it—or a comparable recipe—at the 1621 gathering.\n\nSo yes: calling it a “first Thanksgiving” dish would be projecting a modern creation backward. Sweet potatoes themselves do not prove that a modern sweet-potato recipe existed in 1621."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-07",
+      "runId": "58df6012-42d8-4245-9d5b-df12e4fc1f0f",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "### Does corn pudding exist?\nYes. It’s a genuine Thanksgiving side, especially in some American households and regions. Sources include [Martha Stewart’s corn pudding recipe](https://www.marthastewart.com/1155558/corn-pudding-chives) and the USDA’s [American Harvest reference](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding).\n\n### Is it common everywhere?\nNo. It isn’t a universal Thanksgiving staple. Its presence is more regional or family-specific; available references document the dish but don’t measure national popularity.\n\n### Was it at the 1621 harvest gathering?\nThat is not documented. Corn was present in the broader historical setting, but that does **not** establish that modern-style corn pudding was served. Projecting today’s creamy baked pudding onto the first Thanksgiving would be speculative—and likely anachronistic."
+    },
+    {
+      "id": "pass-search-selection-control-batch-07",
+      "runId": "40066e9c-e7d7-4441-81c9-3f336852dc27",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 3
+      },
+      "answer": "### 1. Do these dishes exist?\nYes—but they are modern social-media recipes or hacks:\n\n- **Tequila instant mash:** a viral stunt replacing the water with Patrón tequila. [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/)\n- **Bottle-squeezed mash:** an instant-potato presentation hack, not a distinct dish. [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/) | [Instagram](https://www.instagram.com/p/DAo5u0JSXRY/)\n\n### 2. Are they broadly common American family traditions?\nNo evidence here supports that. They are high-engagement viral posts, and the search sample is explicitly **not representative of households**. They should be treated as internet trends, not normal Thanksgiving staples. Mashed potatoes themselves are common, but these preparations are not established traditions.\n\n### 3. Were they served at the 1621 harvest gathering?\nNo. I found no historical documentation for either dish at the 1621 gathering. More fundamentally, these are modern instant-potato products and techniques being projected backward—not 1621 recipes. Viral visibility is not historical evidence."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-07",
+      "runId": "fec9143d-669a-4650-babe-64fbf1bc7263",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Green bean casserole was created in **1955** by Campbell Soup Company test-kitchen staff, commonly credited to Dorcas Reilly.\n\n- **Does it exist?** Yes—an unmistakably American mid-20th-century dish.\n- **Is it common?** It became a widespread Thanksgiving staple, though popularity varies by family and region.\n- **Was it served in 1621?** No. It had not been invented, and surviving accounts of the 1621 harvest gathering do not mention it.\n\nSo yes: presenting green bean casserole as part of the “first Thanksgiving” is projecting a modern tradition backward. The 1621 menu likely included venison, fowl, seafood, corn, and locally available produce—not canned soup and fried onions.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/), [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)"
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-07",
+      "runId": "7b1e2c27-1dd0-4b62-9113-3ec9c85ac94a",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—it is a real modern American dish. Marshmallow-topped sweet potatoes are documented by the early 20th century, and sweet-potato casseroles became especially associated with later Thanksgiving menus.\n\nThree distinctions matter:\n\n- **Does it exist?** Yes: sweet potato casserole with marshmallows is an established recipe.\n- **Is it common?** It is popular in some American families and regions, but it is not universal. Marshmallows on sweet potatoes remain a spirited culinary divide.\n- **Was it served at the 1621 gathering?** There is no evidence for that. Surviving descriptions mention foods such as venison, fowl, seafood, corn, and local produce, but not this casserole.\n\nSo yes, presenting it as part of the “first Thanksgiving” is projecting a later dish—and modern Thanksgiving traditions—onto the 1621 harvest gathering.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/) and [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-07",
+      "runId": "b2511490-25f6-4bda-b9b1-91b11dc6bc2b",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**corn pudding is genuinely served at Thanksgiving**, but it is more **regional and family-specific** than universally expected. It appears especially in Southern and Midwestern traditions, alongside dishes like cornbread dressing and creamed corn.\n\nThree separate points:\n\n- **Does it exist?** Yes. Modern recipes commonly combine corn with eggs, milk or cream, and sometimes sugar or butter.\n- **Is it common?** It’s a legitimate Thanksgiving side, but not a nationwide staple; prevalence varies by region and household.\n- **Was it at the 1621 harvest gathering?** There is no good evidence that modern corn pudding was served there. Corn was present in the broader Wampanoag and colonial foodways, but projecting today’s baked custard-like dish onto that meal would be speculative.\n\nSources: [Martha Stewart corn pudding](https://www.marthastewart.com/1155558/corn-pudding-chives) and [USDA/FNS American Harvest](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-07",
+      "runId": "42b9ea32-738a-4f35-9b52-76ac34fb1997",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 2
+      },
+      "answer": "### Tequila and bottle-squeezed instant mash\n\n- **Do they exist?** Yes. Tequila instant mash was a viral TikTok recipe/stunt, while bottle-squeezed mash was a viral Instagram hack.\n- **Are they broadly popular Thanksgiving staples?** No evidence of that. The search results specifically caution that viral posts are not representative of American households. They’re internet trends, not established family or regional traditions.\n\nSources: [tequila mash coverage](https://homeandtexture.com/holiday-mashed-potatoes-patron/), [bottle-squeezed mash coverage](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/).\n\n### Green bean casserole\n\n- **Does it exist?** Yes, and it remains a familiar American holiday side.\n- **When did it originate?** It was created in a Campbell’s test kitchen in the **1950s**, commonly dated to **1955**.\n- **Was it served at the 1621 harvest gathering?** No. It is a modern twentieth-century dish, so projecting it onto the “first Thanksgiving” would be historically inaccurate.\n\nSources: [Smithsonian](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/), [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian).\n\nViral visibility can make a dish look universal—rather like assuming every British family serves the same Christmas pudding recipe."
+    },
+    {
+      "id": "pass-history-green-bean-batch-08",
+      "runId": "c7d30b54-5fa3-43cb-9b82-d2af13e9adae",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "Green bean casserole is a real dish, created in the Campbell Soup Company test kitchen in **1955**, commonly credited to Dorcas Reilly.\n\n- **Does it exist?** Yes—a 20th-century American casserole.\n- **Is it common?** It became a popular Thanksgiving side, though family traditions vary; that does not establish that most families serve it.\n- **Was it served at the 1621 gathering?** **No.** It was invented more than 300 years later. The 1621 menu is documented only partially, and modern ingredients do not prove a modern recipe was present.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-08",
+      "runId": "1f841126-ff7a-4ca5-aad8-5bb78b3b1bde",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## Does the dish exist?\nYes. @eatsbyrachel’s viral **sweet potato crème brûlée** involves:\n\n- Roasting a sweet potato and splitting it open  \n- Mashing the flesh in place  \n- Topping it with pastry cream  \n- Sprinkling sugar over it  \n- Torching or broiling until crisp and caramelized  \n\nThe **original Instagram Reel** is here: [@eatsbyrachel’s post](https://www.instagram.com/reel/C_I2LuugxlS/). A recipe review appears at [The Kitchn](https://www.thekitchn.com/viral-sweet-potato-creme-brulee-recipe-review-23692946). The available sources describe the method but do not provide a fully verified ingredient list or exact quantities, so I wouldn’t present a precise recipe as authoritative.\n\n## Is it common?\nSweet potatoes are common on Thanksgiving menus, but **sweet potato crème brûlée is a modern, creator-specific preparation**, not a broadly established Thanksgiving standard. Viral coverage shows attention—not what most families serve.\n\n## Was it documented in 1621?\nNo evidence links this dish to the 1621 harvest gathering. It is a modern dessert concept; the presence of sweet potatoes in a modern recipe does not establish a 1621 recipe."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-08",
+      "runId": "c7f2a055-b12c-4a18-90a3-6bef6ba895f8",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "### Does corn pudding exist?\nYes. It is a genuine baked corn side dish served by some American households, including at Thanksgiving.\n\n### Is it common everywhere?\nNo. It is better described as **regional and family-specific**, with stronger associations in parts of the American South and with particular family traditions—not a universal Thanksgiving side. The available references do not measure nationwide prevalence, so viral posts should not be treated as evidence that most families serve it.\n\n### Was it documented at the 1621 harvest gathering?\nNot as modern corn pudding. Corn was present historically, but that does **not** establish that a pudding resembling today’s recipe was served at the 1621 gathering.\n\nSources: [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives) and [USDA/FNS](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "pass-search-selection-control-batch-08",
+      "runId": "92f351a6-755d-4ec1-a9b8-a814ccf27205",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "No. Viral visibility does **not** establish broad popularity.\n\n- **Do they exist?** Yes. Tequila “lit mashed potatoes” and bottle-squeezed instant mash are documented social-media recipes or hacks.\n- **Are they common staples?** The evidence only shows high-engagement viral posts—not representative household data. They should be treated as novelty trends, not broadly established Thanksgiving traditions.\n- **Were they served at the 1621 harvest gathering?** No evidence supports that. Instant potatoes—and especially tequila-based mash—are modern inventions.\n\nSources: [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/), [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/), and the [Instagram post](https://www.instagram.com/p/DAo5u0JSXRY/)."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-08",
+      "runId": "8c749d6a-23c8-48b8-acc3-0cf87670cc31",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Green bean casserole was created in **1955** in the Campbell Soup Company’s test kitchen, commonly credited to Dorcas Reilly.\n\n- **Does it exist?** Yes—a twentieth-century American casserole.\n- **Is it common?** It became a popular Thanksgiving side, though whether families serve it varies by region and tradition. Viral posts shouldn’t be treated as evidence of universal practice.\n- **Was it at the 1621 gathering?** No. Green bean casserole had not been invented; surviving accounts mention foods such as venison, waterfowl, seafood, corn, and vegetables available locally.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-08",
+      "runId": "bf1b0162-978f-4a21-84e3-38583bc140ba",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**sweet potato casserole with marshmallows is a real modern American dish**. Marshmallow-topped versions are documented from the early twentieth century.\n\nThree separate points:\n\n- **Does it exist?** Yes, as a sweet-potato side dish topped with marshmallows and browned.\n- **Is it common?** It’s a recognizable Thanksgiving dish, but not universal; prevalence varies by family and region. Viral posts shouldn’t be treated as evidence of what most households serve.\n- **Was it at the 1621 harvest gathering?** No documentation supports that. Accounts of the 1621 gathering mention foods such as venison, seafood, corn, and local produce—not this casserole. Sweet potatoes and marshmallows in this form belong to much later culinary history.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/) and the [Smithsonian National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-08",
+      "runId": "be0ad87d-fa19-42ae-be20-f32dc3a1b382",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Corn pudding **does exist as a Thanksgiving dish** and is served by some American households, especially in certain Southern and regional traditions.\n\n- **Common nationwide?** No—it's less universal than stuffing, mashed potatoes, or cranberry sauce. Whether it appears often depends on region and family tradition.\n- **Family-specific?** Often, yes. Many people encounter it as a treasured family side rather than a standard national dish.\n- **Served at the 1621 harvest gathering?** There’s no good evidence that modern corn pudding was served then. Corn was present, but that doesn’t establish this later-style dish.\n\nSources: [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives) and [USDA/FNS](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-08",
+      "runId": "818fef53-c499-460e-a162-61022c22be2a",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 2
+      },
+      "answer": "No. Viral visibility does **not** establish that a dish is broadly served.\n\n- **Tequila instant mashed potatoes:** They exist as a viral social-media recipe/stunt, but the coverage explicitly says it is not an established Thanksgiving tradition. [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/)\n- **Bottle-squeezed instant mash:** Also a real viral hack, not a distinct traditional dish or evidence of widespread household use. [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/) · [Instagram post](https://www.instagram.com/p/DAo5u0JSXRY/)\n\n**Green bean casserole:** It originated in the **1950s**, created in a Campbell’s test kitchen and commonly associated with developer Dorcas Reilly. It became a recognizable American holiday side, though “common” still varies by family and region. It was **not documented at the 1621 harvest gathering**. [Smithsonian](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) · [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)"
+    },
+    {
+      "id": "pass-history-green-bean-batch-09",
+      "runId": "d648034a-4f3f-4c88-a6cf-138f6a9877fd",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "## Green bean casserole history\n\n- **Does it exist?** Yes—a real American dish.\n- **When was it created?** It was developed in the Campbell Soup Company test kitchen in **1955**, commonly credited to Dorcas Reilley.\n- **Was it common?** It became a widely recognized modern Thanksgiving dish, though household traditions vary.\n- **Was it served at the 1621 harvest gathering?** **No.** It postdates 1621 by more than three centuries. The documented evidence for that gathering mentions foods such as venison, fowl, corn, seafood, and seasonal produce—not green bean casserole.\n\n**Confidence:** High for its 1955 origin and absence from 1621: the dish’s modern creation is well documented, while surviving descriptions of the 1621 gathering do not include it. Absence of a surviving menu cannot prove every food served, but the chronology makes the casserole claim impossible.\n\nSources: [Smithsonian](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-09",
+      "runId": "adbff23c-381d-493e-8d1a-417d9f93a08b",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## @eatsbyrachel’s recipe\n\nThe available coverage describes it as:\n\n1. Roast a sweet potato until soft.\n2. Split it open and mash the flesh in its skin.\n3. Top with pastry cream.\n4. Sprinkle with sugar.\n5. Torch or broil until the sugar forms a crisp brûlée shell.\n\n**Original post:** [@eatsbyrachel’s Instagram Reel](https://www.instagram.com/reel/C_I2LuugxlS/)  \nRecipe coverage: [The Kitchn](https://www.thekitchn.com/viral-sweet-potato-creme-brulee-recipe-review-23692946)\n\nI’d treat those steps as a reliable summary, not a fully verified ingredient-by-ingredient transcription of the creator’s caption.\n\n## Is it common at Thanksgiving?\n\nThe **dish exists**, but it appears to be a contemporary viral/social-media recipe—not a generally common Thanksgiving standard. It may be served by particular families or adventurous hosts, but the search evidence does not measure household prevalence.\n\n## History and 1621 context\n\n- **Dish history:** Sweet-potato crème brûlée is modern in this form; I found no evidence establishing it as a traditional historical Thanksgiving dish.\n- **1621 harvest gathering:** There is no evidence that this specific dessert was served at the 1621 gathering. A modern sweet potato or brûlée technique cannot be used to infer that.\n- **Confidence:** **High** that the recipe is a recent social-media creation; **moderate-to-high** that it is not a broadly established Thanksgiving tradition. The historical search found related sweet-potato casserole history, not evidence for this crème brûlée.\n\nFor comparison, marshmallow-topped sweet-potato casserole is itself a modern tradition, documented from the early twentieth century—not a 1621 recipe."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-09",
+      "runId": "cc6ea40a-0ce1-47a3-a330-eb983fba8bd8",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## Does corn pudding exist?\nYes. It is a genuine dish: typically corn baked with eggs, milk or cream, and sometimes butter, sugar, or seasoning.\n\n## Is it common everywhere?\nNo. It is better described as **regional and family-specific**, with stronger associations in parts of the American South and some Midwestern households. It is not a universal Thanksgiving side, and the available references do not measure national prevalence.\n\n## Was it documented at the 1621 harvest gathering?\nNot as corn pudding. Although corn was present historically, that does **not** establish that the modern egg-and-cream casserole was served in 1621. I found no evidence documenting corn pudding at that gathering.\n\n**Confidence:** High that it is a real modern Thanksgiving dish; moderate that it is regional/family-specific; high that its presence at the 1621 gathering is unverified.\n\nSources: [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives) and [USDA/America’s Harvest](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "pass-search-selection-control-batch-09",
+      "runId": "e5883706-828b-4da8-9399-e3477d701411",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 3
+      },
+      "answer": "## Does each dish exist?\n\n- **Tequila instant mashed potatoes:** Yes—as a recent viral recipe/stunt, replacing the water with tequila. [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/)\n- **Bottle-squeezed instant mash:** Yes—as a preparation hack using a plastic bottle. [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/) · [Instagram](https://www.instagram.com/p/DAo5u0JSXRY/)\n\n## Are they common American Thanksgiving foods?\n\nNo evidence supports that claim. The social-media search returned highly engaged posts, but explicitly notes that this is **not a representative household sample**. They appear to be novelties or hacks, not broadly established family staples. Viral visibility is not the same as prevalence—algorithms do love a dramatic potato.\n\n## Were they documented at the 1621 harvest gathering?\n\nNo. The historical search found no supporting evidence, and neither modern instant potatoes nor these techniques should be projected backward into 1621.\n\n**Confidence:** High that both exist as modern online trends; low that they are common nationwide Thanksgiving traditions. Instant mashed potatoes generally may be used by some families, but these particular versions are not verified as broadly popular."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-09",
+      "runId": "15d3181a-d0eb-465c-ae3e-baf3c8626003",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Green bean casserole was created in **1955** in a Campbell’s test kitchen, commonly credited to staff member Dorcas Reilly.\n\n- **Does it exist?** Yes—well-documented as a 20th-century American dish.\n- **Is it common?** It became a popular Thanksgiving side, though prevalence varies by household and region.\n- **Was it served at the 1621 harvest gathering?** No. The dish—and its canned soup and fried-onion ingredients—came centuries later. Accounts of 1621 mention foods such as deer, seafood, corn, and squash, but not green bean casserole.\n\n**Confidence:** Very high for the 1955 origin and the conclusion that it was not served in 1621. The 1621 menu itself is only partly documented, so historians avoid claiming complete certainty about every dish present.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [Smithsonian’s National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-09",
+      "runId": "01579136-6a44-4fa8-87fe-b37ccf71f542",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**sweet potato casserole with marshmallows is a real modern American dish**. Marshmallow-topped versions are documented in the **early 20th century**, so the tradition is roughly a century old.\n\nThree separate questions:\n\n1. **Does it exist?** Yes, as a recognizable casserole, often sweetened and topped with marshmallows.\n2. **Is it common?** It’s a familiar Thanksgiving side, though not universal—some families prefer streusel, plain roasted sweet potatoes, or savory preparations.\n3. **Was it at the 1621 harvest gathering?** Almost certainly not documented. Historical accounts mention foods such as venison, seafood, corn, and local produce, but not this casserole. The 1621 meal also wasn’t the standardized menu now associated with Thanksgiving.\n\n**Confidence:** High that the dish is modern and was not documented at the 1621 gathering; moderate-to-high regarding its early-20th-century documentation, based on the cited historical references. Marshmallows on sweet potatoes are a later culinary plot twist, not a Pilgrim eyewitness account.\n\nSources:\n- [Smithsonian: 100th birthday of marshmallow sweet potatoes](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/)\n- [Smithsonian: Food at the first Thanksgiving](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/)\n- [National Museum of American History: Colonial food](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)"
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-09",
+      "runId": "e9bd7f83-4d51-4202-ac12-d94cfa032102",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**corn pudding is genuinely served at Thanksgiving**, but it is not universal. It’s best described as a **regional and family-specific side**, with stronger associations in parts of the American South and traditional holiday cooking.\n\n- **Does it exist?** Yes. It’s a recognized baked corn-and-custard-style dish.\n- **Is it common?** Common in some households and regions, but not a standard on every American Thanksgiving table. The research source does not measure national prevalence.\n- **Was it served at the 1621 harvest gathering?** There’s no solid evidence that modern corn pudding was served then. Corn was present historically, but that doesn’t establish this specific preparation.\n\n**Confidence:** High that it is a real Thanksgiving dish; moderate that it is regional/family-specific; very low that modern corn pudding can be attributed to the 1621 meal.\n\nSources: [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives) and [USDA Food and Nutrition Service](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-09",
+      "runId": "c69a15e6-80cc-42c2-a0c5-74241156fe8c",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 2
+      },
+      "answer": "### Instant-mash trends\n\n- **Do they exist?** Yes. Tequila “lit mashed potatoes” and bottle-squeezed instant mash are documented viral recipes/hacks.\n- **Are they broadly common Thanksgiving staples?** No evidence supports that. The search covered high-engagement social posts—not a representative household survey—and explicitly describes them as a viral stunt/hack, not established traditions.\n- **Were they served at the 1621 harvest gathering?** No. They are modern inventions.\n\nSources: [Patrón tequila mash coverage](https://homeandtexture.com/holiday-mashed-potatoes-patron/), [bottle hack coverage](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/).\n\n### Green bean casserole\n\n- **Does it exist?** Yes: a twentieth-century Campbell’s test-kitchen creation.\n- **How common?** It became a recognizable American holiday side, but prevalence varies by family and region; it is not universal.\n- **When did it originate?** The commonly cited origin is **1955**, associated with Campbell’s developer Dorcas Reilly.\n- **Was it at the 1621 gathering?** No—it postdates that event by centuries.\n\n**Confidence:** High that it is a modern Campbell’s-era dish and not a 1621 food. The exact “1955” attribution is well established in culinary-history accounts, though the search results supplied here mainly corroborate its twentieth-century origin rather than providing a primary 1955 document.\n\nSources: [Smithsonian: foods at the first Thanksgiving](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/), [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "pass-history-green-bean-batch-10",
+      "runId": "a810c2e9-d6b7-4e36-96c6-bb2a0dcb3450",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## When was it created?\n\nGreen bean casserole is a real American dish created in a Campbell’s test kitchen in the **twentieth century**, commonly dated to **1955**. It traditionally combines green beans, cream of mushroom soup, and crispy fried onions.\n\n## Is it common?\n\nIt became a popular **modern Thanksgiving side dish**, though it is not served by every family. Recipes and traditions vary by household and region.\n\n## Was it served in 1621?\n\n**No.** There is no evidence that green bean casserole was served at the 1621 harvest gathering. The dish is much newer, and surviving accounts of that gathering do not document it.\n\nFor a first American Thanksgiving, think of it as a familiar modern classic—not an unchanged dish from the Pilgrims’ meal.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [Smithsonian’s National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-10",
+      "runId": "9d162744-e86f-423f-8e15-e8606ff23652",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## The recipe\n\n@eatsbyrachel’s viral **sweet potato crème brûlée** involves:\n\n1. Roast a sweet potato until soft.\n2. Split it open and mash the flesh slightly.\n3. Top it with pastry cream.\n4. Sprinkle with sugar.\n5. Torch or broil until the sugar forms a crisp brûlée shell.\n\nThe original Instagram Reel is here: [@eatsbyrachel’s post](https://www.instagram.com/reel/C_I2LuugxlS/). A recipe review is available from [The Kitchn](https://www.thekitchn.com/viral-sweet-potato-creme-brulee-recipe-review-23692946). The precise quantities should be taken from the original post or its accompanying recipe, since the available evidence confirms the method but not a fully transcribed ingredient list.\n\n## Is it common at Thanksgiving?\n\n- **Does the dish exist?** Yes—it is a real contemporary social-media recipe.\n- **Is it common?** No evidence suggests it is a standard or widespread Thanksgiving dish. It is better understood as a creative, viral dessert inspired by Thanksgiving flavors.\n- **Was it served at the 1621 harvest gathering?** No. This modern preparation—and crème brûlée generally—cannot be documented there.\n\nFor a first American Thanksgiving, expect more traditional sweet-potato preparations, especially **sweet potato casserole**, sometimes topped with marshmallows. That is a modern American tradition, not a 1621 recipe either. And yes, marshmallows on vegetables are as delightfully controversial as they sound."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-10",
+      "runId": "14413238-e282-4633-aec5-3e5acbc7990e",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "### Does corn pudding exist?\nYes. **Corn pudding** is a real American side dish, usually a soft baked custard or casserole made with corn, eggs, and dairy. It is served at some Thanksgiving meals.\n\n### Is it common everywhere?\nNo. It is **regional and family-specific**, rather than a universal Thanksgiving staple. It is especially associated with parts of the American South and with particular family traditions. Many Americans would recognize it, but others may never have encountered it at Thanksgiving.\n\nFor a first Thanksgiving, expect more universal possibilities such as turkey, stuffing/dressing, gravy, potatoes, cranberry sauce, and vegetables—but every family’s menu differs.\n\n### Was it documented at the 1621 harvest gathering?\nNo evidence documents **modern corn pudding** at the 1621 gathering. Corn was present in the broader historical context, but that does **not** establish that this particular recipe was served.\n\nSources: [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives), [USDA/National Archives-style history resource](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "pass-search-selection-control-batch-10",
+      "runId": "2c9b83f0-5715-40da-97d4-10c4f05e2f7e",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 3
+      },
+      "answer": "Short answer: **no**. Seeing these repeatedly online reflects algorithmic amplification, not broad household practice.\n\n- **Do the dishes/trends exist?** Yes. A viral video replaced the water in instant mash with Patrón tequila (“lit mashed potatoes”): [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/). Another demonstrated squeezing prepared instant mash from a bottle: [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/) and [Instagram](https://www.instagram.com/p/DAo5u0JSXRY/).\n- **Are they common?** The evidence supports “viral food experiments,” not common Thanksgiving staples. Instant mashed potatoes themselves may appear at some families’ meals, but preparation varies greatly.\n- **Were they documented at the 1621 harvest gathering?** No. There is no basis for attributing instant potatoes—or either modern technique—to that event. These are modern inventions.\n\nFor a first American Thanksgiving, expect family variation: turkey, potatoes, stuffing/dressing, gravy, cranberry sauce, and vegetable sides are common patterns, but no single menu is mandatory. Social media’s repetition can make a novelty look like everyone’s tradition—rather like believing every British household serves novelty marmalade cocktails."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-10",
+      "runId": "2c4f46c4-d105-4b45-aa85-c4715f71b6bf",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "## Green bean casserole\n\n- **Does it exist?** Yes. It’s a casserole of green beans, creamy mushroom soup, and usually crispy fried onions.\n- **When was it created?** It was developed in the **Campbell Soup Company test kitchen in 1955**, reportedly by Dorcas Reilly.\n- **Is it common?** It became a popular American Thanksgiving side dish, though not every family serves it. It’s especially associated with mid-century and convenience-food traditions.\n- **Was it served at the 1621 harvest gathering?** **No.** The dish was created more than 300 years later. The 1621 meal is also poorly documented, but surviving evidence points to foods such as venison, wildfowl, corn, and seasonal produce—not modern casseroles.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian).\n\nFor a first American Thanksgiving, think of it as a modern, familiar side dish—not an ancient historical tradition."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-10",
+      "runId": "283d2483-2c8a-4ce7-a252-028bcebbe52d",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**sweet potato casserole topped with marshmallows is a real modern American dish**. Marshmallow-topped versions are documented from the early 20th century, and many families serve them at Thanksgiving today.\n\nThree distinctions help:\n\n- **Does it exist?** Yes, absolutely.\n- **Is it common?** It’s a familiar Thanksgiving side, but not universal. Some families make it every year; others prefer savory sweet potatoes or none at all.\n- **Was it served at the first Thanksgiving in 1621?** There’s no evidence for that. The 1621 harvest gathering likely included foods such as venison, seafood, corn, and local vegetables, but not the modern casserole—or marshmallows.\n\nSo, think of it as a later American Thanksgiving tradition, not an unchanged Pilgrim-era recipe. It may be sweet enough to make the marshmallows wonder whether they’ve wandered onto a dessert table.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/), [Smithsonian Magazine on the 1621 meal](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/), and [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-10",
+      "runId": "633de753-dfd6-4bb2-a978-890e38ea5810",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**corn pudding is genuinely served at Thanksgiving**, but it is not a universal staple like turkey, stuffing, or cranberry sauce.\n\n- **Does it exist?** Yes. It’s a soft, creamy baked side dish made with corn, often eggs, milk or cream, and sometimes flour or cornmeal.\n- **Is it common?** It’s especially associated with parts of the American South and with particular family traditions. Many Americans have never had it at Thanksgiving, while others consider it essential.\n- **Was it at the 1621 harvest gathering?** There’s no good evidence that modern corn pudding was served there. Corn was present in Indigenous and colonial diets, but today’s recipe is a later dish.\n\nSo, for your first Thanksgiving: if your host serves it, it’s perfectly authentic American Thanksgiving food—not merely an invention. If they don’t, that’s equally normal.\n\nSources: [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives), [USDA/FNS](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-10",
+      "runId": "d4a05c00-edc7-44dd-8a7b-3ea5eff4e91e",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 2
+      },
+      "answer": "### Instant-mash trends\n\n- **Do they exist?** Yes. Tequila “lit mashed potatoes” and bottle-squeezed instant mash are real viral recipes or hacks.\n- **Are they broadly common Thanksgiving staples?** No. The research describes them as social-media trends, not established family traditions—and the search sample does **not** measure household prevalence. Many families serve homemade mashed potatoes; some use instant potatoes, but tequila mash is especially a novelty.\n- **Were they at the 1621 harvest gathering?** Definitely not documented. That meal was quite different from today’s Thanksgiving menu.\n\nSources: [tequila mash coverage](https://homeandtexture.com/holiday-mashed-potatoes-patron/), [bottle hack coverage](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/).\n\n### Green bean casserole\n\n- **Does it exist?** Yes, it is a classic American casserole made traditionally with green beans, cream-of-mushroom soup, and crispy fried onions.\n- **How common is it?** Fairly common at Thanksgiving, but regional and family-dependent—not obligatory. Some families would consider it essential; others never serve it.\n- **Was it at the 1621 gathering?** No. It originated in a Campbell’s test kitchen in the **1950s**, generally dated to **1955**, long after 1621.\n\nSource: [Smithsonian history of Thanksgiving foods](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/).\n\nFor your first Thanksgiving, expect turkey, stuffing/dressing, gravy, potatoes, cranberry sauce, and several vegetable or sweet dishes—but every family’s menu differs. And marshmallows on sweet potatoes are a genuine tradition for some, not a culinary prank."
+    },
+    {
+      "id": "pass-history-green-bean-batch-11",
+      "runId": "b5fdbf22-c7d7-4237-a036-952665e975fc",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "**Green bean casserole was created in 1955** in a Campbell’s test kitchen, commonly credited to Dorcas Reilly.\n\n- **Does it exist?** Yes—a verified 20th-century American dish.\n- **Is it common?** It became a popular Thanksgiving side, though popularity varies by household and region.\n- **Was it served at the 1621 harvest gathering?** **No.** It was invented more than three centuries later. The surviving historical evidence about 1621 does not include it.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [Smithsonian National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-11",
+      "runId": "5f57c7df-8c75-4126-9ae4-b20ffa43596b",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## Verified recipe and original post\n\nThe dish **does exist** and is attributed to @eatsbyrachel. The documented method is:\n\n1. Roast a sweet potato until soft.\n2. Split and mash it in its skin.\n3. Top with pastry cream.\n4. Sprinkle with sugar.\n5. Torch or broil until the sugar forms a crisp brûlée shell.\n\n**Original Instagram Reel:** [@eatsbyrachel’s sweet potato crème brûlée](https://www.instagram.com/reel/C_I2LuugxlS/)  \n**Recipe coverage/review:** [The Kitchn](https://www.thekitchn.com/viral-sweet-potato-creme-brulee-recipe-review-23692946)\n\nThe available evidence verifies the social-media recipe and attribution, but I can’t verify a more precise ingredient list or quantities from the source record alone.\n\n## Is it common at Thanksgiving?\n\n- **Does it exist?** Yes.\n- **Common or family/regional-specific?** It appears to be a recent viral recipe, not a broadly established Thanksgiving standard. Social-media coverage is not evidence of national popularity.\n- **Documented at the 1621 harvest gathering?** No. There is no evidence for this modern crème brûlée preparation at that event.\n\nSweet-potato casserole—sometimes topped with marshmallows—is the much more recognizable modern Thanksgiving association, though even that isn’t universal."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-11",
+      "runId": "e7093cbb-34e9-4b28-bea7-c0a2021a5110",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "### Does corn pudding exist?\nYes. It is a genuine dish, including as a Thanksgiving side. Sources document modern corn-pudding recipes and Thanksgiving-oriented usage:\n\n- [Martha Stewart: Corn Pudding](https://www.marthastewart.com/1155558/corn-pudding-chives)\n- [USDA/FNS: Corn Pudding](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)\n\n### Is it common everywhere?\nNo verified evidence supports calling it universal nationwide. The available references describe it as common in **some regions and households**, so it is better characterized as regional or family-specific rather than an obligatory American Thanksgiving dish. The search source explicitly says its results do not measure household prevalence.\n\n### Was it documented at the 1621 harvest gathering?\nNo. Modern corn pudding should not be projected onto the 1621 menu merely because corn was present. The cited sources document the dish’s modern existence, not its presence at that gathering.\n\n**Bottom line:** real dish; regionally/family common, not everywhere; not verified as a 1621 dish."
+    },
+    {
+      "id": "pass-search-selection-control-batch-11",
+      "runId": "8ea732f5-54be-4fc3-852e-b47a8f72b90b",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "**Does either dish exist?**  \nYes. Both are documented social-media creations:\n\n- **Tequila instant mash (“lit mashed potatoes”)**: a viral TikTok recipe replacing water with Patrón tequila.  \n  Source: [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/)\n- **Bottle-squeezed instant mash**: a documented Instagram food hack.  \n  Sources: [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/), [Instagram](https://www.instagram.com/p/DAo5u0JSXRY/)\n\n**Are they common American Thanksgiving foods?**  \nNot verified. The available evidence shows viral posts and media coverage—not representative household data. They should be treated as stunts or hacks, not broadly established family staples.\n\n**Were they part of the 1621 harvest gathering?**  \nNo. They are modern instant-potato preparations; there is no basis for associating them with 1621. Viral visibility isn’t the same as national popularity—algorithms can make one potato seem like the whole country’s side dish."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-11",
+      "runId": "8efc4766-6fd9-4af2-aeeb-95df1aab72ba",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Green bean casserole was created in **1955** in a Campbell’s test kitchen, by Dorcas Reilly.\n\n- **Does it exist?** Yes—well documented as a 20th-century dish.\n- **Is it common?** Yes, it became a widespread American Thanksgiving side, though it is not universal.\n- **Was it served at the 1621 harvest gathering?** **No verified evidence supports that.** The dish did not yet exist, and surviving accounts of the gathering do not mention it.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-11",
+      "runId": "5725cc19-a925-49df-b0ae-032127a4f59b",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—it is a **real modern American dish**. Marshmallow-topped sweet potatoes are documented in the **early 20th century**, so the recipe is historically verified, not merely plausible.\n\nThree distinctions:\n\n- **Does it exist?** Yes: sweet-potato casserole with marshmallows is a documented recipe.\n- **Is it common?** It is a familiar Thanksgiving tradition, but not universal; prevalence varies by family and region.\n- **Was it served at the 1621 gathering?** **No verified evidence supports that.** Accounts of the harvest gathering do not document this casserole—or marshmallows. Sweet potatoes themselves are not reliable evidence that the modern dish was present.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/) and the [Smithsonian National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian). The marshmallows arrived much later—history’s most conspicuous attempt to turn a vegetable into a dessert cloud."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-11",
+      "runId": "2fe020e8-9b1a-4eb9-ac83-3e6ffdd0f13c",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**corn pudding is genuinely served at Thanksgiving**, but it is not a universal or standard dish. It’s best described as a **regional and family-specific tradition**, with some modern recipes explicitly presented as Thanksgiving sides.\n\n- **Does it exist?** Yes, verified.\n- **Is it common?** It appears in some regional/household menus, but the available references do **not establish national prevalence**.\n- **Was it served at the 1621 harvest gathering?** Not documented. Corn was present, but projecting modern corn pudding onto that meal would be speculation.\n\nSources: [Martha Stewart corn pudding](https://www.marthastewart.com/1155558/corn-pudding-chives) and [USDA/National Agricultural Library reference](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-11",
+      "runId": "85efe1b2-42bc-45ed-bc2d-c77ceb09176e",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 4,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 3
+      },
+      "answer": "### Tequila instant mash and bottle-squeezed mash\n\n- **Do they exist?** Yes. Both are documented social-media recipes or hacks.\n- **Are they broadly popular Thanksgiving staples?** No verified evidence supports that. The search results reflect curated, high-engagement posts—not a representative sample of American households. The tequila version was reported as a viral stunt, while the bottle version is a presentation hack, not a distinct traditional dish.\n- **Sources:** [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/), [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/), and the original [Instagram post](https://www.instagram.com/p/DAo5u0JSXRY/).\n\nSo: **viral visibility ≠ widespread family practice**. Social media can make a novelty look like everyone’s tradition—marshmallows on sweet potatoes know the feeling.\n\n### Green bean casserole\n\n- **Does it exist?** Yes.\n- **When did it originate?** It was created in a Campbell’s test kitchen in the **mid-20th century, generally dated to 1955**, by Dorcas Reilly.\n- **Is it common?** It became a well-established American Thanksgiving side, though not every family serves it.\n- **Was it at the 1621 harvest gathering?** No. It is a modern dish, not a documented first-Thanksgiving food.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "pass-history-green-bean-batch-12",
+      "runId": "0d0e8b6b-2242-4cbd-9597-8da5baeff3bb",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "Green bean casserole was created in **1955** in a Campbell’s test kitchen, commonly credited to Dorcas Reilly.\n\n- **Does it exist?** Yes—it is a documented 20th-century dish.\n- **Is it common?** It became a widely recognized Thanksgiving dish, though this evidence does not establish that every region or family serves it.\n- **Was it served at the 1621 gathering?** **No.** It postdates that event by centuries, and surviving evidence about 1621 describes a different, limited menu.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [Smithsonian National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-12",
+      "runId": "8443b716-fe90-4be0-ac96-0efce24a4b8c",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "## Sweet potato crème brûlée\n\nAccording to coverage of @eatsbyrachel’s viral recipe:\n\n1. Roast a sweet potato until soft.\n2. Split and mash it in its skin.\n3. Top with pastry cream.\n4. Sprinkle with sugar.\n5. Torch or broil until the sugar forms a crisp brûlée shell.\n\n**Original post:** [Instagram Reel](https://www.instagram.com/reel/C_I2LuugxlS/)  \n**Recipe coverage:** [The Kitchn](https://www.thekitchn.com/viral-sweet-potato-creme-brulee-recipe-review-23692946)\n\n## Is it common at Thanksgiving?\n\n- **Does the dish exist?** Yes—this is a documented online recipe.\n- **Is it common?** The evidence does **not** establish it as a common Thanksgiving dish. It appears to be a recent viral/social-media creation.\n- **Was it documented at the 1621 harvest gathering?** No evidence connects it to that event; modern crème brûlée techniques and this preparation should not be projected backward.\n\nThe available evidence shows an **online example**, not a broadly established national, regional, or family tradition."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-12",
+      "runId": "8cb664a1-4212-4e5d-bae2-9a9bd4c3dd03",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "### Does corn pudding exist?\nYes. It is a real baked corn side dish and is served at Thanksgiving in some American households.\n\n### Is it common everywhere?\nNo evidence supports that. It appears to be **regional or family-specific**, rather than a universal Thanksgiving side. The available references document it as a Thanksgiving option, but do not measure nationwide popularity. So an online or regional example should not be treated as representative of all Americans.\n\n### Was it documented at the 1621 harvest gathering?\nNo. Although corn was present historically, that does **not** establish that modern corn pudding was served at the 1621 gathering. The dish is documented in modern Thanksgiving contexts, not as a verified 1621 recipe.\n\nSources: [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives) and the USDA’s [America’s Harvest](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "pass-search-selection-control-batch-12",
+      "runId": "1ba1c3ab-6dee-4217-bb1a-5158e6ba1760",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "No. The videos show **online visibility, not broad family adoption**.\n\n- **Tequila instant mashed potatoes:** This is a real viral recipe/stunt, reported on TikTok, but the evidence does not establish it as a common Thanksgiving dish or regional tradition. [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/)\n- **Bottle-squeezed instant mash:** This is a real Instagram food hack, not a distinct dish or established Thanksgiving custom. [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/) · [Instagram example](https://www.instagram.com/p/DAo5u0JSXRY/)\n\nThe search sample is specifically curated for high-engagement social posts, **not a representative survey of American households**. Thus, both exist; neither can confidently be called a broadly popular Thanksgiving staple. Viral potatoes are still potatoes—just unusually committed to content creation."
+    },
+    {
+      "id": "fail-tool-contract-green-bean-batch-12",
+      "runId": "aab78dd8-91ae-4f6b-8807-8b81a4782a5a",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Green bean casserole was created in **1955** in a Campbell’s test kitchen by Dorcas Reilly.\n\n- **Does it exist?** Yes—a documented 20th-century American dish.\n- **Is it common?** It became a widespread Thanksgiving staple, though household traditions vary; the evidence here does not measure universal popularity or establish a particular regional example.\n- **Was it served at the 1621 harvest gathering?** No. It was invented centuries later. Accounts of the 1621 gathering mention foods such as venison, seafood, corn, and squash, not green bean casserole.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) and [National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)."
+    },
+    {
+      "id": "fail-tool-contract-sweet-potato-batch-12",
+      "runId": "a90626ba-746e-402d-81e6-e9168d55a64c",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**sweet potato casserole topped with marshmallows is a real modern American dish**. Marshmallow-topped versions are documented from the early 20th century.\n\n- **Does it exist?** Yes, as a recognized recipe.\n- **Is it common?** It is associated with American Thanksgiving, but prevalence varies by household and region; the evidence does **not** establish it as universal. The search found a documented recipe tradition, not merely an online anecdote.\n- **Was it served at the first Thanksgiving in 1621?** No evidence supports that. Accounts of the 1621 harvest gathering mention foods such as venison, seafood, corn, and squash, but not marshmallows—which were not part of that meal. The casserole is a later invention.\n\nSources: [Smithsonian Magazine](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/) and [Smithsonian National Museum of American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian).\n\nSo: historically authentic modern Thanksgiving food, but not a 1621 dish."
+    },
+    {
+      "id": "fail-tool-contract-corn-pudding-batch-12",
+      "runId": "b9bad85d-a1b2-4c9c-a7e9-8cbac536c344",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "dish_classification": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 1
+      },
+      "answer": "Yes—**corn pudding is genuinely served at Thanksgiving**, but it’s best described as a **regional or family-specific side**, not a universally common dish.\n\n- **Does it exist?** Yes, it’s a recognized American side dish.\n- **Is it common?** It appears in some regional and household Thanksgiving meals, but the evidence does **not** establish how widespread it is.\n- **Was it served at the 1621 harvest gathering?** No reliable evidence documents modern corn pudding there. Corn was present, but that doesn’t prove this particular preparation was.\n\nSources: [Martha Stewart](https://www.marthastewart.com/1155558/corn-pudding-chives) and [USDA/FNS](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)."
+    },
+    {
+      "id": "fail-tool-contract-search-selection-challenge-batch-12",
+      "runId": "1e58c74b-482c-499d-99ee-cd3bcfc25001",
+      "variant": "baseline",
+      "expected": {
+        "tool_contract": "fail",
+        "search_selection": "pass"
+      },
+      "toolContract": "FAIL",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 1,
+        "completedSearches": 2
+      },
+      "answer": "No. **Virality isn’t evidence of broad household popularity.**\n\n- **Tequila instant mashed potatoes:** They exist as a viral 2025 TikTok recipe/stunt, but the evidence is online coverage—not a broadly established Thanksgiving staple. [Home & Texture](https://homeandtexture.com/holiday-mashed-potatoes-patron/)\n- **Bottle-squeezed instant mash:** This is a genuine 2024 Instagram hack, not a distinct traditional dish or evidence of widespread family practice. [Delish](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/) · [Instagram](https://www.instagram.com/p/DAo5u0JSXRY/)\n- **Green bean casserole:** It does exist and originated in a Campbell’s test kitchen in **1955**. It became a familiar modern American holiday side, though prevalence varies by family and region. It was **not** documented at the 1621 harvest gathering. [Smithsonian](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/) · [Smithsonian American History](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)\n\nIn short: the potato examples are online phenomena; green bean casserole is a real, historically documented modern tradition—though not universal."
+    },
+    {
+      "id": "pass-history-green-bean-batch-13",
+      "runId": "ccb3275f-0e11-49cb-8067-e90fa298e986",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 1,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 1
+      },
+      "answer": "## When was it created?\n\n**Green bean casserole is a real dish, created in 1955** by Dorcas Reilly in the Campbell Soup Company test kitchen. The original recipe combined green beans, condensed cream of mushroom soup, and milk, with fried onions as a topping.\n\n## Was it served at the 1621 harvest gathering?\n\n**No—there is no evidence it was served there.** The dish was invented more than three centuries later. Moreover, surviving accounts of the 1621 gathering are limited, and they do not provide a complete menu.\n\n## How common is it?\n\nIt became a widely recognized **modern American Thanksgiving dish**, especially through Campbell’s promotion, but “common” does not mean universal. It is a twentieth-century family and regional tradition—not a documented colonial one.\n\nSources:\n\n- [Smithsonian Magazine: What Food Was Served at the First Thanksgiving in 1621?](https://www.smithsonianmag.com/history/what-food-was-served-at-the-first-thanksgiving-in-1621-511554/)\n- [Smithsonian National Museum of American History: 5 Questions for a Colonial Culinarian](https://americanhistory.si.edu/explore/stories/5-questions-colonial-culinarian)"
+    },
+    {
+      "id": "pass-social-creme-brulee-batch-13",
+      "runId": "71136373-1979-41ae-9dfb-2b827b6127f5",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "source_integrity": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "## The @eatsbyrachel recipe\n\nThe original Instagram Reel is here: [@eatsbyrachel’s Sweet Potato Crème Brûlée](https://www.instagram.com/reel/C_I2LuugxlS/).\n\nThe available coverage describes it as:\n\n1. Roast a sweet potato until soft.\n2. Split it open and mash the flesh in its skin.\n3. Top with pastry cream.\n4. Sprinkle with sugar.\n5. Torch—or briefly broil—until the sugar forms a crisp brûlée shell.\n\nA detailed secondary write-up is available from [The Kitchn](https://www.thekitchn.com/viral-sweet-potato-creme-brulee-recipe-review-23692946). I’d treat this as a careful reconstruction rather than an exact transcription: the search evidence does not provide verified quantities or the creator’s complete written recipe.\n\n## Is it common at Thanksgiving?\n\n- **Does the dish exist?** Yes—this is a documented modern social-media recipe.\n- **Is it common?** No evidence here supports calling sweet potato crème brûlée a common national Thanksgiving dish. It appears to be a newer, creator-specific variation.\n- **Was it documented at the 1621 harvest gathering?** No. There is no basis for connecting this dish—or crème brûlée generally—to that event.\n\nSweet potatoes are familiar in American holiday cooking, especially as sweet-potato casserole. Marshmallows on top have their own modern history, but every family gets to decide whether that’s dessert or a daring vegetable experiment. [Smithsonian history](https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/)."
+    },
+    {
+      "id": "pass-regional-corn-pudding-batch-13",
+      "runId": "6364a2c9-96cd-4415-a5f7-28aa9edb4392",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "factual_grounding": "pass",
+        "dish_classification": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 2,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 2
+      },
+      "answer": "### Short answer\n\n**Corn pudding is a real Thanksgiving side, but not an everywhere-standard one.** It is better described as **regional and family-specific**, with particular associations in parts of the American South and elsewhere where fresh or creamed corn dishes are traditional.\n\n### What is documented?\n\n- Modern **corn pudding** is a recognized American side dish and appears in Thanksgiving recipe collections, including:\n  - [Martha Stewart: Corn Pudding with Chives](https://www.marthastewart.com/1155558/corn-pudding-chives)\n  - [USDA/National Agricultural Library: Corn Pudding](https://fns-prod.azureedge.us/americasharvest/founding/sides/corn-pudding)\n\nThese sources document the dish’s existence and use—not that most Americans serve it.\n\n### What is common?\n\nThere is no reliable evidence here for a national prevalence rate. The available references explicitly treat it as something served in **some regions and households**, rather than a universal Thanksgiving staple. Many families would consider mashed potatoes, stuffing, cranberry sauce, or green-bean casserole more familiar default sides; corn pudding may be a cherished local or family tradition.\n\n### Was it documented at the 1621 harvest gathering?\n\n**No—not as corn pudding.** Corn was present in the broader historical setting, but that does **not** establish that the modern baked custard-like dish was served at the 1621 harvest gathering. The modern recipe should not be projected backward from the ingredient alone.\n\nSo, for a British newcomer: ordering or serving corn pudding is entirely legitimate, but expect it to read as **regional or household Thanksgiving food**, not an obligatory national dish."
+    },
+    {
+      "id": "pass-search-selection-control-batch-13",
+      "runId": "2b09ae94-3cd6-4d82-be5c-45ae950fe1ed",
+      "variant": "improved",
+      "expected": {
+        "tool_contract": "pass",
+        "search_selection": "pass"
+      },
+      "toolContract": "PASS",
+      "metrics": {
+        "searchToolCalls": 3,
+        "invalidSourceTypeCalls": 0,
+        "completedSearches": 3
+      },
+      "answer": "Short answer: **no—virality doesn’t establish broad household popularity.**\n\n1. **Do the dishes/trends exist?**  \n   Yes. The tequila version substitutes Patrón tequila for the water in instant mash; the bottle version squeezes prepared instant mash from a plastic bottle. They’re documented social-media creations, not merely invented names.\n\n2. **Are they common American Thanksgiving staples?**  \n   No evidence here supports that. The reports describe them as viral stunts or hacks, and the social search is a **curated high-engagement sample, not a representative household survey**. Instant mashed potatoes themselves may be used by some families, but these particular methods appear novelty-oriented and likely family- or creator-specific—not broadly established traditions.\n\n3. **Were they served at the 1621 harvest gathering?**  \n   No. They could not have been: instant mashed potatoes, tequila, and plastic squeeze bottles are modern products. The historical search found no relevant documentation, and modern ingredients should not be used to infer a 1621 recipe.\n\nSources:\n\n- [Home & Texture: tequila “lit mashed potatoes”](https://homeandtexture.com/holiday-mashed-potatoes-patron/)\n- [Delish: bottle mashed-potato hack](https://www.delish.com/food-news/a62600102/mashed-potatoes-hack-trend-instagram/)\n- [Original Instagram post](https://www.instagram.com/p/DAo5u0JSXRY/)\n\nSo: real trends, **not demonstrated national staples**. Viral algorithms are rather good at making one person’s potato experiment look like everyone’s aunt does it."
+    }
+  ]
+}

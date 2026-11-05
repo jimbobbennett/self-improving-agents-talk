@@ -1,16 +1,16 @@
-# Thanksgiving Food Lore Planner: Self-Improving Agent Demo
+# Gobble & Tell: Self-Improving Thanksgiving Chatbot Demo
 
 ## Demo objective
 
-Show a deliberately flawed Thanksgiving dinner planner, use Arize AX traces and evaluations to discover repeatable failures, turn real passing and failing traces into a dataset, improve quality and cost through measured iterations, then automate the improvement workflow with the Codex SDK.
+Show a playful Thanksgiving Q&A chatbot for a British newcomer, use Arize AX traces and evaluations to find realistic cost and answer-quality failures, turn passing and failing traces into a dataset, improve the agent through measured iterations, then automate the improvement workflow with the Codex SDK.
 
 ## Product concept
 
-The Thanksgiving Food Lore Planner helps a British newcomer understand dishes and trends, distinguish real foods from fabricated social-media bait, and then build a menu for a group. It asks about guest count, dietary restrictions, oven capacity, and preferences before returning a menu, ingredient list, and feasible cooking timeline. Its playful voice can gently tease dishes such as marshmallow-topped sweet potatoes without mocking guests or treating one regional tradition as universal.
+The Thanksgiving Food Lore chatbot answers questions a British newcomer might ask about American dishes, regional traditions, social-media recipes, and the first Thanksgiving. It can gently tease dishes such as marshmallow-topped sweet potatoes without mocking the people who enjoy them or treating one regional tradition as universal. Keep the product focused on conversation and researched answers; menu planning is outside the current demo scope.
 
-### Research agent
+### Research behavior
 
-The planner delegates dish and trend questions to a research agent. It searches for the dish, checks the historical and cultural claims, and looks for the original TikTok or Instagram post when the dish is a social-media trend. It returns structured evidence to the planner:
+The current app is one agent with a `search_food_lore` tool; it is not yet a separate research-agent orchestration. The desired research behavior is to search for the dish, check historical and cultural claims, and look for the original TikTok or Instagram post when the dish is a social-media trend. Keep evidence explicit in the trace and answer:
 
 - Canonical dish name and a short, plain-language description.
 - Whether the dish is documented, a regional/family tradition, a modern trend, a synthetic benchmark example, or simply unverified. Lack of a search result must not be treated as proof that a dish is fake.
@@ -18,54 +18,53 @@ The planner delegates dish and trend questions to a research agent. It searches 
 - A brief explanation of what makes the recipe notable, and whether it is known as a Thanksgiving dish or merely went viral around the holiday.
 - Source URLs and a confidence/evidence note for claims about popularity or the 1621 gathering.
 
-The baseline's seeded defect is stale tool documentation: it exposes an optional `source_type` as a plain string and uses the value `historical`, while the backing service validates the enum `history | social`. The model follows the documented value, gets a runtime validation error, and spends another model turn correcting the call. The improved agent uses the runtime enum. The tool-contract code evaluator catches invalid values. The search-selection judge is a guardrail for a realistic risk: the social endpoint returns a curated high-engagement sample that cannot establish household prevalence. AX traces show the failed call, retry, result scope, and token cost.
+The tool-call issue models an integration failure: the tool accepts `source_type` as a string, and its neutral description asks the model to choose a suitable source type. The backing service accepts only `history | social`, so a model guess such as `historical` gets rejected and may cost another model turn to correct. This is now a natural but probabilistic failure, not a hard-coded instruction. A deterministic AX code evaluator catches invalid tool input. Separately, the model can make ordinary evidence errors, such as inferring how common a food is from curated search results. AX judge evaluators catch these answer-quality issues.
 
 ### UI direction
 
-Keep the landing page focused on the planner and use playful sample prompts for real dishes, viral recipes, and synthetic benchmark names. In the answer, show research results in a compact playful card when useful; include the dish name, short description, evidence labels, and a **Watch original on TikTok/Instagram** link only when the direct post is verified. Include creator and post date when known. Make source links available beside historical claims.
+Keep the app a simple chat for Thanksgiving questions. It needs the conversation, playful turkey artwork, a link to the AX project, and readable answers with source links. Do not show evaluation labels, error counts, retry counts, or other failure indicators in the chat; use AX to inspect those. Provide three real-world starter questions and use the original agent for each: one clean control, one tool-contract retry, and one search-selection failure.
 
 Use a warm, silly illustration style: expressive turkey characters, anthropomorphic Thanksgiving sides, rounded shapes, and a hand-drawn cut-paper/sticker feel on a warm cream canvas. Keep the humor affectionate and legible at small card sizes. The first generated art-direction sheet is [thanksgiving-food-stickers.png](output/imagegen/thanksgiving-food-stickers.png); it shows a chef turkey, a turkey hiding behind gravy, marshmallow-topped sweet potatoes, a skeptical cranberry bowl, and a cheerful corn cob.
 
-For synthetic benchmark dishes, show a light-hearted **Made up for this demo** verdict. For any other dish with insufficient evidence, use **Couldn’t verify this one yet** rather than declaring it fake. Keep viral popularity claims specific to the evidence and date; do not turn a viral post into a claim that everyone serves the dish. The sweet-potato-and-marshmallow joke belongs in the copy, not as a judgment of the person who likes it.
+Keep viral popularity claims specific to the evidence and date; do not turn a viral post into a claim that everyone serves the dish. The sweet-potato-and-marshmallow joke belongs in the copy, not as a judgment of the person who likes it.
 
 ## Baseline agent
 
-The current seeded failure is stale tool-contract documentation: the prompt and tool description use `source_type="historical"`, while the service validates `history | social`. The agent gets a model-visible validation error, retries, and incurs an unnecessary model turn before recovering. The evaluator catches the invalid call count; AX shows the rejected input, returned validation message, corrective call, and added model span.
+The seeded integration issue is an open-ended tool parameter: the description accepts any string and tells the agent to choose a source type, while the service validates only `history | social`. The Original agent may guess `historical`, get a model-visible validation error, retry, and incur an extra model turn. The tool evaluator catches the rejected argument; AX shows the invalid call and correction. This cost example is probabilistic rather than guaranteed.
 
-Additional realistic failure cases to add as the planner grows:
+The natural quality failures come from the model filling gaps in incomplete evidence. The green bean casserole question can prompt the agent to add broad popularity claims even though its curated history sources do not estimate prevalence. Related traces also show the model adding an exact date or creator not contained in those sources. Search-selection, factual-grounding, and source-integrity judges flag these claims without injecting false records into the answer.
+
+Other realistic failure cases to consider later:
 
 - Social search results overrepresent unusual viral recipes, leading the planner to overstate how common they are.
-- A recipe record is missing an allergen field, so a menu passes a simplistic ingredient filter but violates a guest's restriction.
-- Oven capacity is treated as one slot even when the plan schedules overlapping dishes, or prep time is confused with bake time.
-- A recipe's base serving count is missing or misread, so quantities are scaled for the wrong number of guests.
-- Coverage articles are mistaken for original creator posts, or an unavailable original link is presented as verified.
+- A social roundup is mistaken for the creator's original post, or an unavailable original link is presented as verified.
+- A plausible dish with no matching source is confidently described as a longstanding tradition instead of being marked unverified.
+- A source confirms a dish exists but says nothing about its date, creator, or popularity; the answer supplies those missing details anyway.
 
-Use deterministic mock tools first so the demo does not depend on paid recipe APIs or unstable search results. Give each mock tool realistic latency and token/cost metadata, and emit span attributes for tool name, request key, cache hit, and result count. This preserves the visible cost story while keeping runs repeatable.
+Use deterministic local search fixtures so the demo does not depend on paid recipe APIs or unstable search results. Preserve each result's source scope, links, and simulated latency/cost in trace context. This keeps the demo repeatable while the extra model turn from an invalid search argument makes cost visible in AX.
 
 ## Tool set
 
-1. `search_recipes`: return candidate dishes by course and preference.
-2. `check_ingredients`: identify allergens and dietary conflicts.
-3. `scale_servings`: calculate quantities from a recipe's base servings.
-4. `schedule_oven`: find conflicts across temperature, duration, and oven capacity.
+1. `search_food_lore`: retrieve curated historical or social-media evidence for a dish.
+2. `suggest_menu`: return a small demo menu if the conversation asks for one; menu planning is not a focus of the talk.
 
-For later experiments, the baseline can call each planner tool independently for every candidate. An improved version can batch ingredient checks, deduplicate genuine repeated lookups, and schedule only shortlisted dishes.
+For later experiments, cost improvements can reduce redundant lookups, stop once evidence is sufficient, and avoid calling both search modes when the question only needs one.
 
 ## Trace and evaluation plan
 
 Trace each request and tool span with a run ID, prompt/version label, tool inputs and outputs, elapsed time, token usage, estimated cost, and cache/deduplication status. Keep secrets and unnecessary personal data out of traces.
 
-Start with evaluators tied to observable failure modes:
+The AX project has five evaluators tied to observed issues:
 
-- **Dietary constraints (code):** no selected dish contains a forbidden ingredient.
-- **Schedule feasibility (code):** no overlapping use exceeds oven capacity and timing is internally consistent.
-- **Serving accuracy (code):** quantities scale to the requested guest count within a defined tolerance.
-- **Tool efficiency (code):** count duplicate calls and total calls; report cost and latency alongside the score.
-- **Cultural grounding and tone (judge):** distinguish common traditions from regional or social-media trends, and keep teasing light rather than judgmental.
-- **Research evidence (code/judge):** direct post links resolve to the named creator/platform when available; claims about a dish, virality, or history are supported by returned sources; uncertainty is preserved when evidence is thin.
-- **UI evidence integrity (code):** synthetic benchmark names are distinguished from merely unverified dishes, and no fabricated video URL is rendered.
+- **Tool contract (code):** fails when a tool span sends the unsupported `historical` source value; the corrected `history` or `social` call passes.
+- **Search selection bias (judge):** fails when the agent infers household prevalence from a curated, high-engagement result set.
+- **Factual grounding (judge):** fails when factual or historical claims exceed the retrieved evidence.
+- **Dish classification (judge):** checks distinctions among documented dishes, regional customs, social-media recipes, synthetic names, and unverified claims.
+- **Source integrity (judge):** checks that creator, platform, date, and source-link claims match the trace evidence.
 
-Do not optimize only for fewer calls: require quality gates for dietary safety and schedule feasibility, then compare cost and tool-call count among candidates that pass those gates.
+The tool-contract and search-selection evaluators run continuously on new traces. The other judges are attached to the manual backfill task to control ongoing judge cost.
+
+Do not optimize only for fewer calls: preserve factual grounding and source integrity while reducing avoidable model turns, latency, and cost.
 
 ## AX improvement loop
 
@@ -78,19 +77,19 @@ Do not optimize only for fewer calls: require quality gates for dietary safety a
 
 ## Talk narrative
 
-1. Show the baseline recover from the stale source enum after an avoidable model turn.
-2. Open its AX trace and compare the rejected tool call, validation feedback, corrected call, and token cost with the improved run.
-3. Create a pass/fail dataset from those traces and identify the failure categories.
-4. Ask a coding agent with Arize AX skills to propose and measure a change.
-5. Compare factual distinctions, planning quality, and cost before/after in an experiment.
-6. Run the repeatable trace-to-dataset-to-experiment workflow through the Codex SDK as the final autonomous agent.
-7. Ask about a strange dish and show the research agent's trace, then render its verified TikTok/Instagram source as a clickable dish card.
+1. Ask for the sweet potato crème brûlée recipe from @eatsbyrachel and a link to the original post. This avoids a prevalence question and is the clean control.
+2. Ask whether corn pudding is a Thanksgiving side everywhere. Inspect any invalid source-type guess and corrective retry in AX.
+3. Ask when green bean casserole was created and whether it was served at the 1621 gathering. Inspect the search-selection failure if the answer makes an unsupported popularity claim.
+4. Create a pass/fail dataset from those traces and identify the distinct failure categories.
+5. Ask a coding agent with Arize AX skills to propose and measure a change.
+6. Compare answer quality and cost before/after in an experiment.
+7. Run the repeatable trace-to-dataset-to-experiment workflow through the Codex SDK as the final autonomous agent.
 
 ## Build sequence
 
-1. Create a minimal deterministic planner, research agent, and mock search/tool environment.
+1. Create a deterministic food-lore agent, search tool, and local evidence fixtures.
 2. Add trace export/observability and seed trace examples, including verified source URLs and intentionally unverified/synthetic examples.
-3. Build a UI that renders structured research results as playful dish cards with direct social-video links only when verified. **Initial local UI implemented:** generated turkey art, sample prompts, baseline/improved planner switch, AX project link, and the tool-contract check.
+3. Build a simple chat UI with fun art, readable Markdown/source links, and an AX project link. **Implemented:** generated turkey art, three real-world starter prompts, original agent only, and no visible evaluation badges.
 4. Connect to an Arize AX project, configure evaluators, and exercise the AX skills workflow.
 5. Tune the planner and research workflow against the pass/fail dataset and report quality/cost deltas.
 6. Wrap the repeatable improvement workflow in a Codex SDK application, with bounded iterations and a human-readable change report.
@@ -102,5 +101,5 @@ Do not optimize only for fewer calls: require quality gates for dietary safety a
 - The dataset contains both passing and failing cases derived from traces.
 - A candidate experiment improves the measured objective without violating quality gates.
 - Research results include accurate dish context and working direct post links where a source can be verified; missing links are not fabricated.
-- The UI clearly distinguishes verified real dishes, synthetic benchmark names, and dishes that remain unverified.
+- The UI renders agent answers and source links; evaluator results remain in AX.
 - The Codex SDK workflow can repeat the analysis and return an inspectable result.
