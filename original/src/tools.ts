@@ -1,6 +1,6 @@
 import { tool } from "@openai/agents";
 import { z } from "zod";
-import benchmark from "../data/dish-benchmark.json" with { type: "json" };
+import benchmark from "../../data/dish-benchmark.json" with { type: "json" };
 
 type EvidenceItem = {
   id: string;

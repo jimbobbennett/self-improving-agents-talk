@@ -36,7 +36,7 @@ const server = createServer(async (request, response) => {
       return;
     }
     if (request.method === "GET" && url.pathname === "/api/dishes") {
-      const file = await readFile(resolve(process.cwd(), "data/dish-benchmark.json"), "utf8");
+      const file = await readFile(resolve(process.cwd(), "../data/dish-benchmark.json"), "utf8");
       response.writeHead(200, { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" });
       response.end(file);
       return;

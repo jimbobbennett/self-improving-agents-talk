@@ -4,12 +4,12 @@
   "description": "A Thanksgiving food lore agent demo with Arize AX traces and evaluation-driven improvement.",
   "private": true,
   "type": "module",
-  "main": "dist/src/cli.js",
+  "main": "dist/original/src/cli.js",
   "scripts": {
     "build": "tsc -p tsconfig.json --noEmit false",
-    "demo": "npm run build && node dist/src/cli.js",
-    "benchmark": "npm run build && node dist/src/benchmark.js",
-    "start": "npm run build && node dist/src/server.js"
+    "demo": "npm run build && node dist/original/src/cli.js",
+    "benchmark": "npm run build && node dist/original/src/benchmark.js",
+    "start": "npm run build && node dist/original/src/server.js"
   },
   "keywords": [],
   "author": "",

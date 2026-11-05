@@ -1,7 +1,7 @@
 // Register tracing before importing the runner and agent SDK modules.
 import { flushTracing } from "./instrumentation.js";
 import { runPlanner, type DemoVariant } from "./run-agent.js";
-import querySet from "../data/eval-queries.json" with { type: "json" };
+import querySet from "../../evals/eval-queries.json" with { type: "json" };
 
 const limit = Number(process.env.DEMO_BENCHMARK_LIMIT ?? querySet.cases.length);
 const cases = querySet.cases.slice(0, Math.max(0, limit));

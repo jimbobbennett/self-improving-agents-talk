@@ -38,7 +38,7 @@ cd original
 npm run benchmark
 ```
 
-The list is in [eval-queries.json](original/data/eval-queries.json). Four cases use the improved variant as passing controls; four use the baseline to exercise the enum retry and search-selection checks. Each run emits an AX trace. Limit spend while iterating with `DEMO_BENCHMARK_LIMIT=1 npm run benchmark`.
+The list is in [eval-queries.json](evals/eval-queries.json). Four cases use the improved variant as passing controls; four use the baseline to exercise the enum retry and search-selection checks. Each run emits an AX trace. Limit spend while iterating with `DEMO_BENCHMARK_LIMIT=1 npm run benchmark`.
 
 Set `DEMO_VARIANT=improved` to run the improved prompt:
 
@@ -47,14 +47,14 @@ cd original
 DEMO_VARIANT=improved npm run demo -- "Is sweet potato crème brûlée a Thanksgiving tradition?"
 ```
 
-The demo covers two distinct failure types. First, the model chooses a free-form `source_type` value that the search service may reject, causing a corrective retry and another model call. The tool description intentionally leaves the string open-ended; the service accepts only `history` or `social`. Second, the model can overstate what curated sources establish—for example, inferring popularity from selected search results. AX has four LLM judge evaluators and a code evaluator for these behaviors. The tool-contract and search-selection checks continuously score new traces; factual-grounding, dish-classification, and source-integrity judges are available for targeted backfills. The prompt sources are in [eval-prompts.json](original/data/eval-prompts.json).
+The demo covers two distinct failure types. First, the model chooses a free-form `source_type` value that the search service may reject, causing a corrective retry and another model call. The tool description intentionally leaves the string open-ended; the service accepts only `history` or `social`. Second, the model can overstate what curated sources establish—for example, inferring popularity from selected search results. AX has four LLM judge evaluators and a code evaluator for these behaviors. The tool-contract and search-selection checks continuously score new traces; factual-grounding, dish-classification, and source-integrity judges are available for targeted backfills. The prompt sources are in [eval-prompts.json](evals/eval-prompts.json).
 
 The runnable original app is in [`original/`](original/) as the first layer of the talk repository.
 
 ## Demo material
 
 - [Demo plan](DEMO_PLAN.md) describes the AX trace → eval → pass/fail dataset → experiment → Codex SDK story.
-- [Dish benchmark](original/data/dish-benchmark.json) contains historical and synthetic lore cases plus sourced social-media examples. Expected answers are for evaluation; the live agent tools do not load these labels.
+- [Search fixture](data/dish-benchmark.json) contains the historical and social-media evidence the live tool uses. Evaluation materials live in [evals/](evals/).
 
 ## Current boundary
 
