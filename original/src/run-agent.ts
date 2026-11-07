@@ -6,11 +6,12 @@ import { createThanksgivingAgent } from "./agent.js";
 import type { DemoMetrics } from "./tools.js";
 
 export type DemoVariant = "baseline" | "improved";
+export type ToolCallRecord = { input: string; output?: string; error?: string };
 const tracer = trace.getTracer("thanksgiving-food-lore-demo");
 
 export async function runPlanner(input: string, variant: DemoVariant) {
   const demoRunId = randomUUID();
-  const metrics: DemoMetrics = { searchToolCalls: 0, invalidSourceTypeCalls: 0, completedSearches: 0, searchEvidence: [] };
+  const metrics: DemoMetrics = { searchToolCalls: 0, invalidSourceTypeCalls: 0, completedSearches: 0, searchEvidence: [], toolCallRecords: [] };
   const runner = new Runner({
     workflowName: "thanksgiving-food-lore-demo",
     traceMetadata: { demo_variant: variant, demo_run_id: demoRunId },
@@ -31,6 +32,7 @@ export async function runPlanner(input: string, variant: DemoVariant) {
       span.setAttribute(SemanticConventions.OUTPUT_VALUE, answer);
       span.setAttribute("demo.response_output", answer);
       span.setAttribute("demo.context", JSON.stringify(metrics.searchEvidence));
+      span.setAttribute("demo.tool_call_records", JSON.stringify(metrics.toolCallRecords));
       span.setAttribute("demo.search_tool_calls", metrics.searchToolCalls);
       span.setAttribute("demo.invalid_source_type_calls", metrics.invalidSourceTypeCalls);
       span.setAttribute("demo.completed_searches", metrics.completedSearches);
@@ -40,10 +42,16 @@ export async function runPlanner(input: string, variant: DemoVariant) {
         runId: demoRunId,
         variant,
         answer,
+        usage: {
+          inputTokens: result.state.usage.inputTokens,
+          outputTokens: result.state.usage.outputTokens,
+        },
         metrics: {
           searchToolCalls: metrics.searchToolCalls,
           invalidSourceTypeCalls: metrics.invalidSourceTypeCalls,
           completedSearches: metrics.completedSearches,
+          searchEvidence: [...metrics.searchEvidence],
+          toolCallRecords: metrics.toolCallRecords.map((record) => ({ ...record })),
         },
         evaluation: {
           passed,
