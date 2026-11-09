@@ -32,13 +32,11 @@ The dish-classification score is one pass below the original baseline (116/117 v
 
 All three candidate experiment runs and their per-evaluator annotations are retained in AX. Per-candidate outputs, scores, patches, and rejection reasons are included in this report directory.
 
-## AX screenshots
+## AX experiment chart
 
-The first image is a real AX capture of experiment #10 on the 117-example dataset. It shows the selected candidate and its per-example evaluator annotations. AX's experiment Charting tab currently reports 0 of 5 evaluators, so the comparison is shown as a table rather than an aggregate evaluator graph.
+![Actual AX Compare Experiments Charting tab](ax-experiment-charting.png)
 
-![Actual AX experiment comparison](ax-experiment-comparison.png)
-
-The second image is a real capture of the Thanksgiving project's Evals & Metrics page for Oct 30–Nov 6. It shows AX cost and latency charts and all five online evaluator charts. These are project-wide trace metrics for that date range, not metrics calculated from the 117-example experiment batch.
+This is a browser capture of the Charting tab in Compare Experiments for experiments #9 and #10. It plots the `no_invalid_source_type` evaluator, which currently scores 0% in both experiments. The other evaluator annotations are visible in the table view but are not available as aggregate chart metrics. These imported experiments also have no experiment-linked trace data, so AX does not show experiment-level cost or latency charts. The screenshot intentionally shows only the experiment chart; it is not a project-wide metrics view.
 
 ![Actual AX project cost, latency, and evaluator charts](ax-evals-cost-latency.png)
 
