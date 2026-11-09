@@ -32,10 +32,4 @@ The dish-classification score is one pass below the original baseline (116/117 v
 
 All three candidate experiment runs and their per-evaluator annotations are retained in AX. Per-candidate outputs, scores, patches, and rejection reasons are included in this report directory.
 
-## AX experiment chart
-
-![Actual AX Compare Experiments Charting tab](ax-experiment-charting.png)
-
-This is a browser capture of the Charting tab in Compare Experiments for experiments #9 and #10. It plots the `no_invalid_source_type` evaluator, which currently scores 0% in both experiments. The other evaluator annotations are visible in the table view but are not available as aggregate chart metrics. These imported experiments also have no experiment-linked trace data, so AX does not show experiment-level cost or latency charts. This is the experiment chart view, not a project-wide metrics view.
-
 Estimated model-token cost for the three candidate batches: $0.62746. Codex SDK patch-generation usage is separately metered and not included.
