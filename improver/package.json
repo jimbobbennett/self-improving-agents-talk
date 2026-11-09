@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "@openai/codex-sdk": "^0.166.0",
-    "openai": "^7.2.0",
-    "playwright": "^1.55.0"
+    "openai": "^7.2.0"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",

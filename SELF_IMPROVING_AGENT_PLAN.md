@@ -2,7 +2,7 @@
 
 ## Goal
 
-Build a reproducible demo loop that takes the existing Thanksgiving agent from `original/`, uses the Arize AX trace dataset and its evaluators to measure the baseline, asks a Codex-powered improvement agent for code changes, and accepts changes only when quality improves without unacceptable cost or latency regressions. The loop should end with a reviewable draft pull request containing the chosen change, experiment history, and an experiment screenshot.
+Build a reproducible demo loop that takes the existing Thanksgiving agent from `original/`, uses the Arize AX trace dataset and its evaluators to measure the baseline, asks a Codex-powered improvement agent for code changes, and accepts changes only when quality improves without unacceptable cost or latency regressions. The loop keeps experiment history and reports locally and ends with a reviewable draft pull request containing only the chosen application code change.
 
 ## Current inputs
 
@@ -28,7 +28,7 @@ Each candidate is a separate git worktree based on the current best accepted can
 6. **Select top two:** apply deterministic eligibility gates first. Candidate must pass minimum quality floors and improve the targeted issue; allow a one-example drop per evaluator to absorb borderline judge variation, but reject larger drops. Keep mean cost and p95 latency at or below 110% of both the fixed baseline and current best. Rank eligible candidates by the macro-average of the four trace-level evaluator pass rates (Factual Grounding, Dish Classification, Source Integrity, Search Selection Bias), while reporting Tool Contract separately as query-level pass rate (a query passes only if every attempted tool call is valid). Require an aggregate gain larger than one-evaluator/one-example score resolution (`1 / (4 * example_count)`). Treat historical Dish Classification pass rates as weak coverage evidence until the dataset has more failure examples. Tie-break by lower cost, then lower latency. If fewer than two qualify, continue with the best eligible one; if none qualify, stop and report no accepted improvement.
 7. **Breed next iteration:** pass the two top candidate diffs and their measured outcomes to Codex, along with the best-so-far version. Request three new distinct proposals that combine or refine observed successful ideas without changing evaluation data or evaluator definitions. Evaluate and rank them as above. The best candidate becomes the new best only when it passes all gates and strictly improves the objective.
 8. **Stop:** default to one improvement iteration; stop when a complete iteration produces no qualifying strict improvement, or at configurable maximum iteration/candidate/API-spend budgets. Account for failed and timed-out requests in latency/cost summaries; never silently drop them. If provider token pricing is unavailable, mark monetary model cost unknown and fail closed for the cost gate unless the user explicitly permits token-only comparison. The fixture's `estimated_external_cost_usd` is simulated and must never be represented as real cost. Keep the best eligible version and stop candidate generation after any stop condition.
-9. **Report and PR:** generate a detailed Markdown report with baseline and candidate versions, patch summaries, per-evaluator scores, aggregate score, mean cost, p95 latency, tool-call counts, AX experiment links, guardrail outcomes, accepted/rejected reasons, stopping reason, and dataset/evaluator versions. Capture a screenshot of the best experiment only through an authenticated browser automation or supported AX export, and verify it depicts the cited experiment; if screenshot capture is unavailable, stop before PR creation and clearly report the missing artifact. Create a draft PR from a clean branch based on `main` containing only the selected best patch and report artifacts; do not include unrelated pending dataset/eval changes. Never merge or publish automatically.
+9. **Report and PR:** generate a detailed local Markdown report with baseline and candidate versions, patch summaries, per-evaluator scores, aggregate score, mean cost, p95 latency, tool-call counts, AX experiment links, guardrail outcomes, accepted/rejected reasons, stopping reason, and dataset/evaluator versions. Keep reports, experiment data, and screenshots out of pull requests. Create a draft PR from a clean branch based on `main` containing only the selected best application source patch under `original/src`, with a short code-focused body and no report links, screenshots, or metric tables. Verify the staged file list is limited to `original/src`. Never merge or publish automatically.
 
 ## Metrics and guardrails
 
@@ -46,10 +46,10 @@ Every experiment name includes run timestamp, iteration, and variant (baseline o
 ## PR/report artifacts
 
 - Selected patch on a named branch and a **draft** PR only.
-- `reports/<run-id>/report.md` with experiment table, iteration narrative, detailed evaluator/cost/latency data, links, and recommendation.
-- `reports/<run-id>/manifest.json` for reproducibility.
-- `reports/<run-id>/best-experiment.png` screenshot tied to the AX best experiment, with capture source/time documented.
-- PR body summarizes the improvement and guardrail checks, and links to the full report and AX experiments.
+- Local `reports/<run-id>/report.md` with experiment table, iteration narrative, detailed evaluator/cost/latency data, links, and recommendation.
+- Local `reports/<run-id>/manifest.json` for reproducibility.
+- Draft PR contains only the accepted `original/src` patch; local reports and screenshots are not staged, copied, linked, or attached.
+- PR body gives a concise code-focused summary and build/evaluation validation without report links or experiment score tables.
 
 ## Safety, reproducibility, and demo controls
 
@@ -66,12 +66,12 @@ Every experiment name includes run timestamp, iteration, and variant (baseline o
 2. Implement baseline candidate runner with OpenTelemetry/AX tracing and consistent metric collection.
 3. Implement AX experiment upload plus local evaluator adapter. Before a full run, verify prompt parity/calibration, import `runPlanner()` from an isolated candidate worktree, collect actual token/timing data, preserve evidence across tool retries, confirm serialized judge context, test Tool Contract no-call and invalid-then-corrected cases, validate schemas and dataset/example/run joins, ensure categorical annotation configs exist, and complete a short real smoke experiment with labels and explanations attached. Preserve raw per-example outputs and compare paired per-example deltas. Repeat baseline only if measured variance warrants it.
 4. Implement Codex proposal generation, isolated candidate worktrees, three-candidate iterations, deterministic ranking/stop gates, and bounded budgets.
-5. Implement report/manifest generation, AX screenshot capture, and draft PR creation.
+5. Implement local report/manifest generation and code-only draft PR creation.
 6. Document setup, dry-run, smoke, full-run, resumption, and cost controls in `improver/README.md` and the root README.
 
 ## Plan review questions
 
-The independent review checked feasibility of scoring local variants as AX experiments, correctness of quality/cost/latency gates, repeatability of evaluator versions and dataset mapping, Codex SDK integration/security, and screenshot/PR automation. Its findings are incorporated above: exact SDK, multi-step experiment scoring, trace-vs-span distinctions, stable dataset keys, explicit spend ceilings, measurable cost limits, and fail-closed screenshot requirements.
+The independent review checked feasibility of scoring local variants as AX experiments, correctness of quality/cost/latency gates, repeatability of evaluator versions and dataset mapping, Codex SDK integration/security, and PR automation. Its findings are incorporated above: exact SDK, multi-step experiment scoring, trace-vs-span distinctions, stable dataset keys, explicit spend ceilings, measurable cost limits, and code-only PR contents.
 
 ## Pre-implementation checks
 

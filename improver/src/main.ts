@@ -234,11 +234,7 @@ try {
     console.log(`Baseline-only run complete. Results are in ${reportsDir}; candidate generation and PR creation were skipped.`);
   } else {
     if (!bestPatch.trim()) throw new Error("No candidate improved the baseline, so there is no fix to propose. Report artifacts are saved locally; no PR was created.");
-    // PR publication requires a verifiable screenshot artifact. Screenshot capture uses the user's
-    // authenticated Playwright browser endpoint; we fail closed if none is available.
-    const screenshot = await captureExperimentScreenshot(bestMetrics ? iterations.at(-1)?.experiment : undefined, reportsDir);
-    if (!screenshot) throw new Error("No authenticated AX screenshot capture is configured. Reports are saved locally; draft PR creation was skipped.");
-    await createDraftPr(`${baselineSourcePatch}${bestPatch}`, reportsDir, runId);
+    await createDraftPr(`${baselineSourcePatch}${bestPatch}`, runId);
   }
 } finally {
   await rm(temporaryRoot, { recursive: true, force: true }).catch(() => undefined);
@@ -252,44 +248,28 @@ function renderReport(report: { generatedAt: string; appModel: string; judgeMode
   return `# Thanksgiving agent improvement report\n\nGenerated: ${report.generatedAt}\n\nApp model: ${report.appModel}; evaluator model: ${report.judgeModel}.\n\nDataset: ${report.dataset} (${report.datasetVersion})\n\n## Baseline and accepted versions\n\n| Version | Quality macro avg | p95 latency ms | Mean model cost/example | AX experiment |\n|---|---:|---:|---:|---|\n${table}\n\n## Candidate versions\n\n| Iteration | Candidate | Parent | Quality | Evaluator rates | Mean cost/example | p95 latency ms | Selection |\n|---:|---|---|---:|---|---:|---:|---|\n${candidateRows || "No candidate experiments were run."}\n\n## Candidate summaries\n\n${summaries || "No candidate proposals were generated."}\n\nThe JSON report and iteration files include proposal summaries, per-evaluator pass/fail counts, full outputs/evidence, AX experiment IDs, and rejection reasons.\n\n## Baseline evaluator pass rates\n\n${JSON.stringify(report.baseline?.quality, null, 2)}\n\n## Accepted best evaluator pass rates\n\n${JSON.stringify(report.acceptedBest?.quality, null, 2)}\n\n## Stop reason\n\n${report.stopReason}\n\nEstimated app and evaluator model cost total: ${report.totalEstimatedModelCostUsd === null ? "unknown" : `$${report.totalEstimatedModelCostUsd.toFixed(5)}`}. Rates per million tokens (USD): ${JSON.stringify(report.pricingUsdPerMillionTokens)}.\n\nCodex SDK patch-generation usage is metered separately and is not included. Search-tool fixture costs are simulated, not actual charges.\n\nGuardrails: ${JSON.stringify(report.guardrails)}\n\nEvaluation scores are computed locally from the versioned prompts and rules; any AX experiment annotations are copies of those local results, not AX evaluator task scores. Continuous trace-monitor tasks are not represented as having scored these experiment rows.\n`;
 }
 
-async function captureExperimentScreenshot(experiment: ExperimentRef | undefined, outputDir: string): Promise<boolean> {
-  const cdp = process.env.AX_CHROME_CDP_URL;
-  if (!experiment || !cdp) return false;
-  const playwright = await import("playwright").catch(() => undefined);
-  if (!playwright) return false;
-  const browser = await playwright.chromium.connectOverCDP(cdp);
-  try {
-    const context = browser.contexts()[0];
-    if (!context) return false;
-    const page = await context.newPage();
-    const target = experiment.url ?? process.env.AX_EXPERIMENT_URL_TEMPLATE?.replaceAll("{id}", encodeURIComponent(experiment.id ?? experiment.name)).replaceAll("{name}", encodeURIComponent(experiment.name));
-    if (!target) return false;
-    await page.goto(target, { waitUntil: "networkidle", timeout: 60_000 });
-    const visibleContent = await page.locator("body").innerText({ timeout: 15_000 });
-    if (!visibleContent.includes(experiment.name)) throw new Error(`AX page did not show the expected experiment ${experiment.name}; refusing to capture an unrelated screenshot.`);
-    await page.screenshot({ path: join(outputDir, "best-experiment.png"), fullPage: true });
-    await page.close();
-    return true;
-  } finally {
-    // With connectOverCDP this disconnects the Playwright client from the user's browser.
-    await browser.close();
-  }
-}
-
-async function createDraftPr(patch: string, reportDir: string, id: string) {
+async function createDraftPr(patch: string, id: string) {
   const branch = `self-improving-agent/${id}`;
-  const patchFile = join(reportDir, "accepted.patch");
-  await writeFile(patchFile, patch);
   const worktree = join(tmpdir(), `thanksgiving-pr-${id}`);
   await run("git", ["worktree", "add", "-b", branch, worktree, "main"], { cwd: root });
   try {
-    await run("git", ["apply", patchFile], { cwd: worktree });
-    const artifactDir = join(worktree, "reports", id);
-    await mkdir(artifactDir, { recursive: true });
-    await cp(reportDir, artifactDir, { recursive: true, filter: (source) => !source.endsWith("accepted.patch") });
-    await run("git", ["add", "original/src", `reports/${id}`], { cwd: worktree });
+    await run("git", ["apply", "--whitespace=nowarn", "-"], { cwd: worktree, input: patch });
+    await run("git", ["add", "original/src"], { cwd: worktree });
+    const stagedPaths = (await run("git", ["diff", "--cached", "--name-only"], { cwd: worktree })).trim().split("\n").filter(Boolean);
+    if (!stagedPaths.length || stagedPaths.some((path) => !path.startsWith("original/src/"))) {
+      throw new Error(`Refusing to create a non-code PR; staged paths were: ${stagedPaths.join(", ") || "none"}`);
+    }
     await run("git", ["commit", "-m", "Improve Thanksgiving agent from AX experiments"], { cwd: worktree });
     await run("git", ["push", "-u", "origin", branch], { cwd: worktree });
-    await run("gh", ["pr", "create", "--draft", "--title", "Improve Thanksgiving agent from AX evals", "--body-file", join(artifactDir, "report.md")], { cwd: worktree });
+    const body = [
+      "## Changes",
+      "",
+      "- Apply the selected Thanksgiving agent improvement in `original/src`.",
+      "",
+      "## Validation",
+      "",
+      "- The selected candidate passed the configured build and evaluation gates.",
+    ].join("\n");
+    await run("gh", ["pr", "create", "--draft", "--title", "Improve Thanksgiving agent", "--body", body], { cwd: worktree });
   } finally { await run("git", ["worktree", "remove", "--force", worktree], { cwd: root }).catch(() => undefined); }
 }
