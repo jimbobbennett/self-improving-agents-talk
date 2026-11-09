@@ -1,0 +1,32 @@
+{
+  "name": "self-improving-agents-talk",
+  "version": "1.0.0",
+  "description": "A Thanksgiving food lore agent demo with Arize AX traces and evaluation-driven improvement.",
+  "private": true,
+  "type": "module",
+  "main": "dist/final/src/cli.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit false",
+    "demo": "npm run build && node dist/final/src/cli.js",
+    "benchmark": "npm run build && node dist/final/src/benchmark.js",
+    "start": "npm run build && node dist/final/src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@arizeai/openinference-instrumentation-openai-agents": "^0.3.3",
+    "@arizeai/openinference-semantic-conventions": "^2.15.0",
+    "@openai/agents": "^0.21.0",
+    "@opentelemetry/api": "1.9.1",
+    "@opentelemetry/exporter-trace-otlp-proto": "0.200.0",
+    "@opentelemetry/resources": "2.0.0",
+    "@opentelemetry/sdk-trace-base": "2.0.0",
+    "@opentelemetry/sdk-trace-node": "2.0.0",
+    "@opentelemetry/semantic-conventions": "1.28.0",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "zod": "^4.6.7"
+  }
+}
