@@ -1,22 +1,22 @@
 {
   "project": "thanksgiving-food-lore-demo",
   "space": "jbennett Space",
+  "trace_dataset": {
+    "name": "thanksgiving-food-lore-traces-v1",
+    "id": "RGF0YXNldDozNzMzNjE6aUQ4OQ==",
+    "version_id": "RGF0YXNldFZlcnNpb246NDAyNjcxOi9FTzY=",
+    "examples": 117,
+    "source_window": "2026-11-04 through 2026-11-05",
+    "selection": "Current-format request traces with all four judge labels, plus their search_food_lore spans and tool-contract labels."
+  },
   "tasks": [
     {
-      "name": "Thanksgiving Agent Judge Backfill",
+      "name": "Thanksgiving Quality Judge Backfill",
       "id": "T25saW5lVGFzazo1NTE0MjpnazVY",
       "task_type": "TEMPLATE_EVALUATION",
       "continuous": false,
       "data_granularity": "trace",
       "evaluators": [
-        {
-          "evaluator_id": "RXZhbHVhdG9yOjE5Nzc1Ojc0SzU=",
-          "column_mappings": {
-            "input": "attributes.demo.request_input",
-            "output": "attributes.demo.response_output",
-            "context": "attributes.demo.context"
-          }
-        },
         {
           "evaluator_id": "RXZhbHVhdG9yOjE5Nzc2Okx1akI=",
           "column_mappings": {
@@ -77,20 +77,30 @@
       ]
     }
   ],
-  "task_mode": "Four trace judges are attached for backfill; search-selection bias and tool-contract checks continuously score new traces at 100% sampling.",
-  "latest_runs": {
-    "judge_task": {
-      "id": "VGVtcGxhdGVFdmFsdWF0aW9uVGFza1J1bjoyNzIxMjcxNDpzMDVr",
+  "task_mode": "Three unique tasks cover five unique evaluators: tool-contract and search-selection checks run continuously at 100%; factual-grounding, dish-classification, and source-integrity judges run on backfill to limit ongoing judge cost.",
+  "verified_sample_prompt_runs": {
+    "search_selection_task": {
+      "id": "VGVtcGxhdGVFdmFsdWF0aW9uVGFza1J1bjoyNzM4NTI0NTo4UkRT",
       "status": "COMPLETED",
-      "successful_evaluations": 400,
-      "errors": 0
+      "successful_evaluations": 3,
+      "errors": 0,
+      "sample_window": "2026-11-05T20:42:20Z/2026-11-05T20:43:10Z"
     },
     "tool_contract_task": {
-      "id": "Q29kZUV2YWx1YXRpb25UYXNrUnVuOjQ0OTM5Nzc6MXM3Sg==",
+      "id": "Q29kZUV2YWx1YXRpb25UYXNrUnVuOjQ1NDU0Mjg6NUVVbw==",
       "status": "COMPLETED",
-      "successful_evaluations": 516,
+      "successful_evaluations": 11,
       "errors": 0,
-      "skipped": 359
+      "skipped": 9,
+      "sample_window": "2026-11-05T20:42:20Z/2026-11-05T20:43:10Z"
+    },
+    "quality_judge_backfill": {
+      "id": "VGVtcGxhdGVFdmFsdWF0aW9uVGFza1J1bjoyNzM4OTI3OTp4SjZP",
+      "status": "COMPLETED",
+      "successful_evaluations": 9,
+      "errors": 0,
+      "skipped": 0,
+      "sample_window": "2026-11-05T20:42:20Z/2026-11-05T20:43:10Z"
     }
   }
 }

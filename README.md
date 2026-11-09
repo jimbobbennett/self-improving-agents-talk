@@ -56,6 +56,21 @@ The runnable original app is in [`original/`](original/) as the first layer of t
 - [Demo plan](DEMO_PLAN.md) describes the AX trace → eval → pass/fail dataset → experiment → Codex SDK story.
 - [Search fixture](data/dish-benchmark.json) contains the historical and social-media evidence the live tool uses. Evaluation materials live in [evals/](evals/).
 
+## Self-improving agent loop
+
+The Codex SDK experiment runner lives in [`improver/`](improver/); its design and reviewer feedback are recorded in [SELF_IMPROVING_AGENT_PLAN.md](SELF_IMPROVING_AGENT_PLAN.md). Install its separate dependencies with `npm install --prefix improver`.
+
+The runner starts in dry-run mode. A five-example smoke run (no promotion or PR) can be started with:
+
+```sh
+npm run build --prefix improver
+npm run improve --prefix improver -- --run --max-examples=5 --max-iterations=1 --max-spend-usd=1
+```
+
+For full dataset selection and draft PR creation, add `--full --confirm-full`. Set `MODEL_INPUT_COST_PER_MILLION` and `MODEL_OUTPUT_COST_PER_MILLION` to the app model's current rates; when the judge model differs, also set `JUDGE_INPUT_COST_PER_MILLION` and `JUDGE_OUTPUT_COST_PER_MILLION`. These rates are required to pass cost guardrails. The tool fixture's external-cost field is simulated and excluded from monetary claims. Codex SDK turn cost is separately metered by the configured Codex account and is not included in app/evaluator token-cost totals.
+
+The full run also needs the existing AX CLI profile and dataset access, GitHub CLI authentication, and an authenticated Chromium session exposed via `AX_CHROME_CDP_URL`. Set `AX_EXPERIMENT_URL_TEMPLATE` to the AX experiment URL pattern used to capture the best experiment screenshot, with `{id}` or `{name}` as a placeholder. The PR flow stops if it cannot capture that screenshot. Full runs score every row with four versioned judge prompts plus tool-contract checks, so choose an explicit spend cap carefully.
+
 ## Current boundary
 
-The AX evaluators are attached to the Thanksgiving project. Tool-contract and search-selection evaluations run continuously; the other judge evaluators are attached to a one-time backfill task to limit ongoing cost. Trace-derived datasets, experiment hill-climbing, and the autonomous Codex SDK loop remain later build steps in the talk plan.
+The AX evaluators are attached to the Thanksgiving project. Tool-contract and search-selection evaluations run continuously; the other judge evaluators are attached to a one-time backfill task to limit ongoing cost. Candidate experiments are scored with the same versioned evaluator prompts and the code tool-contract rule, then attached to AX experiment runs as annotations. The continuous trace tasks are not represented as having scored those experiment rows.

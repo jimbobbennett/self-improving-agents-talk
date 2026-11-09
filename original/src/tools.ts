@@ -66,6 +66,7 @@ export type DemoMetrics = {
   invalidSourceTypeCalls: number;
   completedSearches: number;
   searchEvidence: string[];
+  toolCallRecords: Array<{ input: string; output?: string; error?: string }>;
 };
 
 const validSourceTypes = ["history", "social"] as const;
@@ -117,9 +118,12 @@ export function createTools(metrics: DemoMetrics) {
     parameters: z.object({ query: z.string().min(2), source_type: z.string().optional() }),
     execute: async ({ query, source_type }) => {
       metrics.searchToolCalls++;
+      const record: { input: string; output?: string; error?: string } = { input: JSON.stringify({ query, source_type }) };
+      metrics.toolCallRecords.push(record);
       if (source_type !== undefined && !validSourceTypes.includes(source_type as typeof validSourceTypes[number])) {
         metrics.invalidSourceTypeCalls++;
-        throw new Error(`Invalid source_type '${source_type}'. The service accepts 'history' or 'social'.`);
+        record.error = `Invalid source_type '${source_type}'. The service accepts 'history' or 'social'.`;
+        throw new Error(record.error);
       }
       const sourceType = (source_type ?? "history") as "history" | "social";
       metrics.completedSearches++;
@@ -129,8 +133,10 @@ export function createTools(metrics: DemoMetrics) {
         records: sourceType === "social" ? socialEvidence : historicalEvidence,
         matcher: (item) => item.name,
       });
-      metrics.searchEvidence.push(JSON.stringify(result));
-      return JSON.stringify(result);
+      const serialized = JSON.stringify(result);
+      metrics.searchEvidence.push(serialized);
+      record.output = serialized;
+      return serialized;
     },
     errorFunction: async (_context, error) => `Search request rejected: ${error instanceof Error ? error.message : String(error)} Retry with one of the accepted source_type values.`,
   });

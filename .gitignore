@@ -4,3 +4,5 @@ dist/
 .env.*
 !.env.example
 .arize-tmp-traces/
+improver/node_modules/
+improver/dist/

@@ -14,5 +14,5 @@
       "checks": "Each TOOL span input must not contain source_type=historical. A rejected historical call scores fail; corrected history/social calls score pass."
     }
   },
-  "task_status": "All four judges and the tool-contract evaluator are attached. Tool-contract and search-selection checks continuously score new traces; the other three judges remain available for backfill to limit ongoing judge cost."
+  "task_status": "Five unique evaluators are attached across three tasks. Tool-contract and search-selection checks run continuously; factual-grounding, dish-classification, and source-integrity run in a non-continuous backfill task. The sample-prompt backfill completed with 9 scores and no errors."
 }

@@ -1,0 +1,344 @@
+{
+  "generatedAt": "2026-11-06T18:45:52.413Z",
+  "appModel": "gpt-5.6-luna",
+  "judgeModel": "gpt-5.6-luna",
+  "pricingUsdPerMillionTokens": {
+    "appInput": 0.2,
+    "appOutput": 1.2,
+    "judgeInput": 0.2,
+    "judgeOutput": 1.2,
+    "source": {
+      "app": "https://developers.openai.com/api/docs/pricing (checked 2026-11-06)",
+      "judge": "https://developers.openai.com/api/docs/pricing (checked 2026-11-06)"
+    }
+  },
+  "dataset": "thanksgiving-food-lore-traces-v1",
+  "datasetVersion": "RGF0YXNldFZlcnNpb246NDAyNjcxOi9FTzY=",
+  "evaluatorScoring": "Local judge calls using versioned eval-prompts.json rubrics plus a deterministic local Tool Contract check; results may be attached to AX experiment rows but are not AX evaluator task scores.",
+  "baseline": {
+    "examples": 117,
+    "quality": {
+      "factual_grounding": {
+        "pass": 115,
+        "fail": 2,
+        "notApplicable": 0,
+        "rate": 0.9829059829059829
+      },
+      "dish_classification": {
+        "pass": 117,
+        "fail": 0,
+        "notApplicable": 0,
+        "rate": 1
+      },
+      "source_integrity": {
+        "pass": 111,
+        "fail": 6,
+        "notApplicable": 0,
+        "rate": 0.9487179487179487
+      },
+      "search_selection": {
+        "pass": 97,
+        "fail": 20,
+        "notApplicable": 0,
+        "rate": 0.8290598290598291
+      },
+      "tool_contract": {
+        "pass": 0,
+        "fail": 117,
+        "notApplicable": 0,
+        "rate": 0
+      }
+    },
+    "aggregateQuality": 0.9401709401709403,
+    "meanLatencyMs": 6922.653341572657,
+    "p95LatencyMs": 9100.86266600003,
+    "meanCostUsd": 0.0018357333333333334,
+    "toolCalls": 257,
+    "errors": 0
+  },
+  "acceptedBest": {
+    "examples": 117,
+    "quality": {
+      "factual_grounding": {
+        "pass": 115,
+        "fail": 2,
+        "notApplicable": 0,
+        "rate": 0.9829059829059829
+      },
+      "dish_classification": {
+        "pass": 117,
+        "fail": 0,
+        "notApplicable": 0,
+        "rate": 1
+      },
+      "source_integrity": {
+        "pass": 111,
+        "fail": 6,
+        "notApplicable": 0,
+        "rate": 0.9487179487179487
+      },
+      "search_selection": {
+        "pass": 97,
+        "fail": 20,
+        "notApplicable": 0,
+        "rate": 0.8290598290598291
+      },
+      "tool_contract": {
+        "pass": 0,
+        "fail": 117,
+        "notApplicable": 0,
+        "rate": 0
+      }
+    },
+    "aggregateQuality": 0.9401709401709403,
+    "meanLatencyMs": 6922.653341572657,
+    "p95LatencyMs": 9100.86266600003,
+    "meanCostUsd": 0.0018357333333333334,
+    "toolCalls": 257,
+    "errors": 0
+  },
+  "experiments": [
+    {
+      "name": "baseline",
+      "metrics": {
+        "examples": 117,
+        "quality": {
+          "factual_grounding": {
+            "pass": 115,
+            "fail": 2,
+            "notApplicable": 0,
+            "rate": 0.9829059829059829
+          },
+          "dish_classification": {
+            "pass": 117,
+            "fail": 0,
+            "notApplicable": 0,
+            "rate": 1
+          },
+          "source_integrity": {
+            "pass": 111,
+            "fail": 6,
+            "notApplicable": 0,
+            "rate": 0.9487179487179487
+          },
+          "search_selection": {
+            "pass": 97,
+            "fail": 20,
+            "notApplicable": 0,
+            "rate": 0.8290598290598291
+          },
+          "tool_contract": {
+            "pass": 0,
+            "fail": 117,
+            "notApplicable": 0,
+            "rate": 0
+          }
+        },
+        "aggregateQuality": 0.9401709401709403,
+        "meanLatencyMs": 6922.653341572657,
+        "p95LatencyMs": 9100.86266600003,
+        "meanCostUsd": 0.0018357333333333334,
+        "toolCalls": 257,
+        "errors": 0
+      },
+      "experiment": {
+        "name": "thanksgiving-2026-11-06T17-56-54-235Z-baseline",
+        "id": "RXhwZXJpbWVudDoxODgxODQ6ZlJvUw=="
+      }
+    }
+  ],
+  "allExperiments": [
+    {
+      "name": "thanksgiving-2026-11-06T17-56-54-235Z-baseline",
+      "id": "RXhwZXJpbWVudDoxODgxODQ6ZlJvUw=="
+    },
+    {
+      "name": "thanksgiving-2026-11-06T17-56-54-235Z-i1-candidate1",
+      "id": "RXhwZXJpbWVudDoxODgxODk6Y0hGUw=="
+    },
+    {
+      "name": "thanksgiving-2026-11-06T17-56-54-235Z-i1-candidate3",
+      "id": "RXhwZXJpbWVudDoxODgxOTE6TWVtbg=="
+    }
+  ],
+  "candidateHistory": [
+    {
+      "iteration": 1,
+      "label": "i1-candidate1",
+      "parent": "baseline",
+      "summary": "Changed one line in [tools.ts](/var/folders/17/xtcg3n390mb262lrklm_r6t40000gn/T/thanksgiving-improver-13tWzh/i1-candidate1/original/src/tools.ts): `source_type` now uses the `history`/`social` enum in the tool schema instead of accepting any string. This targets the measured rejected-source-type retries. I did not run the evaluator, so I’m not claiming a score improvement.",
+      "metrics": {
+        "examples": 117,
+        "quality": {
+          "factual_grounding": {
+            "pass": 115,
+            "fail": 2,
+            "notApplicable": 0,
+            "rate": 0.9829059829059829
+          },
+          "dish_classification": {
+            "pass": 116,
+            "fail": 1,
+            "notApplicable": 0,
+            "rate": 0.9914529914529915
+          },
+          "source_integrity": {
+            "pass": 114,
+            "fail": 3,
+            "notApplicable": 0,
+            "rate": 0.9743589743589743
+          },
+          "search_selection": {
+            "pass": 91,
+            "fail": 26,
+            "notApplicable": 0,
+            "rate": 0.7777777777777778
+          },
+          "tool_contract": {
+            "pass": 117,
+            "fail": 0,
+            "notApplicable": 0,
+            "rate": 1
+          }
+        },
+        "aggregateQuality": 0.9316239316239316,
+        "meanLatencyMs": 5143.892142444449,
+        "p95LatencyMs": 6817.227624999941,
+        "meanCostUsd": 0.0016521162393162395,
+        "toolCalls": 135,
+        "errors": 0
+      },
+      "experiment": {
+        "name": "thanksgiving-2026-11-06T17-56-54-235Z-i1-candidate1",
+        "id": "RXhwZXJpbWVudDoxODgxODk6Y0hGUw=="
+      },
+      "eligible": false,
+      "retainedAsParent": false,
+      "selectedAsBest": false,
+      "reasons": [
+        "dish_classification regressed versus current best",
+        "search_selection regressed versus current best",
+        "aggregate quality gain (-0.0085) did not exceed one-evaluator/one-example resolution (0.0021)"
+      ]
+    },
+    {
+      "iteration": 1,
+      "label": "i1-candidate2",
+      "parent": "unknown",
+      "summary": "Duplicate patch generated within this iteration; Changed one line in [tools.ts](/var/folders/17/xtcg3n390mb262lrklm_r6t40000gn/T/thanksgiving-improver-13tWzh/i1-candidate2/original/src/tools.ts:118): the `source_type` parameter now uses the `history`/`social` enum instead of accepting any string. This makes the tool schema match the backing service’s accepted values, targeting the repeated invalid-call failures. I did not run the evaluator; its measurement will determine the result.",
+      "metrics": {
+        "examples": 0,
+        "quality": {
+          "factual_grounding": {
+            "pass": 0,
+            "fail": 0,
+            "notApplicable": 0,
+            "rate": 1
+          },
+          "dish_classification": {
+            "pass": 0,
+            "fail": 0,
+            "notApplicable": 0,
+            "rate": 1
+          },
+          "source_integrity": {
+            "pass": 0,
+            "fail": 0,
+            "notApplicable": 0,
+            "rate": 1
+          },
+          "search_selection": {
+            "pass": 0,
+            "fail": 0,
+            "notApplicable": 0,
+            "rate": 1
+          },
+          "tool_contract": {
+            "pass": 0,
+            "fail": 0,
+            "notApplicable": 0,
+            "rate": 1
+          }
+        },
+        "aggregateQuality": 1,
+        "meanLatencyMs": 0,
+        "p95LatencyMs": 0,
+        "toolCalls": 0,
+        "errors": 0
+      },
+      "experiment": {
+        "name": "not-run"
+      },
+      "eligible": false,
+      "retainedAsParent": false,
+      "selectedAsBest": false,
+      "reasons": [
+        "Duplicate patch generated within this iteration",
+        "Changed one line in [tools.ts](/var/folders/17/xtcg3n390mb262lrklm_r6t40000gn/T/thanksgiving-improver-13tWzh/i1-candidate2/original/src/tools.ts:118): the `source_type` parameter now uses the `history`/`social` enum instead of accepting any string. This makes the tool schema match the backing service’s accepted values, targeting the repeated invalid-call failures. I did not run the evaluator; its measurement will determine the result."
+      ]
+    },
+    {
+      "iteration": 1,
+      "label": "i1-candidate3",
+      "parent": "baseline",
+      "summary": "Changed only [original/src/tools.ts](/var/folders/17/xtcg3n390mb262lrklm_r6t40000gn/T/thanksgiving-improver-13tWzh/i1-candidate3/original/src/tools.ts:116): `source_type` now uses the `\"history\" | \"social\"` enum already enforced by the search service. This targets the measured rejected-source retries. I did not run tests or claim a score improvement; the evaluator will measure the change.",
+      "metrics": {
+        "examples": 117,
+        "quality": {
+          "factual_grounding": {
+            "pass": 117,
+            "fail": 0,
+            "notApplicable": 0,
+            "rate": 1
+          },
+          "dish_classification": {
+            "pass": 117,
+            "fail": 0,
+            "notApplicable": 0,
+            "rate": 1
+          },
+          "source_integrity": {
+            "pass": 114,
+            "fail": 3,
+            "notApplicable": 0,
+            "rate": 0.9743589743589743
+          },
+          "search_selection": {
+            "pass": 94,
+            "fail": 23,
+            "notApplicable": 0,
+            "rate": 0.8034188034188035
+          },
+          "tool_contract": {
+            "pass": 117,
+            "fail": 0,
+            "notApplicable": 0,
+            "rate": 1
+          }
+        },
+        "aggregateQuality": 0.9444444444444444,
+        "meanLatencyMs": 4912.023842282055,
+        "p95LatencyMs": 6942.26354200003,
+        "meanCostUsd": 0.0016449675213675216,
+        "toolCalls": 135,
+        "errors": 0
+      },
+      "experiment": {
+        "name": "thanksgiving-2026-11-06T17-56-54-235Z-i1-candidate3",
+        "id": "RXhwZXJpbWVudDoxODgxOTE6TWVtbg=="
+      },
+      "eligible": false,
+      "retainedAsParent": false,
+      "selectedAsBest": false,
+      "reasons": [
+        "search_selection regressed versus current best"
+      ]
+    }
+  ],
+  "stopReason": "iteration 1 produced no eligible strict improvement",
+  "totalEstimatedModelCostUsd": 0.6005396000000001,
+  "guardrails": {
+    "costAndP95LatencyMaxIncrease": "10% vs baseline and current best",
+    "maximumIterations": 1
+  }
+}

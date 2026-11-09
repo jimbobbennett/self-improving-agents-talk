@@ -1,0 +1,20 @@
+{
+  "name": "thanksgiving-self-improver",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "improve": "node dist/main.js"
+  },
+  "dependencies": {
+    "@openai/codex-sdk": "^0.166.0",
+    "openai": "^7.2.0",
+    "playwright": "^1.55.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
