@@ -2,6 +2,8 @@
 
 A demo for a self-improving Thanksgiving food-lore chatbot. It helps a British newcomer understand American dishes and social-media food trends, and separates documented modern traditions from claims about the 1621 gathering.
 
+Companion repository for the [self-improving agents talk](https://luma.com/m376rai8?tk=8vgbnc). The demo progresses from the baseline app in `original/`, through [the proposed improvement PR](https://github.com/jimbobbennett/self-improving-agents-talk/pull/1), to the same changes applied in `final/`.
+
 ## Run the demo
 
 Requires Node.js 22 or later and an OpenAI API key. To send traces to Arize AX, set these environment variables in your shell:
@@ -70,6 +72,10 @@ npm run improve --prefix improver -- --run --max-examples=5 --max-iterations=1 -
 For full dataset selection and draft PR creation, add `--full --confirm-full`. Set `MODEL_INPUT_COST_PER_MILLION` and `MODEL_OUTPUT_COST_PER_MILLION` to the app model's current rates; when the judge model differs, also set `JUDGE_INPUT_COST_PER_MILLION` and `JUDGE_OUTPUT_COST_PER_MILLION`. These rates are required to pass cost guardrails. The tool fixture's external-cost field is simulated and excluded from monetary claims. Codex SDK turn cost is separately metered by the configured Codex account and is not included in app/evaluator token-cost totals.
 
 The full run also needs the existing AX CLI profile and dataset access, GitHub CLI authentication, and an authenticated Chromium session exposed via `AX_CHROME_CDP_URL`. Set `AX_EXPERIMENT_URL_TEMPLATE` to the AX experiment URL pattern used to capture the best experiment screenshot, with `{id}` or `{name}` as a placeholder. The PR flow stops if it cannot capture that screenshot. Full runs score every row with four versioned judge prompts plus tool-contract checks, so choose an explicit spend cap carefully.
+
+### Security and scope
+
+This is a local demo, not a hosted multi-user service. The improver sends dataset examples and trace evidence to the configured models, asks Codex to propose source changes, then executes candidate app code during experiments. Use it only with trusted AX datasets and appropriately scoped credentials; do not expose the local chat server to an untrusted network. The server binds to `127.0.0.1` by default.
 
 ## Current boundary
 
